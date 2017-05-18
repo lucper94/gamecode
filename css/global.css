@@ -219,7 +219,7 @@ nav{width:100%;}
    
 }
 .game-search input{
-    width: 40%;
+    width: 20%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -232,7 +232,7 @@ nav{width:100%;}
     transition: width 0.4s ease-in-out;
 }
 .game-search input:focus {
-    width: 87%;
+    width: 57%;
 }
 .pacman{
 width: 10%;
