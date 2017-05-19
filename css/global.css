@@ -1,7 +1,7 @@
 
 
 body{
-    margin-top: 111px;
+    margin-top: 149px;
     background-color: transparent;
 }
 html { 
@@ -14,8 +14,39 @@ background-size: cover;
 }
 .game-header{
     background: rgba(0, 0, 0, 0.9);
-
+    padding-bottom: 10px;
     border-bottom: 4px solid red;
+
+
+}
+.game-header-info label{
+    margin-top: 3px;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 16px;
+    color: white;
+}
+.game-header-info label:hover{
+
+ margin-right: 5px;
+ margin-left: 5px;
+ color: darkred;
+}
+.game-footer{
+    background: rgba(0, 0, 0, 0.9);
+    padding-top: 10px;
+    border-top: 4px solid red;
+
+
+}
+.game-footer-text{
+    color: white;
+
+}
+.game-footer-image{
+    
+    height: 40px;
+
 
 }
 .game-logo{
@@ -50,13 +81,7 @@ background-size: cover;
     
  
 }
-.game-action-label:hover{
-    background: rgba(255, 0, 0, 0.9);
-    color: white;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-}
+
 .game-precios-label{
 
 
@@ -66,10 +91,10 @@ background-size: cover;
 }
 .game-image{
     background-color: white;
-    border: black 4px solid;
+    border: black 5px solid;
     width: 70%;
     margin-top: 12px;
-    
+    box-shadow: 0 5px 20px 0 rgba(255,255,255,0.9);
 
 
 }
@@ -82,11 +107,36 @@ background-size: cover;
  
 }
 .game-table{
-    font-size: 14px;
+    font-size: 14px;    
     text-align: center;
-    margin-left: -23px;
     margin-top: -8px;
     margin-bottom: -4px;
+}
+.game-table th{
+    text-align: center;
+
+}
+@media only screen and (min-width: 1150px) {
+    .game-table{
+       font-size: 11px;
+
+    }
+}
+@media only screen and (max-width: 600px) {
+    .game-table{
+        margin-left: -6px;
+    }
+    body{
+    margin-top: 180px;
+    background-color: transparent;
+    }
+
+}
+@media only screen and (max-width: 300px) {
+    .game-table{
+       font-size: 8px;
+
+    }
 }
 .game-table th{
    background-color: black;
@@ -119,13 +169,7 @@ font-size: 16px;
     
  
 }
-.search-action-label:hover{
-    background: rgba(255, 0, 0, 0.9);
-    color: white;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-}
+
 .search-precios-label{
 
 
@@ -238,15 +282,16 @@ nav{width:100%;}
 #cssmenu > ul > li.has-sub > ul > li.active > a,#cssmenu > ul ul > li.has-sub > ul > li.active > a{border-top:none}
 }
 .game-search {
-    width: 100%;
+
    
 }
 .game-search input{
-    width: 20%;
+    width: 103%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
     background-color: white;
     background-position: 10px 10px; 
     background-repeat: no-repeat;
@@ -255,7 +300,7 @@ nav{width:100%;}
     transition: width 0.4s ease-in-out;
 }
 .game-search input:focus {
-    width: 57%;
+
 }
 .pacman{
 width: 10%;
@@ -318,6 +363,7 @@ body,
     padding: 0;
     display: block;
     overflow: auto;
+    z-index: 2;
   
 }
 .game-slider{
