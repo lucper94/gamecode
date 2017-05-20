@@ -132,19 +132,47 @@ background-size: cover;
     }
 
 }
-@media only screen and (max-width: 300px) {
+@media only screen and (min-width: 400px)   {
+    body{
+    margin-top: 256px;
+    background-color: transparent;
+    }
     .game-table{
-       font-size: 8px;
+       font-size: 16px;
+       margin-bottom: -4px;
 
     }
+    .game-image{
+    background-color: white;
+    border: black 5px solid;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 12px;
+    box-shadow: 0 5px 20px 0 rgba(255,255,255,0.9);
+    height: 1220px;
+
+}
+    .game-image img{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 1000px;
+
+}
 }
 .game-table th{
    background-color: black;
+   font-size: 40px;
    color: white;
 }
 .game-table td{
 font-weight: bold;
-font-size: 16px;
+font-size: 40px;
+}
+.game-text h4{
+    font-weight: bold;
+    font-size: 40px;
 }
 .search-text{
     background-color: black;
@@ -244,7 +272,7 @@ nav{position:relative;width:980px;margin:0 auto; }
 #cssmenu ul ul ul li.active a{border-left:1px solid #333}
 #cssmenu > ul > li.has-sub > ul > li.active > a,#cssmenu > ul ul > li.has-sub > ul > li.active> a{border-top:1px solid #333}
 
-@media screen and (max-width:700px){
+@media screen and (min-width: 400px)  and (max-width: 1000px) {
 .logo{position:absolute;top:0;left: 0;width:100%;height:46px;text-align:center;padding:10px 0 0 0 ;float:none}
 .logo2{display:none}
 nav{width:100%;}
@@ -263,10 +291,10 @@ nav{width:100%;}
 #cssmenu ul ul li:hover > a,#cssmenu ul ul li.active > a{color:#fff}
 #cssmenu ul ul,#cssmenu ul ul ul{position:relative;left:0;width:100%;margin:0;text-align:left}
 #cssmenu > ul > li.has-sub > a:after,#cssmenu > ul > li.has-sub > a:before,#cssmenu ul ul > li.has-sub > a:after,#cssmenu ul ul > li.has-sub > a:before{display:none}
-#cssmenu #head-mobile{display:block;padding:23px;color:#ddd;font-size:12px;font-weight:700}
+#cssmenu #head-mobile{display:block;padding:23px;color:#ddd;font-size:30px;font-weight:700}
 .button{width:55px;height:46px;position:absolute;right:0;top:0;cursor:pointer;z-index: 12399994;}
-.button:after{position:absolute;top:22px;right:20px;display:block;height:4px;width:20px;border-top:2px solid #dddddd;border-bottom:2px solid #dddddd;content:''}
-.button:before{-webkit-transition:all .3s ease;-ms-transition:all .3s ease;transition:all .3s ease;position:absolute;top:16px;right:20px;display:block;height:2px;width:20px;background:#ddd;content:''}
+.button:after{position:absolute;top:22px;right:20px;display:block;height:8px;width:40px;border-top:2 px solid #dddddd;border-bottom:2px solid #dddddd;content:''}
+.button:before{-webkit-transition:all .3s ease;-ms-transition:all .3s ease;transition:all .3s ease;position:absolute;top:16px;right:20px;display:block;height:8px;width:40px;background:#ddd;content:''}
 .button.menu-opened:after{-webkit-transition:all .3s ease;-ms-transition:all .3s ease;transition:all .3s ease;top:23px;border:0;height:2px;width:19px;background:#fff;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg)}
 .button.menu-opened:before{top:23px;background:#fff;width:19px;-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-ms-transform:rotate(-45deg);-o-transform:rotate(-45deg);transform:rotate(-45deg)}
 #cssmenu .submenu-button{position:absolute;z-index:99;right:0;top:0;display:block;border-left:1px solid #444;height:46px;width:46px;cursor:pointer}
@@ -280,6 +308,7 @@ nav{width:100%;}
 #cssmenu .submenu-button.submenu-opened:before{display:none}
 #cssmenu ul ul ul li.active a{border-left:none}
 #cssmenu > ul > li.has-sub > ul > li.active > a,#cssmenu > ul ul > li.has-sub > ul > li.active > a{border-top:none}
+#cssmenu  a{font-size: 47px !important;}
 }
 .game-search {
 
