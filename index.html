@@ -103,7 +103,7 @@
  </div>
 </header>
 
-<body>
+<body ng-controller="gamesCtrl">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-banner" >
     <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -136,11 +136,11 @@
        <p data-orderby="name" class="filter-button">Titulo <i class="fa fa-caret-down" aria-hidden="true"></i></p>
                          
   </div>
-  <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10  col-md-offset-1 col-lg-offset-1" ng-controller="gamesCtrl">
+  <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10  col-md-offset-1 col-lg-offset-1" >
      <div ng-repeat="todo in todos">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 game-front">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-image" >
-        <img src="assets/{{todo.ID_Product}}.jpg" class="img-responsive" alt="Image">
+        <img src="assets/{{todo.ID_Product}}.jpg"  class="img-responsive" alt="Image">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-text">
                 <h4>{{todo.Name}}</h4>
             </div>
