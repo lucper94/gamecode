@@ -140,11 +140,13 @@
      <div ng-repeat="todo in todos">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 game-front">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-image" >
-        <img src="assets/{{todo.ID_Product}}.jpg"  class="img-responsive" style="max-width:200px;" alt="Image">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-text">
+        <div style="height:300px;" >
+         <img src="assets/{{todo.ID_Product}}.jpg"  class="img-responsive vcenter" style="max-height:300px;" alt="Image">
+        </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-text" style="height:53px;">
                 <label class="game-name-text"><h4>{{getName(todo.Name)}}</h4></label>
             </div>
-            <div class="game-table-content">
+            <div class="game-table-content" style="height:50px;">
             <table class="table game-table table-hover">
                     <thead>
                       <tr>
