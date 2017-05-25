@@ -140,10 +140,11 @@
      <div ng-repeat="todo in todos">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 game-front">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-image" >
-        <img src="assets/{{todo.ID_Product}}.jpg"  class="img-responsive" alt="Image">
+        <img src="assets/{{todo.ID_Product}}.jpg"  class="img-responsive" style="max-width:200px;" alt="Image">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-text">
-                <h4>{{todo.Name}}</h4>
+                <label class="game-name-text"><h4>{{getName(todo.Name)}}</h4></label>
             </div>
+            <div class="game-table-content">
             <table class="table game-table table-hover">
                     <thead>
                       <tr>
@@ -159,7 +160,9 @@
                         <td>{{todo.intercambio}}</td>
                       </tr>
                     </tbody>
-                  </table>  
+              </table>
+              </div>
+
           </div>
       </div>
     </div>
