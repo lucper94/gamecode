@@ -8,7 +8,7 @@ App.controller('gamesCtrl', function($scope, $http) {
     }else{
       return name;
     } 
-    console.log('hii');
+    
   }
   $http.get('js/games.json')
        .then(function(res){
