@@ -55,7 +55,7 @@ background-size: cover;
     margin-left: 5px;
  
 }
-.test
+.filters
 {
     color: white;
     background-color:darkred;
@@ -610,13 +610,4 @@ li > a:only-child:after { content: ''; }
 /* Media Queries
 --------------------------------------------- */
 
-@media all and (max-width : 400px) {
 
-
-}
-
-@media all and (max-width : 330px) {
-
-
-
-}

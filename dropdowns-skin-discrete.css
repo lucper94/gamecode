@@ -1,0 +1,84 @@
+/* fonts */
+.dropdowns {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+/* colors */
+/* ------ */
+/* togle menu button for narrow screens */
+.toggleMenu {
+    background: rgba(0, 0, 0, 0.9);  
+    color: #fff;
+}
+
+/* general navigation background colors */
+.nav {
+     background: rgba(0, 0, 0, 0.9);  
+	 border: 1px solid #f0f0f0;
+}
+
+/* general navigation link font color */
+.nav a {
+    color:white;
+}
+
+/* first level items borders */
+.nav > li a:hover {
+	background-color: darkred;
+	color: white;
+}
+
+/* navigation hover colors */
+.nav a:hover {
+	background-color: darkred;
+	color: white;
+}
+
+/* second level navigation colors */
+.nav li li a {
+    background: rgba(0, 0, 0, 0.9);  
+    border-bottom: 1px solid #c0c0c0;
+}
+
+/* third level navigation colors */
+.nav li li li a {
+    background: rgba(0, 0, 0, 0.9);  
+    border-bottom: 1px solid #c0c0c0;;
+}
+
+/* ---------------- */
+/*      layout      */
+/* -----------------*/
+
+/* main div */
+.dropdowns {
+	width:auto;
+}
+
+/* small screens menu button */
+a.toggleMenu {
+	padding: 10px 0;
+	width:100%;
+	text-align: center;
+}
+
+/* second and third level menus */
+.nav ul {
+	width:9em;
+}
+
+/* general paddings and other stuff */
+.nav a {
+	padding: 5px 10px;
+}
+
+/* parents that have submenus */
+.nav > li > .parent {
+	padding-right: 25px;
+	background-position: 90% 50%;
+}
+
+/* small screen adjustments*/
+@media only screen and (max-device-width: 480px) {
+	.nav ul {
+		width: 100%;
+	}
+}
