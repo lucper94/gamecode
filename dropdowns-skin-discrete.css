@@ -12,7 +12,7 @@
 /* general navigation background colors */
 .nav {
      background: rgba(0, 0, 0, 0.9);  
-	 border: 1px solid #f0f0f0;
+	 
 }
 
 /* general navigation link font color */
@@ -32,6 +32,10 @@
 	color: white;
 }
 
+.nav label {
+    margin-bottom: 60px;
+	color: white;
+}
 /* second level navigation colors */
 .nav li li a {
     background: rgba(0, 0, 0, 0.9);  
@@ -49,9 +53,7 @@
 /* -----------------*/
 
 /* main div */
-.dropdowns {
-	width:auto;
-}
+
 
 /* small screens menu button */
 a.toggleMenu {
