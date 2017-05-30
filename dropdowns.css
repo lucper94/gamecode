@@ -58,6 +58,14 @@
 }
 
 @media only screen and (max-device-width: 480px) {
+    .nav a {
+        color: white;
+        margin: 48px;
+        font-size: 62px;
+    }
+    .nav a:hover {
+        padding: 30px;
+    }
     .active {
         display: block;
     }

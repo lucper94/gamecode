@@ -131,7 +131,12 @@ font-size: 16px;
 
 }
 @media only screen and (min-width: 500px) {
-
+    .dropdowns{
+        padding-left: 184px;
+    }
+    .nav{
+        margin-bottom: -40px !important;
+    }
     .game-text{
         text-align: center;
         height: 53px;
@@ -160,7 +165,11 @@ font-size: 16px;
     display: block;
     overflow: auto;
     z-index: 2;
-    margin-top: 13%;
+    margin-top: 11.1%;
+    
+}
+.game-search-container{
+    margin-top: 11.1%;
     
 }
 .filters
@@ -175,11 +184,18 @@ font-size: 16px;
         width:24px; 
         height:27px;
     }
-
+    .nav a {
+        color: white;
+        margin: 0px;
+    }
 }
 @media only screen and (max-device-width: 480px) {
-    
-
+    .dropdowns{
+        padding-left: 0px;
+    }
+    .nav{
+        margin-bottom: -0px;
+    }
     .game-logo{
         margin-top: 10px;
         margin-bottom: 10px;
@@ -422,11 +438,19 @@ font-size: 40px;
     font-size: 27px;
     color: white;
     text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
-
+    text-align: center;
 }
-.search-action{
+.search-action {
     background-color: black; 
     height: 40px;
+    text-align: center;
+ 
+}
+
+.search-precios {
+
+    height: 40px;
+    text-align: center;
  
 }
 
@@ -434,19 +458,19 @@ font-size: 40px;
 
     color: white;
     text-align: center;
+    font-size: 25px;
     
  
 }
 
 .search-precios-label{
-
-
     text-align: center;
-    
+    font-size: 25px;
+  
  
 }
 .search-front{
-    background-color: gray;
+    background-color: rgba(255,255,255,0.4);
     border: black 4px solid;
 
     margin-top: 12px;
