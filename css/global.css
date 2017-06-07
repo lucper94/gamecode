@@ -175,11 +175,17 @@ font-size: 16px;
 .filters
 {
     color: white;
-    background-color:darkred;
+    background-color:black;
     position:fixed;
     margin-top: 1%;
     z-index: 1;
+    border: white 1px solid;
 }
+.filters p
+{
+border: white 1px solid;
+}
+
     .game-search-icon{
         width:24px; 
         height:27px;
@@ -486,7 +492,7 @@ font-size: 40px;
 .search-console-xbox{
     background-color: #107c10;
     text-align: center;
-    border: 1px white solid;
+    border: 1px black solid;
 }
 .search-console-xbox label{
     font-size: 14px;
