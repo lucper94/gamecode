@@ -165,11 +165,11 @@ font-size: 16px;
     display: block;
     overflow: auto;
     z-index: 2;
-    margin-top: 11.1%;
+    margin-top: 9.1%;
     
 }
 .game-search-container{
-    margin-top: 11.1%;
+    margin-top: 9%;
     
 }
 .filters
@@ -179,7 +179,7 @@ font-size: 16px;
     position:fixed;
     margin-top: 1%;
     z-index: 1;
-    border: white 1px solid;
+
 }
 .filters p
 {
@@ -194,6 +194,15 @@ border: white 1px solid;
         color: white;
         margin: 0px;
     }
+    .game-header-info {
+        margin-top: -18px;
+        margin-bottom: -14px;
+    }
+    .search-stock-label{
+        border: black 1px solid;
+        margin-bottom: 2px;
+    }
+
 }
 @media only screen and (max-device-width: 480px) {
     .dropdowns{
@@ -274,6 +283,7 @@ border: white 1px solid;
     .game-front{
         margin-top: 15px;
     }
+
     .game-header-info label{
         margin-top: 3px;
         margin-right: 5px;
@@ -455,7 +465,7 @@ font-size: 40px;
 
 .search-precios {
     background-color: white;
-    height: 25px;
+    height: 31px;
     text-align: center;
  
 }
@@ -476,7 +486,7 @@ font-size: 40px;
  
 }
 .search-front{
-    background-color: darkgrey;
+    background-color: white;
     border: black 4px solid;
 
     margin-top: 12px;
