@@ -6,25 +6,19 @@
          
          var ctrl = this;
 
-         /*ctrl.gamesObj = [
-         {
-             "ID_Product":"1",
-             "Platform":"Xbox 360",
-             "Name":"Halo 4",
-             "Price_S":"400",
-             "Price_P":"250",
-             "Price_E":"280"
-             
-         }]*/
-         listService.getGames()
+            listService.getGames()
             .then(function(response){
                 console.log(response);
                 ctrl.gamesObj = response.data.app_data;
             })
-         console.log(ctrl.gamesObj);
-     }
 
-     angular
+        ctrl.updateOrder = function(){
+            ctrl.fn(order);
+         }
+     }
+    
+    
+         angular
         .module('games')
         .controller('listCtrl',listCtrl);
 
