@@ -1,0 +1,788 @@
+
+
+body{
+    margin-top: 149px;
+    background-color: transparent;
+}
+html { 
+
+background: #fff; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+.game-header{
+    background: rgba(0, 0, 0, 0.9);
+    padding-bottom: 10px;
+    border-bottom: 4px solid red;
+
+
+}
+
+.game-header-info label:hover{
+
+ margin-right: 5px;
+ margin-left: 5px;
+ color: darkred;
+}
+.game-footer{
+    background: rgba(0, 0, 0, 0.9);
+    padding-top: 10px;
+    border-top: 4px solid red;
+
+
+}
+.game-footer-text{
+    color: white;
+
+}
+.game-footer-image{
+    
+    height: 40px;
+
+
+}
+.game-logo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+ 
+}
+
+
+
+.game-image{
+    background-color: white;
+    border: black 5px solid;
+    width: 70%;
+    margin-top: 12px;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0 ,0.9);
+    height: 435px;
+
+
+}
+
+
+
+.game-table{
+    font-size: 8px;    
+    text-align: center;
+    margin-top: -8px;
+    margin-bottom: -4px;
+}
+.game-table th{
+    text-align: center;
+    background-color: black;
+    font-size: 8px;
+    color: white;
+
+}
+
+.game-table td{
+font-weight: bold;
+font-size: 8px;
+}
+
+
+    .dropdowns{
+        padding-left: 184px;
+    }
+    .nav{
+        margin-bottom: -40px !important;
+    }
+    .game-text{
+        text-align: center;
+        height: 53px;
+    }
+    .game-table-content{
+        height: 50px;
+    }
+    .game-image-div{
+        height: 300px;
+    }
+    .vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    
+    }
+    .game-header-info label{
+    margin-top: 3px;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 16px;
+    color: white;
+    }
+    .game-banner{
+    padding: 0;
+
+    
+}
+.game-search-container{
+    margin-top: 9%;
+    
+}
+.filters
+{
+    color: white;
+    background-color:black;
+    position:fixed;
+    margin-top: 1%;
+    z-index: 1;
+
+}
+.filters p
+{
+border: white 1px solid;
+}
+
+    .game-search-icon{
+        width:24px; 
+        height:27px;
+    }
+    .nav a {
+        color: white;
+        margin: 0px;
+    }
+    .game-header-info {
+        margin-top: -18px;
+        margin-bottom: -14px;
+    }
+    .search-stock-label{
+        border: black 1px solid;
+        margin-bottom: 2px;
+    }
+
+
+
+    .dropdowns{
+        padding-left: 0px;
+    }
+    .nav{
+        margin-bottom: -0px;
+    }
+    .game-search-icon {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+
+    }
+    .close-menu {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+
+    }
+    .open-menu{
+        position: absolute;
+        top: 4px;
+        right: 4px; 
+        width: 20px;
+        height: 20px;
+        z-index: 1;
+
+
+    }
+    .dropdowns{
+        width: 100%; 
+        height: 100%; 
+        margin: 0em;
+        left: 0em; 
+        top: 0em; 
+        background: black;
+        position: fixed;
+        z-index: 1;
+        font-size: 40px;
+        text-align: center;
+    }
+
+
+    .filters
+    {
+        color: white;
+        background-color:darkred;
+        position:fixed;
+        margin-top: 38%;
+        z-index: 1;
+    }
+    body{
+    margin-top: 256px;
+    background-color: transparent;
+
+    }
+    .game-front{
+        margin-top: 15px;
+    }
+
+    .game-header-info label{
+        margin-top: 3px;
+
+        font-size: 18px;
+        color: white;
+    }
+    .game-table{
+       font-size: 16px;
+       margin-bottom: -4px;
+
+    }
+    .game-text{
+        height: auto;
+    }
+    .game-text h4{
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .game-table-content{
+    height: auto;
+    }
+
+
+.game-table th{
+   background-color: black;
+   font-size: 16px;
+   color: white;
+}
+.game-table td{
+font-weight: bold;
+font-size: 16px;
+}
+//---------------------------------------------
+
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+	#logo {
+		display: block;
+		padding: 0;
+		width: 100%;
+		text-align: center;
+		float: none;
+	}
+
+	nav {
+		margin: 0;
+	}
+
+	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	.toggle + a,
+	.menu {
+		display: none;
+	}
+
+	/* Stylinf the toggle lable */
+	.toggle {
+		display: block;
+		background-color: #254441;
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px;
+		text-decoration:none;
+		border:none;
+	}
+
+	.toggle:hover {
+		background-color: #000000;
+	}
+
+	/* Display Dropdown when clicked on Parent Lable */
+	[id^=drop]:checked + ul {
+		display: block;
+	}
+
+	/* Change menu item's width to 100% */
+	nav ul li {
+		display: block;
+		width: 100%;
+		}
+
+	nav ul ul .toggle,
+	nav ul ul a {
+		padding: 0 40px;
+	}
+
+	nav ul ul ul a {
+		padding: 0 80px;
+	}
+
+	nav a:hover,
+ 	nav ul ul ul a {
+		background-color: #000000;
+	}
+  
+	nav ul li ul li .toggle,
+	nav ul ul a,
+  nav ul ul ul a{
+		padding:14px 20px;	
+		color:#FFF;
+		font-size:17px; 
+	}
+  
+  
+	nav ul li ul li .toggle,
+	nav ul ul a {
+		background-color: #212121; 
+	}
+
+	/* Hide Dropdowns by Default */
+	nav ul ul {
+		float: none;
+		position:static;
+		color: #ffffff;
+		/* has to be the same number as the "line-height" of "nav a" */
+	}
+		
+	/* Hide menus on hover */
+	nav ul ul li:hover > ul,
+	nav ul li:hover > ul {
+		display: none;
+	}
+		
+	/* Fisrt Tier Dropdown */
+	nav ul ul li {
+		display: block;
+		width: 100%;
+	}
+
+	nav ul ul ul li {
+		position: static;
+		/* has to be the same number as the "width" of "nav ul ul li" */ 
+
+	}
+
+
+
+}
+
+
+.search-text{
+  
+    padding: 3px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 21px;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+.search-action {
+    background-color: black; 
+    height: 25px;
+    text-align: center;
+ 
+}
+
+.search-precios {
+    background-color: white;
+    height: 31px;
+    text-align: center;
+ 
+}
+
+.search-action-label{
+
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    
+ 
+}
+
+.search-precios-label{
+    text-align: center;
+    font-size: 14px;
+  
+ 
+}
+.search-front{
+    background-color: white;
+    border: black 4px solid;
+
+    margin-top: 12px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    box-shadow: 0 5px 7px 0 rgba(0,0,0,1);
+    transition: 0.3s;
+    border-radius: 5px;
+
+
+
+}
+.search-console-xbox{
+    background-color: #107c10;
+    text-align: center;
+    border: 1px black solid;
+}
+.search-console-xbox label{
+    font-size: 14px;
+    color: white;
+
+}
+.search-image{
+    border: black 3px solid;
+    max-height: 195px;
+}
+.game-content{
+
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+
+ 
+}
+
+
+
+.game-search {
+
+   
+}
+.game-search input{
+    height: 40px;
+    width: 103%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+.game-search input:focus {
+
+}
+
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+        
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    .carousel-control {
+        z-index: 2;
+    }
+
+}
+}
+
+
+
+html, 
+body, 
+.carousel, 
+.carousel-inner, 
+.carousel-inner .item {
+    height: 100%;
+
+}
+
+
+
+.game-slider{
+    padding: 0;
+    width: 100%;
+  
+}
+.game-bimage{
+     width: 100%;
+}
+.game-control{
+     position: relative;
+    top: 50%;
+    transform: translateY(-50%); /* or try 50% */
+}
+.carousel-indicators li {
+    background: #ccc;
+    height: 25px;
+    width: 15px;
+}
+
+.carousel-indicators .active {
+    background: red;
+    height: 25px;
+    width: 15px;
+
+}
+
+
+
+
+
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+
+body {
+
+	line-height: 32px;
+	margin: 0;
+	padding: 0;
+	word-wrap:break-word !important;
+	font-family: 'Open Sans', sans-serif;
+	}
+
+
+
+#container {
+	margin: 0 auto;
+	max-width: 890px;
+}
+
+p {
+	text-align: center;
+}
+
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav { 
+	margin:0;
+	padding: 0;
+	background-color: #254441;
+    position: relative;
+    z-index: 2;
+}
+
+#logo {
+	display: block;
+	padding: 0 30px;
+	float: left;
+	font-size:20px;
+	line-height: 60px;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+	float: right;
+	padding:0;
+	margin:0;
+	list-style: none;
+	position: relative;
+	}
+	
+/* Positioning the navigation items inline */
+nav ul li {
+	margin: 0px;
+	display:inline-block;
+	float: left;
+	background-color: #254441;
+	}
+
+/* Styling the links */
+nav a {
+	display:block;
+	padding:14px 20px;	
+	color:#FFF;
+	font-size:17px;
+	text-decoration:none;
+}
+
+
+nav ul li ul li:hover { background: #000000; }
+
+/* Background color change on Hover */
+nav a:hover { 
+	background-color: #000000; 
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	/* has to be the same number as the "line-height" of "nav a" */
+	top: 60px; 
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of "nav ul ul li" */ 
+	left:170px; 
+}
+
+	
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+
+/* Media Queries
+--------------------------------------------- */
+.game-detail-front{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    margin-top: 124px;
+    margin-bottom: 40px;
+}
+.game-detail-image{
+    margin-top: 30px;
+    height: 300px;
+}
+.game-detail-title{
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+.game-detail-content{
+    background-color: white;
+    border: black 5px solid;
+    margin-top: 12px;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.9);
+    height: 435px;
+
+
+}
+.game-detail-body{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    margin-top: 20px;
+    height: 160px;
+    font-size: 20px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+
+
+}
+
+.game-index-container{
+    margin-top:40px;
+    min-height: 529px;
+    max-height: 529px;
+}
+.game-index-imgcontainer{
+
+}
+.game-index-image{
+    height:auto; width:auto;
+
+     min-height: 418.5px;
+    max-height: 418.5px;
+}
+.game-index-front{
+    background-color: white;
+    border: black 5px solid;
+
+    margin-top: -22px;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.9);
+   
+}
+
+@media only screen and (max-width: 500px) {
+    .game-index-container{
+    margin-top:40px;
+    min-height: 529px;
+    max-height: 529px;
+}
+.game-index-imgcontainer{
+    height:40%;
+
+}
+.game-index-image{
+    height:100%; width:auto;
+     min-height: 200px;
+ 
+}
+.game-index-front{
+    background-color: white;
+    border: black 5px solid;
+
+    margin-top: -22px;
+    box-shadow: 0 5px 20px 0 rgba(0,0,0,0.9);
+   
+}
+
+    .game-header-info label{
+        margin-top: 10px;
+
+        font-size: 10px;
+        color: white;
+    }
+
+    .game-logo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    }
+    .game-banner{
+
+
+    position: relative;    
+    }
+}
