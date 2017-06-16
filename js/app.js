@@ -1,12 +1,13 @@
 var App = angular.module('App', []);
 
 App.controller('gamesCtrl', function($scope, $http) {
-
+  $scope.loading=true;
 	$http({
         method : "GET",
         url : "game_handler.php"
     }).then(function mySuccess(response) {
         $scope.todos = response.data;
+        $scope.loading=false;
     }, function myError(response) {
         $scope.todos = response.statusText;
     });
