@@ -235,11 +235,11 @@
                          
   </div>
 <body ng-app="games" class="game-search-container">
-  
+  {{vm.limit}}
 
 
 
-   <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2" ng-repeat="game in vm.gamesObj | orderBy:'SP':vm.fn('menor');">
+   <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2" ng-repeat="game in vm.gamesObj | limitTo: vm.limit | orderBy:'SP':vm.fn('menor');">
     
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " >
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 search-front" >
@@ -292,7 +292,9 @@
         </div>
       </div>       
     </div>
-  </div>
+	</div>
+		<button ng-hide="vm.limit.length === vm.gamesObj.length" ng-click="vm.limit = vm.limit +25">show more...</button>
+
  
   
 </body>
