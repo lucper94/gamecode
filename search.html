@@ -236,8 +236,7 @@
   </div>
 <body ng-app="games" class="game-search-container">
   {{vm.limit}}
-
-
+	{{vm.gamesObj.length}}
 
    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2" ng-repeat="game in vm.gamesObj | limitTo: vm.limit | orderBy:'SP':vm.fn('menor');">
     
@@ -293,9 +292,10 @@
       </div>       
     </div>
 	</div>
-		<button ng-hide="vm.limit.length === vm.gamesObj.length" ng-click="vm.limit = vm.limit +25">show more...</button>
+		<button ng-hide="vm.limit.length >= vm.gamesObj.length" ng-click="vm.limit = vm.limit +25">Cargar más</button>
 
  
+	
   
 </body>
 
