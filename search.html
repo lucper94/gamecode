@@ -1,4 +1,4 @@
-<html >
+<html ng-app="games" ng-controller="listCtrl as vm">
 <head>
 <meta name="viewport" content="user-scalable=no" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -36,7 +36,7 @@
 		<a href="#">XBOX ONE</a>
 		<ul>
      <li class='drop'>
-				<a href="#">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('xbox one');">Juegos</a>
 		  </li>
 			<li class='drop'>
 				<a href="#">Consola y Accesorios</a>
@@ -47,7 +47,7 @@
 		<a href="#">PS4</a>
 		<ul>
 			<li class='drop'>
-				<a href="#">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('PS4');">Juegos</a>
 		 </li>
 			<li class='drop'>
 				<a href="#">Consolas y Accesorios</a>
@@ -58,7 +58,7 @@
 		<a href="#">WII U</a>
 		<ul>
 			<li class='drop'>
-				<a href="#">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('WIIU');">Juegos</a>
 		  </li>
 			<li class='drop'>
 				<a href="#">Consolas y Accesorios</a>
@@ -69,7 +69,7 @@
 		<a href="#">XBOX 360</a>
 		<ul>
 			<li class='drop'>
-				<a href="#">Juegos</a>
+				<a href="#" ng-click = "vm.getPlatform('xbox 360');">Juegos</a>
 			</li>
 			<li class='drop'>
 				<a href="#">Consolas y Accesorios</a>
@@ -80,7 +80,7 @@
 		<a href="#">PS3</a>
 		<ul>
 			<li class='drop'>
-				<a href="#">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('PS3');">Juegos</a>
 			</li>
 			<li class='drop'>
 				<a href="#">Consolas y Accesorios</a>
@@ -92,7 +92,7 @@
 		<a href="#">WII</a>
 		<ul>
 			<li class='drop'>
-				<a href="#">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('wii');">Juegos</a>
 		  </li>
 			<li class='drop'>
 				<a href="#">Consolas y Accesorios</a>
@@ -226,7 +226,7 @@
     
  </div>
 </header>
-<div ng-controller="listCtrl as vm">
+<div >
 <div class="row col-md-2  filters"  id="game-filters">   
        <a href="" ng-click="predicate = 'SP';"><p data-orderby="price" class="filter-button">Precio Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
        <a href="" ng-click="predicate = '-SP';"><p data-orderby="price" class="filterDesc-button">Precio Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
@@ -234,7 +234,7 @@
        <a href="" ng-click="predicate = 'Name'; reverse=!reverse"><p data-orderby="name" class="filter-button">Titulo <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
             
   </div>
-<body ng-app="games" class="game-search-container">
+<body class="game-search-container">
 
 
    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2" ng-repeat="game in vm.gamesObj | limitTo: vm.limit | orderBy:predicate:reverse">
