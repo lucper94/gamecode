@@ -232,10 +232,11 @@
        <p data-orderby="price" class="filterDesc-button">Precio Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
        <p data-orderby="platform" class="filter-button subfilter-button">Consola <i class="fa fa-caret-down" aria-hidden="true"></i></p>
        <p data-orderby="name" class="filter-button">Titulo <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-      <a href="" ng-click="predicate = 'Name'; reverse=!reverse">Name</a>
-         
-    <a href="" ng-click="predicate = 'SP'; reverse=!reverse">Phone Number</a>
-    <a href="" ng-click="predicate = '-SP'; reverse=!reverse">Age</a>                
+    
+    <a href="" ng-click="predicate = 'SP'; reverse=!reverse">Precio Menor</a>
+    <a href="" ng-click="predicate = '-SP'; reverse=!reverse">Precio Mayor</a> 
+		  <a href="" ng-click="">Consola</a>
+		  <a href="" ng-click="predicate = 'Name'; reverse=!reverse">Titulo</a>               
   </div>
 <body ng-app="games" class="game-search-container">
 
