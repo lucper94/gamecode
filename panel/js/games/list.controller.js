@@ -11,12 +11,10 @@
                 console.log(response);
                 ctrl.gamesObj = response.data.app_data;
                 ctrl.limit = 25;
+                ctrl.predicate = '-SP';
             })
 
-        ctrl.updateOrder = function(){
-            ctrl.fn(order);
-         }
-
+       
 
      }
     
