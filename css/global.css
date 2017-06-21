@@ -174,8 +174,7 @@ font-size: 16px;
 }
 .filters
 {
-    color: white;
-    background-color:black;
+
     position:fixed;
     margin-top: 1%;
     z-index: 1;
@@ -183,6 +182,8 @@ font-size: 16px;
 }
 .filters p
 {
+    color: white;
+    background-color:black;
     border: white 1px solid;
 }
 .filters p:hover
