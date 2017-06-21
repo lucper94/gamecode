@@ -228,15 +228,11 @@
 </header>
 <div ng-controller="listCtrl as vm">
 <div class="row col-md-2  filters"  id="game-filters">   
-       <p data-orderby="price" class="filter-button">Precio Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-       <p data-orderby="price" class="filterDesc-button">Precio Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-       <p data-orderby="platform" class="filter-button subfilter-button">Consola <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-       <p data-orderby="name" class="filter-button">Titulo <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-    
-    <a href="" ng-click="predicate = 'SP'; reverse=!reverse">Precio Menor</a>
-    <a href="" ng-click="predicate = '-SP'; reverse=!reverse">Precio Mayor</a> 
-		  <a href="" ng-click="">Consola</a>
-		  <a href="" ng-click="predicate = 'Name'; reverse=!reverse">Titulo</a>               
+       <a href="" ng-click="predicate = 'SP'; reverse=!reverse"><p data-orderby="price" class="filter-button">Precio Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
+       <a href="" ng-click="predicate = '-SP'; reverse=!reverse"><p data-orderby="price" class="filterDesc-button">Precio Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
+       <a href="" ng-click=""><p data-orderby="platform" class="filter-button subfilter-button">Consola <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
+       <a href="" ng-click="predicate = 'Name'; reverse=!reverse"><p data-orderby="name" class="filter-button">Titulo <i class="fa fa-caret-down" aria-hidden="true"></i></p></a>
+            
   </div>
 <body ng-app="games" class="game-search-container">
 
@@ -294,8 +290,11 @@
         </div>
       </div>       
     </div>
+
 	</div>
-		<button ng-hide="vm.limit >= vm.gamesObj.length" ng-click="vm.limit = vm.limit +25">Cargar más</button>
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<button ng-hide="vm.limit >= vm.gamesObj.length" class=" game-search-btn center-block" ng-click="vm.limit = vm.limit +25">Cargar más</button>
+		</div>
 	<div>
 
 
