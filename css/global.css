@@ -855,3 +855,33 @@ li > a:only-child:after { content: ''; }
     padding-right: 12px; 
     border-radius: 3px;
 }
+
+
+.loadscreen{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color:rgba(0,0,0,0.9);
+    z-index: 15;
+    
+}
+
+#loading {
+    position: absolute;
+    top: 50%;
+    margin-right: 45%;
+    margin-left: 45%;
+    height:auto;
+    width:10%;
+}
+#loadingsvg {
+
+    position: absolute;
+    top: 59%;
+    margin-right: 47%;
+    margin-left: 47%;
+    height:auto;
+    width:6%;
+}
