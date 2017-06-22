@@ -1,4 +1,4 @@
-<html ng-app="App">
+<html ng-app="games" ng-controller="listCtrl as vm">
 <head>
 <meta name="viewport" content="user-scalable=no" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -10,8 +10,10 @@
 <link rel="stylesheet" type="text/css" href="dropdowns.css">
 <link rel="stylesheet" type="text/css" href="dropdowns-skin-discrete.css">
 
- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
- <script src="js/app.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+  <script src="panel/js/gc.app.js" ></script>
+ <script src="panel/js/games/list.service.js" ></script>
+ <script src="panel/js/games/list.controller.js" ></script>
 </head>
 <header>
 <div class="col-md-12 col-xs-12 col-sm-12  game-header navbar-fixed-top" >       
@@ -26,14 +28,14 @@
 <a class="toggleMenu" href="#">Menu</a>
 <ul class="nav">
    <li >
-		    <label><a href="">Venta</a></label>
+		    <label>Venta</label>
 	    </li>
 	<li class='drop'  class="test">
     
 		<a href="#">XBOX ONE</a>
 		<ul>
      <li class='drop'>
-				<a href="#">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('xbox one');">Juegos</a>
 		  </li>
 			<li class='drop'>
 				<a href="#">Consola y Accesorios</a>
@@ -44,7 +46,7 @@
 		<a href="#">PS4</a>
 		<ul>
 			<li class='drop'>
-				<a href="#">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('PS4');">Juegos</a>
 		 </li>
 			<li class='drop'>
 				<a href="#">Consolas y Accesorios</a>
@@ -55,7 +57,7 @@
 		<a href="#">WII U</a>
 		<ul>
 			<li class='drop'>
-				<a href="#">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('WIIU');">Juegos</a>
 		  </li>
 			<li class='drop'>
 				<a href="#">Consolas y Accesorios</a>
@@ -66,7 +68,7 @@
 		<a href="#">XBOX 360</a>
 		<ul>
 			<li class='drop'>
-				<a href="#">Juegos</a>
+				<a href="#" ng-click = "vm.getPlatform('xbox 360');">Juegos</a>
 			</li>
 			<li class='drop'>
 				<a href="#">Consolas y Accesorios</a>
@@ -77,7 +79,7 @@
 		<a href="#">PS3</a>
 		<ul>
 			<li class='drop'>
-				<a href="#">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('PS3');">Juegos</a>
 			</li>
 			<li class='drop'>
 				<a href="#">Consolas y Accesorios</a>
@@ -89,7 +91,7 @@
 		<a href="#">WII</a>
 		<ul>
 			<li class='drop'>
-				<a href="#">Juegos</a>
+				<a href="#wii" ng-click="vm.getPlatform('wii');">Juegos</a>
 		  </li>
 			<li class='drop'>
 				<a href="#">Consolas y Accesorios</a>
@@ -224,7 +226,7 @@
  </div>
 </header>
 
-<body ng-controller="gamesCtrl">
+<body>
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-banner" >
     <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -258,14 +260,14 @@
                          
   </div>-->
   <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10  col-md-offset-1 col-lg-offset-1" >
-     <div ng-repeat="todo in todos">
+     <div ng-repeat="todo in vm.todos">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 game-front">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-image" >
         <div  class="game-image-div" >
          <img src="assets/{{todo.ID_Product}}.jpg"  class="img-responsive vcenter"  alt="Image">
         </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-text" >
-                <label class="game-name-text"><h4>{{getName(todo.Name)}}</h4></label>
+                <label class="game-name-text"><h4>{{vm.getName(todo.Name)}}</h4></label>
             </div>
             <div class="game-table-content" >
             <table class="table game-table table-hover">

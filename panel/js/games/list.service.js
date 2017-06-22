@@ -13,6 +13,16 @@
                     headers: {'Content-Type':'application/json'}
                 })
             }
+
+            this.getGamesHome = function(){
+
+                var url = 'game_handler.php';
+                 return $http({
+                    method: 'GET',
+                    url : url,
+                    headers: {'Content-Type':'application/json'}
+                })
+            }
         }
         angular
             .module('games')

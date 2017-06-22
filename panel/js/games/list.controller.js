@@ -2,7 +2,7 @@
 
      'use strict'
 
-     function listCtrl(listService){
+     function listCtrl($http,listService){
          
          var ctrl = this;
             ctrl.loading=true;
@@ -26,13 +26,27 @@
                 ctrl.loading=false;
             })
 
-       
+            listService.getGamesHome()
+                .then(function(response){
+                ctrl.todos = response.data;
+                console.log(ctrl.todos);
+                 ctrl.loading=false;
+            })
+            
+            ctrl.getName = function(name){
+                if(name.length > 25) {
+                return name.substr(0, 25)+'...';
+                }else{
+                return name;
+                } 
+            }
+            
 
      }
     
     
          angular
-        .module('games')
-        .controller('listCtrl',listCtrl);
+            .module('games')
+            .controller('listCtrl',listCtrl);
 
  }());
