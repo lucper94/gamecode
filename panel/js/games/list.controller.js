@@ -15,6 +15,7 @@
                 ctrl.limit = 25;
                 ctrl.predicate = '-SP';
                 ctrl.loading=false;
+            
             })
             }
             listService.getGames('WII')
@@ -31,6 +32,16 @@
                 ctrl.todos = response.data;
                 console.log(ctrl.todos);
                  ctrl.loading=false;
+                 ctrl.images = [
+                     
+                     "assets/slider/slider2.jpg",
+                     "assets/slider/slider3.jpg",
+                     "assets/slider/slider4.jpg",
+                     "assets/slider/slider5.jpg",
+                     "assets/slider/slider6.jpg"
+                 ];
+
+                 console.log(ctrl.images);
             })
             
             ctrl.getName = function(name){
@@ -40,7 +51,8 @@
                 return name;
                 } 
             }
-            
+
+        
 
      }
     

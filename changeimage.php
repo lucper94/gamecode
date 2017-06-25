@@ -37,7 +37,7 @@ $slider = $_REQUEST['slider'];
  					else{
 						if (is_uploaded_file($_FILES['nombre_archivo']['tmp_name']))
 						{
- 								$nombreDirectorio = "assets/";
+ 								$nombreDirectorio = "assets/slider/";
  								$nombreFichero = $_FILES['nombre_archivo']['name'];
  
 								$nombreCompleto =$nombreDirectorio.$slider.".jpg";
@@ -49,9 +49,11 @@ $slider = $_REQUEST['slider'];
  									}
  
 						move_uploaded_file($_FILES['nombre_archivo']['tmp_name'], $nombreCompleto);
+						echo '<meta http-equiv="refresh" content="0;url=http://localhost/gamecode/edit_games.php">';
  
 						}
+						
  					}
 
- 		
+ 			
 		?>

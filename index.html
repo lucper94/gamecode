@@ -233,18 +233,20 @@
             <li data-target="#carousel" data-slide-to="0" class="active"></li>
             <li data-target="#carousel" data-slide-to="1"></li>
             <li data-target="#carousel" data-slide-to="2"></li>
+						<li data-target="#carousel" data-slide-to="3"></li>
+            <li data-target="#carousel" data-slide-to="4"></li>
+						<li data-target="#carousel" data-slide-to="5"></li>
+            
         </ol>
         <!-- Carousel items -->
         <div class="carousel-inner">
-            <div class="active item game-slider"> 
-                <img src="assets/slider1.jpg" class="img-responsive game-bimage" alt="Logo">
+            <div class="active item game-slider" > 
+                <img src="assets/slider/slider1.jpg" class="img-responsive game-bimage" alt="Logo">
             </div>
-            <div class="item game-slider">
-                <img src="assets/slider2.jpg" class="img-responsive game-bimage" alt="Logo">
+            <div class="item game-slider" ng-repeat="image in vm.images">
+                <img src="{{image}}" class="img-responsive game-bimage" alt="Logo">
             </div>
-            <div class="item game-slider">
-                <img src="assets/slider3.jpg" class="img-responsive game-bimage" alt="Logo">
-            </div>
+
         </div>
         <!-- Carousel nav -->
         <a class="carousel-control left" href="#carousel" data-slide="prev"><img src="assets/left-control.png" width="50px" height="50px" class="game-control"></a>
