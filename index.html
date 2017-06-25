@@ -19,7 +19,7 @@
 <div class="col-md-12 col-xs-12 col-sm-12  game-header navbar-fixed-top" >       
 <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
 
-    <img src="assets/gamerscode-logo.png" class="img-responsive game-logo" alt="Logo">
+    <img src="assets/gamerscode-logo.png" href="index.html" class="img-responsive game-logo" alt="Logo">
     
 </div>
 <img src="assets/open.png" class="img-responsive close-menu" onclick="menu()" alt="Image">
@@ -76,10 +76,10 @@
 		</ul>
 	</li>
 	<li class='drop'>
-		<a href="#">PS3</a>
+		<a href="">PS3</a>
 		<ul>
 			<li class='drop'>
-				<a href="#" ng-click="vm.getPlatform('PS3');">Juegos</a>
+				<a href="games.html" ng-click="vm.getPlatform('PS3');">Juegos</a>
 			</li>
 			<li class='drop'>
 				<a href="#">Consolas y Accesorios</a>
@@ -88,10 +88,10 @@
 		</ul>
 	</li>
 	<li class='drop'>
-		<a href="#">WII</a>
+		<a href="">WII</a>
 		<ul>
 			<li class='drop'>
-				<a href="#wii" ng-click="vm.getPlatform('wii');">Juegos</a>
+				<a href="games.html" ng-click="vm.getPlatform('wii');">Juegos</a>
 		  </li>
 			<li class='drop'>
 				<a href="#">Consolas y Accesorios</a>
@@ -104,7 +104,7 @@
 			<li class='drop'>
 				<a href="#">XBOX</a>
 				<ul>
-					<li class='drop'><a href="#">Juegos</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('xbox','Without_Box')">Juegos</a></li>
 					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
 				</ul>
 			</li>

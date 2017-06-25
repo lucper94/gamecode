@@ -6,9 +6,9 @@
          
          var ctrl = this;
             ctrl.loading=true;
-            ctrl.getPlatform = function(Platform){
+            ctrl.getPlatform = function(Platform,Kind){
                  ctrl.loading=true;
-                 listService.getGames(Platform)
+                 listService.getGames(Platform,Kind)
                     .then(function(response){
                 console.log(response);
                 ctrl.gamesObj = response.data.app_data;

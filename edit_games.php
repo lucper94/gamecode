@@ -1,43 +1,70 @@
 
  <link rel="stylesheet" href="css/bootstrap.min.css">
-<?php
 
 
-$db = new mysqli('hartlink.mysql.guardedhost.com','hartlink_featured','amaJF2j6-3cr','hartlink_featured');
-
-$query = <<<SQL
-
-SELECT * FROM games_titles;
 
 
-SQL;
+<table class ='table table-condensed' width = '90px'>
+<tr class='danger'>;
 
-$result = mysqli_query($db, $query);
+<th width: 5%;>Imagen</th>
+<th width: 5%;>Change Image</th>
+</tr>
 
-echo "<table class ='table table-condensed' width = '90px'>";
-echo "<tr class='danger'> ";
-echo "<th>ID_Producto</th>";
-echo "<th width: 5%;>Nombre</th>";
-echo "<th width: 5%;>Precio de Venta</th>";
-echo "<th width: 5%;>Precio Compra</th>";
-echo "<th width: 5%;>Precio Intercambio</th>";
+	<tr>
+        <td><img width="200" height="100" src="assets/slider1.jpg"></td>
+        <td><form action ="changeimage.php" method="post">
+            <input type="hidden" name="slider" value ="slider1">
+            <input type="submit" value="Cambiar">
+            
+            </form>
+        </td>
+   </tr>
+   <tr>
+        <td><img width="200" height="100" src="assets/slider2.jpg"></td>
+        <td><form action ="changeimage.php" method="post">
+             <input type="hidden" name="slider" value ="slider2">
+            <input type="submit" value="Cambiar">
+           
+            </form>
+        </td>
+   </tr>
+   <tr>
+        <td><img width="200" height="100" src="assets/slider3.jpg"></td>
+        <td><form action ="changeimage.php" method="post">
+            <input type="hidden" name="slider" value ="slider3">
+            <input type="submit" value="Cambiar">
+            
+            </form>
+        </td>
+   </tr>
+   <tr>
+        <td><img width="200" height="100" src="assets/slider4.jpg"></td>
+        <td><form action ="changeimage.php" method="post">
+             <input type="hidden" name="slider" value ="slider4">
+            <input type="submit" value="Cambiar">
+           
+            </form>
+        </td>
+   </tr>
+   <tr>
+        <td><img  width="200" height="100" src="assets/slider5.jpg"></td>
+        <td><form action ="changeimage.php" method="post">
+             <input type="hidden" name="slider" value ="slider5">
+            <input type="submit" value="Cambiar">
+           
+            </form>
+        </td>
+   </tr>
+   <tr>
+        <td><img  width="200" height="100" src="assets/slider6.jpg"></td>
+        <td><form action ="changeimage.php" method="post">
+            <input type="hidden"  name="slider" value ="slider6">
+            <input type="submit" value="Cambiar">
+            
+            </form>
+        </td>
+   </tr>
 
-echo "<th width: 5%;>Editar</th>";
-echo "</tr>";
-while($row = mysqli_fetch_array($result)){
-	echo "<tr>";
-	 echo "<td>".$row['ID_Product']."</td>";
-    echo "<td>".$row['Name']."</td>";
-    echo "<td>".$row['Sale_Price']."</td>";
-    echo "<td>".$row['Purchase_Price']."</td>";
-    echo "<td>".$row['Exchange_Price']."</td>";
-    echo "<td><form action = 'http://beta.cieloytierra.mx/pictures/index.php'  method = 'get'>
-			        
-					<input type = 'hidden' name = 'id' value = '".$row['ID']."'>
-					<input type = 'submit'  name  = 'submit'  value = 'Editar'>
-                                         </form></td>";
-    echo "</tr>";
-}
-echo "</table>";
+</table>
 
-?>
