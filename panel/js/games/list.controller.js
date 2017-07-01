@@ -6,14 +6,14 @@
          
          var ctrl = this;
             ctrl.loading=true;
-            ctrl.getPlatform = function(Platform,Kind){
+            ctrl.getPlatform = function(Kind,Platform,Type){
                  ctrl.loading=true;
-                 listService.getGames(Platform,Kind)
+                 listService.getGames(Kind,Platform,Type)
                     .then(function(response){
                 console.log(response);
                 ctrl.gamesObj = response.data.app_data;
                 ctrl.limit = 25;
-                ctrl.predicate = '-SP';
+                ctrl.predicate = 'Name';
                 ctrl.loading=false;
             
             })
@@ -23,7 +23,7 @@
                 console.log(response);
                 ctrl.gamesObj = response.data.app_data;
                 ctrl.limit = 25;
-                ctrl.predicate = '-SP';
+                ctrl.predicate = '-price_s';
                 ctrl.loading=false;
             })
 
