@@ -9,7 +9,7 @@
             .state('index', {
                 url: '/index',
                 templateUrl: 'panel/templates/game-list.html',
-                // controller: 'listCtrl as vm'
+                controller: 'listCtrl as vm'
             })
 
             .state('detail', {

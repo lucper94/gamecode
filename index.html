@@ -11,6 +11,8 @@
 <link rel="stylesheet" type="text/css" href="dropdowns-skin-discrete.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+<script src="/gamecode/libs/angular-ui-router.min.js"></script>
+
 	 <script src="panel/js/gc.app.js" ></script>
   <script src="panel/js/gc.router.js" ></script>
  <script src="panel/js/games/list.service.js" ></script>
@@ -28,8 +30,7 @@
 </div>
 <img src="assets/open.png" class="img-responsive close-menu" onclick="menu()" alt="Image">
 <div class="dropdowns col-xs-8 col-sm-8 col-md-10 col-lg-10">
-<img src="assets/close.png" class="img-responsive open-menu" onclick="menu()" alt="Image">
-<div class="dropdowns col-xs-8 col-sm-8 col-md-10 col-lg-10">
+
 
 <a class="toggleMenu" href="#">Menu</a>
 <ul class="nav">
@@ -300,7 +301,13 @@
       </div>
     </div>
   </div>
- 
+ <ui-view></ui-view>
+
+<div class="loadscreen" ng-show="vm.loading">
+	<img id="loading" src="assets/gamerscode-logo.png" class=""  >
+  <img id="loadingsvg" src="assets/spin2.svg" />
+</div>
+	
 </body>
 
 <footer >
