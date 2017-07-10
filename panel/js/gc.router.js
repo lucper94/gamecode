@@ -9,11 +9,11 @@
             .state('index', {
                 url: '/index',
                 templateUrl: 'panel/templates/game-list.html',
-                // controller: 'indexCtrl as vm'
+                controller: 'listCtrl as vm'
             })
 
             .state('detail', {
-                url: '/detail/{id}',
+                url: '/detail/:id',
                 templateUrl: 'panel/templates/game-detail.html',
                 controller: 'gameDetail as vm'
             })
