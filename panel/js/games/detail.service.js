@@ -7,7 +7,7 @@
          this.getDetail = function(gameId){
              return $http({
                  method: 'GET',
-                 url: 'http://159.203.210.238/metalgear/api/webpage/singlestock/' + gameId,
+                 url: 'http://localhost/metalgear/api/webpage/singlestock/' + gameId,
                  headers: {'Content-Type':'application/json'}
              }) 
          }

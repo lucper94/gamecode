@@ -5,7 +5,7 @@
         function listService($http){
             this.getGames = function(Kind,Platform,Type){
                
-                var url ="http://159.203.210.238/metalgear/api/webpage/products/" + Kind + "/" + Platform + "/" + Type;
+                var url ="http://localhost/metalgear/api/webpage/products/" + Kind + "/" + Platform + "/" + Type;
                 return $http({
                     method: 'GET',
                     url : url,
