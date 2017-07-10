@@ -2,6 +2,6 @@
 
      'use strict'
 
-     angular.module('games',[])
+     angular.module('games',['ui.router'])
 
  }());
