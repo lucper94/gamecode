@@ -300,6 +300,39 @@
 			<button ng-hide="vm.limit >= vm.gamesObj.length" class=" game-search-btn center-block" ng-click="vm.limit = vm.limit +25">Cargar más</button>
 		</div>
 	<div>-->
+		<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10  col-md-offset-1 col-lg-offset-1" >
+     <div ng-repeat="todo in vm.todos">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 game-front">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-image" >
+        <div  class="game-image-div" >
+         <img src="assets/{{todo.ID_Product}}.jpg"  class="img-responsive vcenter"  alt="Image">
+        </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-text" >
+                <label class="game-name-text"><h4>{{vm.getName(todo.Name)}}</h4></label>
+            </div>
+            <div class="game-table-content" >
+            <table class="table game-table table-hover">
+                    <thead>
+                      <tr>
+                        <th>COMPRA</th>
+                        <th>VENDE</th>
+                        <th>CAMBIA</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>{{todo.compra}}</td>
+                        <td>{{todo.venta}}</td>
+                        <td>{{todo.intercambio}}</td>
+                      </tr>
+                    </tbody>
+              </table>
+              </div>
+
+          </div>
+      </div>
+    </div>
+  </div>
 
 <ui-view></ui-view>
 
