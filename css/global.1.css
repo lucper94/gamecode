@@ -588,11 +588,11 @@ li > a:only-child:after { content: ''; }
     margin-right: 10%;
     text-align: center;
     margin-top: 20px;
-    height: 160px;
+    height: 120px;
     font-size: 20px;
 
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 

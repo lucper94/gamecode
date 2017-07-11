@@ -517,6 +517,11 @@ font-size: 40px;
     text-align: center;
     border: 1px black solid;
 }
+.search-detail-stock{
+    background-color:gray;
+    text-align: center;
+    border: 1px black solid;
+}
 .search-console-xbox label{
     font-size: 14px;
     color: white;
@@ -812,11 +817,11 @@ li > a:only-child:after { content: ''; }
     margin-right: 10%;
     text-align: center;
     margin-top: 20px;
-    height: 160px;
+    height: 90px;
     font-size: 20px;
 
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 

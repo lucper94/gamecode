@@ -10,6 +10,7 @@
             .then(function(response){
                 console.log(response);
                 ctrl.gameDetail = response.data;
+                ctrl.loading=false;
             })
 
      }
