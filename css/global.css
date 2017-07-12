@@ -789,7 +789,7 @@ li > a:only-child:after { content: ''; }
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
-    margin-top: 124px;
+
     margin-bottom: 40px;
 }
 .game-detail-image{
@@ -804,7 +804,7 @@ li > a:only-child:after { content: ''; }
 }
 .game-detail-content{
     background-color: white;
-    border: black 5px solid;
+    border: black 3px solid;
     margin-top: 12px;
     box-shadow: 0 5px 20px 0 rgba(0,0,0,0.9);
     height: 435px;
