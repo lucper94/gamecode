@@ -11,10 +11,15 @@
 <link rel="stylesheet" type="text/css" href="dropdowns-skin-discrete.css">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-	 <script src="/gamecode/libs/angular-ui-router.min.js"></script>
-  <script src="panel/js/gc.app.js" ></script>
+<script src="/gamecode/libs/angular-ui-router.min.js"></script>
+
+	 <script src="panel/js/gc.app.js" ></script>
+  <script src="panel/js/gc.router.js" ></script>
  <script src="panel/js/games/list.service.js" ></script>
  <script src="panel/js/games/list.controller.js" ></script>
+ <script src="panel/js/games/detail.controller.js" ></script>
+ <script src="panel/js/games/detail.service.js" ></script>
+
 </head>
 <header>
 <div class="col-md-12 col-xs-12 col-sm-12  game-header navbar-fixed-top" >       
@@ -25,7 +30,8 @@
 </div>
 <img src="assets/open.png" class="img-responsive close-menu" onclick="menu()" alt="Image">
 <div class="dropdowns col-xs-8 col-sm-8 col-md-10 col-lg-10">
-<img src="assets/close.png" class="img-responsive open-menu" onclick="menu()" alt="Image">
+
+
 <a class="toggleMenu" href="#">Menu</a>
 <ul class="nav">
    <li >
@@ -36,10 +42,10 @@
 		<a href="#">XBOX ONE</a>
 		<ul>
      <li class='drop'>
-				<a href="#" ng-click="vm.getPlatform('xbox one');">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('With_Box','xbox one','False');">Juegos</a>
 		  </li>
 			<li class='drop'>
-				<a href="#">Consola y Accesorios</a>
+				<a href="#" ng-click="vm.getPlatform('Good','xbox one','False');">Consola y Accesorios</a>
 		</li>
 		</ul>
 	</li>
@@ -47,10 +53,10 @@
 		<a href="#">PS4</a>
 		<ul>
 			<li class='drop'>
-				<a href="#" ng-click="vm.getPlatform('PS4');">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('With_Box','ps4','False');">Juegos</a>
 		 </li>
 			<li class='drop'>
-				<a href="#">Consolas y Accesorios</a>
+				<a href="#" ng-click="vm.getPlatform('Good','ps4','False');">Consolas y Accesorios</a>
 			</li>
 		</ul>
 	</li>
@@ -58,10 +64,10 @@
 		<a href="#">WII U</a>
 		<ul>
 			<li class='drop'>
-				<a href="#" ng-click="vm.getPlatform('WIIU');">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('With_Box','WIIU','False');">Juegos</a>
 		  </li>
 			<li class='drop'>
-				<a href="#">Consolas y Accesorios</a>
+				<a href="#" ng-click="vm.getPlatform('Good','WIIU','False');">Consolas y Accesorios</a>
 			</li>
 		</ul>
 	</li>
@@ -69,33 +75,33 @@
 		<a href="#">XBOX 360</a>
 		<ul>
 			<li class='drop'>
-				<a href="#" ng-click = "vm.getPlatform('xbox 360');">Juegos</a>
+				<a href="#" ng-click = "vm.getPlatform('With_Box','xbox 360','False');">Juegos</a>
 			</li>
 			<li class='drop'>
-				<a href="#">Consolas y Accesorios</a>
+				<a href="#" ng-click="vm.getPlatform('Good','xbox 360','False');">Consolas y Accesorios</a>
 			</li>
 		</ul>
 	</li>
 	<li class='drop'>
-		<a href="">PS3</a>
+		<a href="#">PS3</a>
 		<ul>
 			<li class='drop'>
-				<a href="games.html" ng-click="vm.getPlatform('PS3');">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('With_Box','ps3','False');">Juegos</a>
 			</li>
 			<li class='drop'>
-				<a href="#">Consolas y Accesorios</a>
+				<a href="#" ng-click="vm.getPlatform('Good','xbox one','False');">Consolas y Accesorios</a>
 			</li>
 			
 		</ul>
 	</li>
 	<li class='drop'>
-		<a href="">WII</a>
+		<a href="#">WII</a>
 		<ul>
 			<li class='drop'>
-				<a href="games.html" ng-click="vm.getPlatform('wii');">Juegos</a>
+				<a href="#" ng-click="vm.getPlatform('With_Box','wii','False');">Juegos</a>
 		  </li>
 			<li class='drop'>
-				<a href="#">Consolas y Accesorios</a>
+				<a href="#" ng-click="vm.getPlatform('Good','wii','False');">Consolas y Accesorios</a>
 		</li>
 		</ul>
 	</li>
@@ -105,64 +111,64 @@
 			<li class='drop'>
 				<a href="#">XBOX</a>
 				<ul>
-					<li class='drop'><a href="#" ng-click="vm.getPlatform('xbox','Without_Box')">Juegos</a></li>
-					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('With_Box','XBOX','False');">Juegos</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Good','XBOX','False');">Consolas y Accesorios</a></li>
 				</ul>
 			</li>
 			<li class='drop'>
 				<a href="#">PS2</a>
 				<ul>
-					<li class='drop'><a href="#">Juegos</a></li>
-					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('With_Box','PS2','False');">Juegos</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Good','PS2','False');">Consolas y Accesorios</a></li>
 				</ul>
 			</li>
       <li class='drop'>
 				<a href="#">GAME CUBE</a>
 				<ul>
-					<li class='drop'><a href="#">Juegos</a></li>
-					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('With_Box','GAMECUBE','False');">Juegos</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Good','game cube','False');">Consolas y Accesorios</a></li>
 				</ul>
 			</li>
       <li class='drop'>
 				<a href="#">PS1</a>
 				<ul>
-					<li class='drop'><a href="#">Juegos</a></li>
-					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('With_Box','ps1','False');">Juegos</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Good','ps1','False');">Consolas y Accesorios</a></li>
 				</ul>
 			</li>
       <li class='drop'>
 				<a href="#">N64</a>
 				<ul>
-					<li class='drop'><a href="#">Juegos</a></li>
-					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Withput_Box','n64','False');">Juegos</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Good','n64','False');">Consolas y Accesorios</a></li>
 				</ul>
 			</li>
       <li class='drop'>
 				<a href="#">SUPER NES</a>
 				<ul>
-					<li class='drop'><a href="#">Juegos</a></li>
-					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Withput_Box','snes','False');">Juegos</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Good','snes','False');">Consolas y Accesorios</a></li>
 				</ul>
 			</li>
       <li class='drop'>
 				<a href="#">NES</a>
 				<ul>
-					<li class='drop'><a href="#">Juegos</a></li>
-					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Withput_Box','nes','False');">Juegos</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Good','nes','False');">Consolas y Accesorios</a></li>
 				</ul>
 			</li>
       <li class='drop'>
 				<a href="#">GBA</a>
 				<ul>
-					<li class='drop'><a href="#">Juegos</a></li>
-					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Without_Box','gba','False');">Juegos</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Good','gba','False');">Consolas y Accesorios</a></li>
 				</ul>
 			</li>
       <li class='drop'>
 				<a href="#">GBC</a>
 				<ul>
-					<li class='drop'><a href="#">Juegos</a></li>
-					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Without_Box','gbc','False');">Juegos</a></li>
+					<li class='drop'><a href="#" ng-click="vm.getPlatform('Good','gbc','False');">Consolas y Accesorios</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -173,29 +179,29 @@
 			<li class='drop'>
 				<a href="#">GAMECUBE</a>
 				<ul>
-					<li class='drop'><a href="#">Juegos</a></li>
-					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
+					<li class='drop'><a href="#" ng-click ="vm.getPlatform('Good','GAMECUBE','True');">Juegos</a></li>
+				
 				</ul>
 			</li>
 			<li class='drop'>
 				<a href="#">SUPER NES</a>
 				<ul>
-					<li class='drop'><a href="#">Juegos</a></li>
-					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
+					<li class='drop'><a href="#" ng-click ="vm.getPlatform('Good','snes','True');">Juegos</a></li>
+				
 				</ul>
 			</li>
       <li class='drop'>
 				<a href="#">NES</a>
 				<ul>
-					<li class='drop'><a href="#">Juegos</a></li>
-					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
+					<li class='drop'><a href="#" ng-click ="vm.getPlatform('Good','nes','True');">Juegos</a></li>
+				
 				</ul>
 			</li>
       <li class='drop'>
 				<a href="#">N64</a>
 				<ul>
-					<li class='drop'><a href="#">Juegos</a></li>
-					<li class='drop'><a href="#">Consolas y Accesorios</a></li>
+					<li class='drop'><a href="#" ng-click ="vm.getPlatform('Good','n64','True');">Juegos</a></li>
+					
 				</ul>
 			</li>
 		</ul>
@@ -295,7 +301,13 @@
       </div>
     </div>
   </div>
- 
+ <ui-view></ui-view>
+
+<div class="loadscreen" ng-show="vm.loading">
+	<img id="loading" src="assets/gamerscode-logo.png" class=""  >
+  <img id="loadingsvg" src="assets/spin2.svg" />
+</div>
+	
 </body>
 
 <footer >

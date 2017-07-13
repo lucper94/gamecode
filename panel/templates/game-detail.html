@@ -1,11 +1,80 @@
 <br><br><br><br><br>
-<div style="top: 150px;
-    right: 200px;
-    left: 500px;
-    position: absolute;">
-    <h5>{{vm.gameId}}</h5>
-    <h5>{{vm.gameDetail.detail.Name}}</h5>
-    <h5>{{vm.gameDetail.detail.Platform}}</h5>
-    <h5>Aguas:{{vm.gameDetail.ags}}</h5>
-    <h5>Zacs:{{vm.gameDetail.zcs}}</h5>
+
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-detail-front">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-detail-content" >
+        <div  class="col-xs-4 col-sm-4 col-md-4 col-lg-4" >
+         <img src="assets/{{vm.gameId}}.jpg"  class="img-responsive game-detail-image"  alt="Image">
+        </div>
+ 
+              <!--  <p class="game-detail-body">
+                    Grand Theft Auto V (abreviado como GTA V o GTA5) es un videojuego de 
+                    acción-aventura de mundo abierto desarrollado por la compañía británica 
+                    Rockstar North y distribuido por Rockstar Games. Fue lanzado el 17 de 
+                    septiembre de 2013 para las consolas PlayStation 3 y Xbox 360.
+                        Grand Theft Auto V (abreviado como GTA V o GTA5) es un videojuego de 
+                    acción-aventura de mundo abierto desarrollado por la compañía británica 
+                    Rockstar North y distribuido por Rockstar Games. Fue lanzado el 17 de 
+                    septiembre de 2013 para las consolas PlayStation 3 y Xbox 360.
+                </p>-->
+                
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                    
+                
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">
+                    <label class="game-detail-title ">{{vm.gameDetail.detail.Name}}</label>
+                    <br><br> 
+                </div>
+                
+
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 search-console-xbox">
+                    <label>{{vm.gameDetail.detail.Platform}}</label>
+                </div>
+                <div class="game-table-content" >
+                <table class="table game-table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>COMPRA</th>
+                                        <th>VENDE</th>
+                                        <th>CAMBIA</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>$125</td>
+                                        <td>$150</td>
+                                        <td>$50</td>
+                                    </tr>
+                                </tbody>
+                    </table>
+                    <br>
+                    <table class="table game-table table-hover" style="border:gray">
+                                <thead >
+
+                                  <th  colspan="4"  style="background-color:darkred; font-size:13px; ">
+                                      En stock
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr >
+                                        <th >Aguascalientes</th>
+                                        <th >Zacatecas</th>
+                                        <th >Leon</th>
+                                        <th >Leon fundadores</th>
+                                    </tr>
+                                    <tr>
+                                        <td>{{vm.gameDetail.ags}}</td>
+                                        <td>{{vm.gameDetail.zcs}}</td>
+                                        <td>{{vm.gameDetail.ags}}</td>
+                                        <td>{{vm.gameDetail.zcs}}</td>
+                                    </tr>
+                                </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+      </div>
 </div>

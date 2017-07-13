@@ -517,6 +517,11 @@ font-size: 40px;
     text-align: center;
     border: 1px black solid;
 }
+.search-detail-stock{
+    background-color:gray;
+    text-align: center;
+    border: 1px black solid;
+}
 .search-console-xbox label{
     font-size: 14px;
     color: white;
@@ -784,7 +789,7 @@ li > a:only-child:after { content: ''; }
     margin-left: 10%;
     margin-right: 10%;
     width: 80%;
-    margin-top: 124px;
+
     margin-bottom: 40px;
 }
 .game-detail-image{
@@ -799,7 +804,7 @@ li > a:only-child:after { content: ''; }
 }
 .game-detail-content{
     background-color: white;
-    border: black 5px solid;
+    border: black 3px solid;
     margin-top: 12px;
     box-shadow: 0 5px 20px 0 rgba(0,0,0,0.9);
     height: 435px;
@@ -812,11 +817,11 @@ li > a:only-child:after { content: ''; }
     margin-right: 10%;
     text-align: center;
     margin-top: 20px;
-    height: 160px;
+    height: 90px;
     font-size: 20px;
 
   display: -webkit-box;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 
