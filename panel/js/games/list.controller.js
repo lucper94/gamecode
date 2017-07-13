@@ -18,14 +18,7 @@
             
             })
             }
-            listService.getGames('WII')
-            .then(function(response){
-                console.log(response);
-                ctrl.gamesObj = response.data.app_data;
-                ctrl.limit = 25;
-                ctrl.predicate = '-price_s';
-                ctrl.loading=false;
-            })
+           
 
             listService.getGamesHome()
                 .then(function(response){
