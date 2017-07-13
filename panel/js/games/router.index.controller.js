@@ -6,7 +6,7 @@
 
          var ctrl = this;
             ctrl.loading=true;
-            ctrl.getPlatform2 = function(Kind,Platform,Type){
+            ctrl.getPlatform = function(Kind,Platform,Type){
                  ctrl.loading=true;
                  listService.getGames(Kind,Platform,Type)
                     .then(function(response){
@@ -19,7 +19,7 @@
             })
             }
 
-            ctrl.getPlatform2($stateParams.kind,$stateParams.platform,$stateParams.classic);
+            ctrl.getPlatform($stateParams.kind,$stateParams.platform,$stateParams.classic);
 
         console.log($stateParams);
 
