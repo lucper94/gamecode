@@ -7,9 +7,9 @@
          $stateProvider
          
             .state('index', {
-                url: '/index',
+                url: '/index/{kind}/{platform}/{classic}',
                 templateUrl: 'panel/templates/game-list.html',
-                //controller: 'listCtrl as vm'
+                controller: 'indexCtrl as vm'
             })
 
             .state('detail', {

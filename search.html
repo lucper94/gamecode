@@ -10,13 +10,14 @@
 <link rel="stylesheet" type="text/css" href="dropdowns.css">
 <link rel="stylesheet" type="text/css" href="dropdowns-skin-discrete.css">
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
+ <script src="/gamecode/libs/angular.min.js"></script>
  <script src="/gamecode/libs/angular-ui-router.min.js"></script>
 
   <script src="panel/js/gc.app.js" ></script>
   <script src="panel/js/gc.router.js" ></script>
  <script src="panel/js/games/list.service.js" ></script>
  <script src="panel/js/games/list.controller.js" ></script>
+ <script src="panel/js/games/router.index.controller.js" ></script>
  <script src="panel/js/games/detail.controller.js" ></script>
  <script src="panel/js/games/detail.service.js" ></script>
 </head>
@@ -40,10 +41,10 @@
 		<a href="#">XBOX ONE</a>
 		<ul>
      <li class='drop'>
-				<a href="#" ng-click="vm.getPlatform('With_Box','xbox one','False');">Juegos</a>
+				<a ui-sref="index({kind:'With_Box',platform:'Xbox One',classic:'False'})">Juegos</a>
 		  </li>
 			<li class='drop'>
-				<a href="#" ng-click="vm.getPlatform('Good','xbox one','False');">Consola y Accesorios</a>
+				 <a ui-sref="index({kind:'Good',platform:'Xbox One',classic:'False'})")>Consola y Accesorios</a> 
 		</li>
 		</ul>
 	</li>
