@@ -19,13 +19,23 @@
             // })
             // }
            
+        ctrl.resize_header = function(){
+            var header= $('.game-header').height()+20;
+            console.log(header);
+            $('.game-banner').css('margin-top',header);
+            $('.filters').css('margin-top',header);
+            console.log('entro');
+        }
+        $(window).resize(function(){
+            ctrl.resize_header();
+        });
 
             listService.getGamesHome()
                 .then(function(response){
                 ctrl.loading = false;
                 ctrl.todos = response.data;
                 console.log(ctrl.todos);
-                 
+                 ctrl.resize_header();
                  ctrl.images = [
                      
                      "assets/slider/slider2.jpg",
@@ -38,6 +48,7 @@
                  console.log(ctrl.images);
                  ctrl.loading = false;
                  console.log(ctrl.loading);
+                
             })
             
             ctrl.getName = function(name){
@@ -47,7 +58,10 @@
                 return name;
                 } 
             }
-
+         angular.element(document).ready(function () {
+            ctrl.resize_header();
+            
+         });
         
 
      }

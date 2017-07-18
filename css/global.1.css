@@ -47,6 +47,7 @@ background-size: cover;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 5px;
+    z-index: 1;
  
 }
 
@@ -125,14 +126,15 @@ font-size: 8px;
 .filters
 {
     color: white;
-    background-color:black;
     position:fixed;
     margin-top: 1%;
+ 
     z-index: 1;
 
 }
 .filters p
 {
+background-color:black;
 border: white 1px solid;
 }
 
@@ -191,15 +193,6 @@ border: white 1px solid;
     }
 
 
-
-    .filters
-    {
-        color: white;
-        background-color:darkred;
-        position:fixed;
-        margin-top: 38%;
-        z-index: 1;
-    }
     body{
     margin-top: 256px;
     background-color: transparent;
@@ -512,7 +505,7 @@ nav ul li ul li:hover { background: #000000; }
 
 /* Background color change on Hover */
 nav a:hover { 
-	background-color: #000000; 
+	background-color: darkred; 
 }
 
 /* Hide Dropdowns by Default
@@ -561,7 +554,7 @@ li > a:only-child:after { content: ''; }
     margin-right: 10%;
     width: 80%;
     margin-top: 124px;
-    margin-bottom: 40px;
+    margin-bottom: 90px;
 }
 .game-detail-image{
     margin-top: 30px;
@@ -578,7 +571,8 @@ li > a:only-child:after { content: ''; }
     border: black 5px solid;
     margin-top: 12px;
     box-shadow: 0 5px 20px 0 rgba(0,0,0,0.9);
-    height: 435px;
+    height: auto;
+    padding-bottom: 20px;
 
 
 }
@@ -702,7 +696,7 @@ nav{position:relative;width:980px;margin:0 auto;}
 #cssmenu,#cssmenu ul,#cssmenu ul li,#cssmenu ul li a,#cssmenu #head-mobile{border:0;list-style:none;line-height:1;display:block;position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 #cssmenu:after,#cssmenu > ul:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
 #cssmenu #head-mobile{display:none}
-#cssmenu{font-family:sans-serif;background-color:rgba(0,0,0,0.9)}
+#cssmenu{font-family:sans-serif;background-color:rgba(0,0,0,0.9);margin-left: 30px;}
 #cssmenu > ul > li{float:left;background-color: rgba(0,0,0,0.9);}
 #cssmenu > ul > li > a{padding:17px;font-size:16px;letter-spacing:1px;text-decoration:none;color:#ddd;font-weight:700;}
 #cssmenu > ul > li:hover > a,#cssmenu ul li.active a{color:#fff}
@@ -802,4 +796,30 @@ nav{width:100%;}
 svg path,
 svg rect{
   fill: #FF6700;
+}
+.game-search-btn{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: darkred;
+    color: white;
+    border: 3px solid black;
+    padding-bottom: 3px; 
+    padding-top: 3px;
+    padding-left: 12px; 
+    padding-right: 12px; 
+    border-radius: 3px;
+}
+
+.game-search-btn:hover{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    border: 3px solid darkred;
+    padding: 3px; 
+    padding-bottom: 3px; 
+    padding-top: 3px;
+    padding-left: 12px; 
+    padding-right: 12px; 
+    border-radius: 3px;
 }

@@ -1,5 +1,14 @@
+<div class="row col-md-2  filters"  id="game-filters">   
+       <p data-orderby="price" class="filter-button">Precio Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+       <p data-orderby="price" class="filterDesc-button">Precio Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+       <p data-orderby="platform" class="filter-button subfilter-button">Consola <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+       <p data-orderby="name" class="filter-button">Titulo <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+                         
+</div>
 
-   <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2" ng-repeat="game in vm.gamesObj | limitTo: vm.limit | orderBy:vm.predicate:reverse">
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-banner">
+  
+   <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 " ng-repeat="game in vm.gamesObj | limitTo: vm.limit | orderBy:vm.predicate:reverse">
     
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " >
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 search-front" >
@@ -57,4 +66,4 @@
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<button ng-hide="vm.limit >= vm.gamesObj.length" class=" game-search-btn center-block" ng-click="vm.limit = vm.limit +25">Cargar más</button>
 		</div>
-	<div>
+</div>
