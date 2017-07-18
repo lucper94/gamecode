@@ -22,9 +22,10 @@
 
             listService.getGamesHome()
                 .then(function(response){
+                ctrl.loading = false;
                 ctrl.todos = response.data;
                 console.log(ctrl.todos);
-                 ctrl.loading=false;
+                 
                  ctrl.images = [
                      
                      "assets/slider/slider2.jpg",
@@ -35,6 +36,8 @@
                  ];
 
                  console.log(ctrl.images);
+                 ctrl.loading = false;
+                 console.log(ctrl.loading);
             })
             
             ctrl.getName = function(name){
