@@ -8,6 +8,7 @@
          ctrl.gameId = $stateParams.id;
          angular.element(document).ready(function () {
             ctrl.resize_header();
+            $( ".game-footer" ).addClass( "footer-detail" );
          });
          detailService.getDetail(ctrl.gameId)
             .then(function(response){

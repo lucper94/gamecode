@@ -618,7 +618,11 @@ li > a:only-child:after { content: ''; }
 }
 
 @media only screen and (max-width: 500px) {
-
+.search-image{
+    border: black 3px solid;
+    max-height: 195px;
+    margin-bottom: 5px;
+}
     .game-index-container{
     margin-top:40px;
     min-height: 529px;
@@ -830,4 +834,16 @@ svg rect{
 
 #modalHead{
     text-align: center;
+}
+
+.menu-main-label{
+    color: white;
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+.footer-detail {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
