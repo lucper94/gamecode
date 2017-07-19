@@ -225,9 +225,9 @@
  </div>
   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-6 col-lg-6 col-lg-offset-6 game-header-info">
 
-        <label class="  ">Sobre Gamer's Code</label>
-        <label class=" ">Sucursales</label>
-        <label class=" ">Contacto</label>
+        <label class="  " data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(1)">Sobre Gamer's Code</label>
+        <label class=" " data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(2)">Sucursales</label>
+        <label class=" " data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(3)">Contacto</label>
 
 
  </div>
@@ -303,6 +303,7 @@
 	<img id="loading" src="assets/gamerscode-logo.png" class=""  >
   <img id="loadingsvg" src="assets/spin2.svg" />
 </div>
+
 </body>
 
 <footer >
@@ -321,6 +322,7 @@
 
 
 </footer>
+
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="js/dropdowns.js"></script>
 <script>
@@ -402,5 +404,23 @@ $("#cssmenu").menumaker({
 
 
 </script>
+<!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title" id="modalHead"><b>{{vm.modalHead}}</b></h3>
+        </div>
+        <div class="modal-body" id="modalBody">
 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+      
+    </div>
 </html>

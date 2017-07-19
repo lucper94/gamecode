@@ -8,16 +8,16 @@
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-banner">
   
-   <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 " ng-repeat="game in vm.gamesObj | limitTo: vm.limit | orderBy:vm.predicate:reverse">
+   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 " ng-repeat="game in vm.gamesObj | limitTo: vm.limit | orderBy:vm.predicate:reverse">
     
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " >
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 search-front" >
         
-        <div class="col-xs-4 col-sm-4 col-md-3 col-lg-3">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
           <img src="assets/{{game.ID_Info}}.jpg" class="img-responsive search-image" alt="Image">
         </div>
         
-        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
 					  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 search-console-xbox">
                 <label>{{game.Platform}}</label>
             </div>
@@ -52,10 +52,10 @@
                     </div>  
                 </div> 
 
-              <div class="search-action col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
+              <div class="search-action col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
                   <label class="search-action-label ">En stock</label>
               </div>
-              <div class="search-precios search-stock-label col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
+              <div class="search-precios search-stock-label col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xs-offset-4 col-sm-offset-4 col-md-offset-4 col-lg-offset-4">
                   <label class=" ">{{game.Quantity}}</label>
               </div> 
         </div>

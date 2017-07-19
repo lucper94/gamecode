@@ -13,7 +13,7 @@ background: #fff;
 background-size: cover;
 }
 .game-header{
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 1);
     padding-bottom: 10px;
     border-bottom: 4px solid red;
 
@@ -822,4 +822,12 @@ svg rect{
     padding-left: 12px; 
     padding-right: 12px; 
     border-radius: 3px;
+}
+
+#modalBody{
+    font-size: 18px;
+}
+
+#modalHead{
+    text-align: center;
 }
