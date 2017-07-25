@@ -595,7 +595,7 @@ li > a:only-child:after { content: ''; }
 }
 
 .game-index-container{
-    margin-top:40px;
+    margin-top:8px;
     min-height: 529px;
     max-height: 529px;
 }
@@ -605,14 +605,13 @@ li > a:only-child:after { content: ''; }
 .game-index-image{
     height:auto; width:auto;
 
-     min-height: 418.5px;
-    max-height: 418.5px;
+     min-height: 360px;
+    max-height: 360px;
 }
 .game-index-front{
     background-color: white;
     border: black 5px solid;
 
-    margin-top: -22px;
     box-shadow: 0 5px 20px 0 rgba(0,0,0,0.9);
    
 }
@@ -623,8 +622,8 @@ li > a:only-child:after { content: ''; }
     max-height: 195px;
     margin-bottom: 5px;
 }
-    .game-index-container{
-    margin-top:40px;
+.game-index-container{
+    margin-top:10px;
     min-height: 529px;
     max-height: 529px;
 }
@@ -641,7 +640,6 @@ li > a:only-child:after { content: ''; }
     background-color: white;
     border: black 5px solid;
 
-    margin-top: -22px;
     box-shadow: 0 5px 20px 0 rgba(0,0,0,0.9);
    
 }
