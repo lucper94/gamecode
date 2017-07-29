@@ -46,28 +46,7 @@
                                 </tbody>
                     </table>
                     <br>
-                    <table class="table game-table table-hover" style="border:gray">
-                                <thead >
-
-                                  <th  colspan="4"  style="background-color:darkred; font-size:13px; ">
-                                      En stock
-                                    </th>
-                                </thead>
-                                <tbody>
-                                    <tr >
-                                        <th >Aguascalientes</th>
-                                        <th >Zacatecas</th>
-                                        <th >Leon</th>
-                                        <th >Leon fundadores</th>
-                                    </tr>
-                                    <tr>
-                                        <td>{{vm.gameDetail.ags}}</td>
-                                        <td>{{vm.gameDetail.zcs}}</td>
-                                        <td>{{vm.gameDetail.ags}}</td>
-                                        <td>{{vm.gameDetail.zcs}}</td>
-                                    </tr>
-                                </tbody>
-                    </table>
+                    <button class=" game-search-btn center-block" style="width:200px;"  data-toggle="modal" data-target="#myStock" >Ver stock</button>
                     </div>
                 </div>
             </div>
@@ -76,3 +55,44 @@
 
       </div>
 </div>
+
+<!-- Modal Stock -->
+  <div class="modal fade" id="myStock" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        </div>
+        <div class="modal-body" >
+             <table class="table game-table table-hover" style="border:gray">
+                <thead >
+
+                    <th  colspan="4"  style="background-color:darkred; font-size:13px; ">
+                        En stock
+                    </th>
+                </thead>
+                <tbody>
+                    <tr >
+                        <th >Aguascalientes</th>
+                        <th >Zacatecas</th>
+                        <th >Leon</th>
+                        <th >Leon fundadores</th>
+                    </tr>
+                    <tr>
+                        <td>{{vm.gameDetail.ags}}</td>
+                        <td>{{vm.gameDetail.zcs}}</td>
+                        <td>{{vm.gameDetail.ags}}</td>
+                        <td>{{vm.gameDetail.zcs}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+      
+    </div>
