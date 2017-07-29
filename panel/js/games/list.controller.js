@@ -34,7 +34,7 @@
 							
              console.log('hi');
              ctrl.searchGames = function(val) {
-    return $http.get('http://localhost/metalgear/api/webpage/search/' + val)
+    return $http.get('http://159.203.210.238/metalgear/api/webpage/search/' + val)
         .then(function(response){
         console.log(response);
             ctrl.ids = response.data.ID;
