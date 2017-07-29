@@ -2,6 +2,6 @@
 
      'use strict'
 
-     angular.module('games',['ui.router'])
+     angular.module('games',['ui.router','ngAnimate', 'ngSanitize', 'ui.bootstrap'])
 
  }());

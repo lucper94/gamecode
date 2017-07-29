@@ -2,24 +2,50 @@
 
      'use strict'
 
-     function listCtrl($http,listService){
+     function listCtrl($http,listService,limitToFilter){
          
          var ctrl = this;
-            ctrl.loading=true;
+            ctrl.loading=true; 
             ctrl.modalHead = "";
             ctrl.modalBody = "";
-            // ctrl.getPlatform = function(Kind,Platform,Type){
-            //      ctrl.loading=true;
-            //      listService.getGames(Kind,Platform,Type)
-            //         .then(function(response){
-            //     console.log(response);
-            //     ctrl.gamesObj = response.data.app_data;
-            //     ctrl.limit = 25;
-            //     ctrl.predicate = 'Name';
-            //     ctrl.loading=false;
+            ctrl.getPlatform = function(Kind,Platform,Type){
+                 ctrl.loading=true;
+                 listService.getGames(Kind,Platform,Type)
+                    .then(function(response){
+                console.log(response);
+                ctrl.gamesObj = response.data.app_data;
+                ctrl.limit = 25;
+                ctrl.predicate = 'Name';
+                ctrl.loading=false;
             
-            // })
-            // }
+            })
+            }
+
+    
+
+             ctrl.hola = function (){ 
+
+                console.log(ctrl.names);
+                console.log(ctrl.names.indexOf(ctrl.asyncSelected));
+                var selectedGame = ctrl.names.indexOf(ctrl.asyncSelected);
+                console.log(ctrl.ids[selectedGame]);
+                location.href='search.html#!/detail/' + ctrl.ids[selectedGame];
+								};
+							
+             console.log('hi');
+             ctrl.searchGames = function(val) {
+    return $http.get('http://localhost/metalgear/api/webpage/search/' + val)
+        .then(function(response){
+        console.log(response);
+            ctrl.ids = response.data.ID;
+            ctrl.names = response.data.Names;
+            return limitToFilter(response.data.Names, 7);
+
+    });
+  };
+   
+
+
            
         ctrl.resize_header = function(){
             var header= $('.game-header').height()+10;
