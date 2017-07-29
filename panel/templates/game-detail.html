@@ -76,16 +76,16 @@
                 </thead>
                 <tbody>
                     <tr >
-                        <th >Aguascalientes</th>
-                        <th >Zacatecas</th>
-                        <th >Leon</th>
-                        <th >Leon fundadores</th>
+                        <th ng-hide= "vm.gameDetail.ags == 0" >Aguascalientes</th>
+                        <th ng-hide= "vm.gameDetail.zcs == 0">Zacatecas</th>
+                        <th ng-hide= "vm.gameDetail.len == 0">Leon</th>
+                        <th ng-hide= "vm.gameDetail.fun == 0">Leon fundadores</th>
                     </tr>
                     <tr>
-                        <td>{{vm.gameDetail.ags}}</td>
-                        <td>{{vm.gameDetail.zcs}}</td>
-                        <td>{{vm.gameDetail.ags}}</td>
-                        <td>{{vm.gameDetail.zcs}}</td>
+                        <td ng-hide= "vm.gameDetail.ags == 0">En Stock</td>
+                        <td ng-hide= "vm.gameDetail.zcs == 0">En Stock</td>
+                        <td ng-hide= "vm.gameDetail.len == 0">En Stock</td>
+                        <td ng-hide ="vm.gameDetail.fun == 0">En Stock</td>
                     </tr>
                 </tbody>
             </table>
