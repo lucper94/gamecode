@@ -294,10 +294,110 @@ font-size: 16px;
     text-align: center;
     border: 1px black solid;
 }
+.search-console-N64{
+    background-color: #107c10;
+    text-align: center;
+    border: 1px black solid;
+}
+.search-console-PS4{
+    background-color:#003a80;
+    text-align: center;
+    border: 1px black solid;
+}
+.search-console-PS3{
+    background-color:#003a80;
+    text-align: center;
+    border: 1px black solid;
+}
+.search-console-PS2{
+    background-color:#003a80;
+    text-align: center;
+    border: 1px black solid;
+}
+.search-console-PS1{
+    background-color:#003a80;
+    text-align: center;
+    border: 1px black solid;
+}
+
+.search-console-WIIU{
+    background-color:#0096c8;
+    text-align: center;
+    border: 1px black solid;
+}
+.search-console-SNES{
+    background-color:#3c8d88;
+    text-align: center;
+    border: 1px black solid;
+}
+.search-console-NES{
+    background-color:#3c8d88;
+    text-align: center;
+    border: 1px black solid;
+}
+.search-console-GBA{
+    background-color:#551A8B;
+    text-align: center;
+    border: 1px black solid;
+}
+.search-console-GBC{
+    background-color:#FF0000;
+    text-align: center;
+    border: 1px black solid;
+}
+
 .search-console-xbox label{
     font-size: 14px;
     color: white;
 
+}
+.search-console-SNES label{
+    font-size: 14px;
+    color: white;
+
+}
+.search-console-NES label{
+    font-size: 14px;
+    color: white;
+
+}
+.search-console-N64 label{
+    font-size: 14px;
+    color: white;
+
+}
+.search-console-PS4 label{
+    font-size: 14px;
+    color: white;
+
+}
+.search-console-PS3 label{
+    font-size: 14px;
+    color: white;
+
+}
+.search-console-PS2 label{
+    font-size: 14px;
+    color: white;
+
+}
+.search-console-PS1 label{
+    font-size: 14px;
+    color: white;
+
+}
+.search-console-WIIU label{
+    font-size: 14px;
+    color: white;
+
+}
+.search-console-GBA label{
+    font-size: 14px;
+    color: white;
+}
+.search-console-GBC label{
+    font-size: 14px;
+    color: white;
 }
 .search-image{
     border: black 3px solid;
