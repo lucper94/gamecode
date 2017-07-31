@@ -76,16 +76,19 @@
                 </thead>
                 <tbody>
                     <tr >
-                        <th ng-hide= "vm.gameDetail.ags == 0" >Aguascalientes</th>
-                        <th ng-hide= "vm.gameDetail.zcs == 0">Zacatecas</th>
-                        <th ng-hide= "vm.gameDetail.len == 0">Leon</th>
-                        <th ng-hide= "vm.gameDetail.fun == 0">Leon fundadores</th>
+                        <th ng-hide= "vm.gameDetail.ags == 'Sin Stock'" >Aguascalientes</th>
+                        <th ng-hide= "vm.gameDetail.ags ==  'Sin Stock'" >Aguascalientes Sur</th>
+                        <th ng-hide= "vm.gameDetail.zcs ==  'Sin Stock'">Zacatecas</th>
+                        <th ng-hide= "vm.gameDetail.len ==  'Sin Stock'">Leon</th>
+                        <th ng-hide= "vm.gameDetail.fun ==  'Sin Stock'">Leon fundadores</th>
                     </tr>
                     <tr>
-                        <td ng-hide= "vm.gameDetail.ags == 0">En Stock</td>
-                        <td ng-hide= "vm.gameDetail.zcs == 0">En Stock</td>
-                        <td ng-hide= "vm.gameDetail.len == 0">En Stock</td>
-                        <td ng-hide ="vm.gameDetail.fun == 0">En Stock</td>
+                        <td ng-hide= "vm.gameDetail.ags ==  'Sin Stock'">En Stock</td>
+                        <td ng-hide= "vm.gameDetail.ags_south ==  'Sin Stock'">En Stock</td>
+                        <td ng-hide= "vm.gameDetail.zcs ==  'Sin Stock'">En Stock</td>
+                        <td ng-hide= "vm.gameDetail.len ==  'Sin Stock'">En Stock</td>
+                        <td ng-hide ="vm.gameDetail.fun ==  'Sin Stock'">En Stock</td>
+
                     </tr>
                 </tbody>
             </table>
