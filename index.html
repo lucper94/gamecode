@@ -225,102 +225,23 @@
 </body>
 
 <script type="text/javascript" src="libs/bootstrap/dropdowns.js"></script>
-<script>
-	$(".dropdowns").dropdowns();
+<script type="text/javascript" src="js/index/dropdown.options.js"></script>
 
-	$(document).ready(function () {
-		resize_header();
-	})
-$(window).resize(function(){
-	resize_header();
-});
-
-function resize_header(){
-	var header= $('.game-header').height()+10;
-	// console.log(header);
-	$('.game-banner').css('margin-top',header);
-}
-
-
-(function($) {
-$.fn.menumaker = function(options) {  
- var cssmenu = $(this), settings = $.extend({
-   format: "dropdown",
-   sticky: false
- }, options);
- return this.each(function() {
-   $(this).find(".button").on('click', function(){
-     $(this).toggleClass('menu-opened');
-     var mainmenu = $(this).next('ul');
-     if (mainmenu.hasClass('open')) { 
-       mainmenu.slideToggle().removeClass('open');
-     }
-     else {
-       mainmenu.slideToggle().addClass('open');
-       if (settings.format === "dropdown") {
-         mainmenu.find('ul').show();
-       }
-     }
-   });
-   cssmenu.find('li ul').parent().addClass('has-sub');
-multiTg = function() {
-     cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
-     cssmenu.find('.submenu-button').on('click', function() {
-       $(this).toggleClass('submenu-opened');
-       if ($(this).siblings('ul').hasClass('open')) {
-         $(this).siblings('ul').removeClass('open').slideToggle();
-       }
-       else {
-         $(this).siblings('ul').addClass('open').slideToggle();
-       }
-     });
-   };
-   if (settings.format === 'multitoggle') multiTg();
-   else cssmenu.addClass('dropdown');
-   if (settings.sticky === true) cssmenu.css('position', 'fixed');
-resizeFix = function() {
-  var mediasize = 1000;
-     if ($( window ).width() > mediasize) {
-       cssmenu.find('ul').show();
-     }
-     if ($(window).width() <= mediasize) {
-       cssmenu.find('ul').hide().removeClass('open');
-     }
-   };
-   resizeFix();
-   return $(window).on('resize', resizeFix);
- });
-  };
-})(jQuery);
-
-(function($){
-$(document).ready(function(){
-$("#cssmenu").menumaker({
-   format: "multitoggle"
-});
-});
-})(jQuery);
-
-
-
-</script>
 <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h3 class="modal-title" id="modalHead"><b>{{vm.modalHead}}</b></h3>
-        </div>
-        <div class="modal-body" id="modalBody">
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-        </div>
-      </div>
-      
-    </div>
+<div class="modal fade" id="myModal" role="dialog">
+	<div class="modal-dialog">
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h3 class="modal-title" id="modalHead"><b>{{vm.modalHead}}</b></h3>
+			</div>
+			<div class="modal-body" id="modalBody"></div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+		
 </html>
