@@ -2,14 +2,14 @@
 
      'use strict'
 
-     function indexCtrl($http,listService,limitToFilter){
+     function indexCtrl($http,listingService,limitToFilter){
           var ctrl = this;
             ctrl.loading=true; 
             ctrl.modalHead = "";
             ctrl.modalBody = "";
             ctrl.getPlatform = function(Kind,Platform,Type){
                  ctrl.loading=true;
-                 listService.getGames(Kind,Platform,Type)
+                 listingService.getGames(Kind,Platform,Type)
                     .then(function(response){
                 // console.log(response);
                 ctrl.gamesObj = response.data.app_data;
@@ -32,7 +32,7 @@
             ctrl.resize_header();
         });
 
-            listService.getGamesHome()
+            listingService.getGamesHome()
                 .then(function(response){
                 ctrl.loading = false;
                 ctrl.todos = response.data;

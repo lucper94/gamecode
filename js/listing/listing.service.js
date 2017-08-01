@@ -2,7 +2,7 @@
 
      'use strict'
 
-        function listService($http){
+        function listingService($http){
             this.getGames = function(Kind,Platform,Type){
                
                 var url ="http://159.203.210.238/metalgear/api/webpage/products/" + Kind + "/" + Platform + "/" + Type;
@@ -25,6 +25,6 @@
         }
         angular
             .module('gcapp')
-            .service('listService',listService);
+            .service('listingService',listingService);
        
  }());

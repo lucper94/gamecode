@@ -2,13 +2,13 @@
 
      'use strict'
 
-     function listingCtrl($http,listService,limitToFilter,$stateParams){
+     function listingCtrl($http,listingService,limitToFilter,$stateParams){
           var ctrl = this;  
           console.log($stateParams);
 
             // ctrl.getPlatform = function(Kind,Platform,Type){
                  ctrl.loading=true;
-                 listService.getGames($stateParams.kind,$stateParams.platform,$stateParams.classic)
+                 listingService.getGames($stateParams.kind,$stateParams.platform,$stateParams.classic)
                     .then(function(response){
                 // console.log(response);
                 ctrl.gamesObj = response.data.app_data;
@@ -31,7 +31,7 @@
             ctrl.resize_header();
         });
 
-            listService.getGamesHome()
+            listingService.getGamesHome()
                 .then(function(response){
                 ctrl.loading = false;
                 ctrl.todos = response.data;

@@ -9,20 +9,19 @@
             .state('index', {
                 url: '/index',
                 templateUrl: 'templates/index.html',
-                // params: {kind: null, platform: null, classic:null},
                 controller: 'indexCtrl as vm'
             })
 
             .state('listing', {
                 url: '/listing',
-                templateUrl: 'panel/templates/game-list.html',
+                templateUrl: 'templates/game-list.html',
                 params: {kind: null, platform: null, classic:null},
                 controller: 'listingCtrl as vm'
             })
 
             .state('detail', {
                 url: '/detail',
-                templateUrl: 'panel/templates/game-detail.html',
+                templateUrl: 'templates/game-detail.html',
                 params : { id: null, },
                 controller: 'gameDetail as vm'
             })
