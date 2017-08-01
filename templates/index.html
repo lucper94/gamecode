@@ -8,13 +8,13 @@
         <!-- Carousel items -->
         <div class="carousel-inner">
             <div class="active item game-slider"> 
-                <img src="assets/slider1.jpg" class="img-responsive game-bimage" alt="Logo">
+                <img src="img/slider/slider1.jpg" class="img-responsive game-bimage" alt="Logo">
             </div>
             <div class="item game-slider">
-                <img src="assets/slider2.jpg" class="img-responsive game-bimage" alt="Logo">
+                <img src="img/slider/slider2.jpg" class="img-responsive game-bimage" alt="Logo">
             </div>
             <div class="item game-slider">
-                <img src="assets/slider3.jpg" class="img-responsive game-bimage" alt="Logo">
+                <img src="img/slider/slider3.jpg" class="img-responsive game-bimage" alt="Logo">
             </div>
         </div>
         <!-- Carousel nav -->
@@ -29,7 +29,7 @@
     <div ng-repeat="todo in vm.todos" repeat-done="foo()" class="col-xs-12 col-sm-6 col-md-6 col-lg-4 game-index-container" >
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-index-front"  >
         <div  class=" game-index-imgcontainer"   >
-          <img ng-src="assets/{{todo.ID_Product}}.jpg" onerror="this.src='http://cdn.2020prosoftware.com/installations/common/img/image-not-found.png'"  class="img-responsive game-index-image center-block"    alt="Image"> 
+          <img ng-src="img/products/{{todo.ID_Product}}.jpg" onerror="this.src='http://cdn.2020prosoftware.com/installations/common/img/image-not-found.png'"  class="img-responsive game-index-image center-block"    alt="Image"> 
         </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" >
                 <label class=""><h4>{{vm.getName(todo.Name)}}</h4></label>
