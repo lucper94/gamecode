@@ -64,7 +64,10 @@
     </div>
 
 	</div>
-
+<div class="loadscreen" ng-show="vm.loading">
+	<img id="loading" src="../img/resources/gamerscode-logo.png" class=""  >
+  <img id="loadingsvg" src="../img/resources/assets/spin2.svg" />
+</div>
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<button ng-hide="vm.limit >= vm.gamesObj.length" class=" game-search-btn center-block" ng-click="vm.limit = vm.limit +25">Cargar más</button>
 		</div>
