@@ -15,7 +15,7 @@
      }
 
      angular
-        .module('games')
+        .module('gcapp')
         .service('detailService', detailService);
 
  }());

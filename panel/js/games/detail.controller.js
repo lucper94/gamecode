@@ -30,7 +30,7 @@
      }
 
      angular
-        .module('games')
+        .module('gcapp')
         .controller('gameDetail', gameDetail);
 
  }());

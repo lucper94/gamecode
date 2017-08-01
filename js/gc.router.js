@@ -7,10 +7,17 @@
          $stateProvider
          
             .state('index', {
-                url: '/index/{kind}/{platform}/{classic}',
-                templateUrl: 'panel/templates/game-list.html',
+                url: '/index',
+                templateUrl: 'templates/index.html',
                 // params: {kind: null, platform: null, classic:null},
                 controller: 'indexCtrl as vm'
+            })
+
+            .state('listing', {
+                url: '/listing',
+                templateUrl: 'panel/templates/game-list.html',
+                params: {kind: null, platform: null, classic:null},
+                controller: 'listingCtrl as vm'
             })
 
             .state('detail', {
@@ -24,7 +31,7 @@
      }
 
      angular
-        .module('games')
+        .module('gcapp')
         .config(panelStates);
 
  }());

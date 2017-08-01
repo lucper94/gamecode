@@ -24,7 +24,7 @@
             }
         }
         angular
-            .module('games')
+            .module('gcapp')
             .service('listService',listService);
        
  }());
