@@ -3,30 +3,33 @@
 <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
+<!-- CSS  -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/global.1.css">
-<script src="js/jquery-3.2.1.min.js" ></script>
-<script src="js/bootstrap.min.js" ></script>
 <link rel="stylesheet" type="text/css" href="css/dropdowns.css">
 <link rel="stylesheet" type="text/css" href="css/dropdowns-skin-discrete.css">
 <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
 
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
- <script src="/gamecode/libs/angular-ui-router.min.js"></script>  -->
-	<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"> -->
-<script src="/gamecode/libs/angular.min.js"></script>
-<script src="/gamecode/libs/angular-ui-router.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js" ></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-touch.min.js" ></script>
-<script src="/gamecode/libs/ui-bootstrap-tpls-2.5.0.min.js" ></script>
-	 <script src="panel/js/gc.app.js" ></script>
-   <script src="panel/js/gc.router.js" ></script> 
- <script src="panel/js/games/list.service.js" ></script>
- <script src="panel/js/games/list.controller.js" ></script>
- <!-- <script src="panel/js/games/detail.controller.js" ></script>
- <script src="panel/js/games/detail.service.js" ></script> -->
+
+<!-- JS Libs  -->
+<script src="js/jquery-3.2.1.min.js" ></script>
+<script src="js/bootstrap.min.js" ></script>
+<script src="libs/angular/angular.min.js"></script>
+<script src="libs/angular/angular-ui-router.min.js"></script>
+<script src="libs/angular/angular-animate.min.js" ></script>
+<script src="libs/angular/angular-sanitize.js"></script>
+<script src="libs/angular/angular-touch.min.js" ></script>
+<script src="libs/angular/ui-bootstrap-tpls-2.5.0.min.js" ></script>
+
+<!-- Webpage JS  -->
+<script src="panel/js/gc.app.js" ></script>
+<script src="panel/js/gc.router.js" ></script> 
+<script src="panel/js/games/list.service.js" ></script>
+<script src="panel/js/games/list.controller.js" ></script>
+<script src="panel/js/games/detail.service.js" ></script> -->
+
 </head>
+
 <header>
 <div class="col-md-12 col-xs-12 col-sm-12  game-header navbar-fixed-top" >       
 
@@ -275,7 +278,7 @@
     <div ng-repeat="todo in vm.todos" repeat-done="foo()" class="col-xs-12 col-sm-6 col-md-6 col-lg-4 game-index-container" >
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-index-front"  >
         <div  class=" game-index-imgcontainer"   >
-         <img src="assets/{{todo.ID_Product}}.jpg"  class="img-responsive game-index-image center-block"    alt="Image">
+         <img ng-src="assets/{{todo.ID_Product}}.jpg"  class="img-responsive game-index-image center-block"    alt="Image">
         </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" >
                 <label class=""><h4>{{vm.getName(todo.Name)}}</h4></label>
