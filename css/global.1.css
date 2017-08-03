@@ -234,6 +234,9 @@ border: white 1px solid;
    font-weight: bold;
    font-size: 14px;
    color: black;
+    height: 45px;
+    line-height: 1.5;
+    margin-top: 3px;
 }
 .game-table td{
 font-weight: bold;
@@ -728,7 +731,7 @@ li > a:only-child:after { content: ''; }
 
 }
 .game-index-container{
-    margin-top:8px;
+    margin-top:18px;
     min-height: 529px;
     max-height: 529px;
     margin-bottom: -164px;
