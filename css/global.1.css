@@ -227,12 +227,17 @@ border: white 1px solid;
 
 .game-table th{
    background-color: black;
-   font-size: 16px;
+   font-size: 12px;
    color: white;
+}
+.game-table-title{
+   font-weight: bold;
+   font-size: 14px;
+   color: black;
 }
 .game-table td{
 font-weight: bold;
-font-size: 16px;
+font-size: 14px;
 }
 
 
@@ -712,11 +717,21 @@ li > a:only-child:after { content: ''; }
 
 
 }
+.game-index-kind{
+    margin-top:8px;
+    margin-bottom:5px;
+   font-weight: bold;
+   font-size: 18px;
+    background-color: black;
+    border: darkred 3px solid;
+    color: white;
 
+}
 .game-index-container{
     margin-top:8px;
     min-height: 529px;
     max-height: 529px;
+    margin-bottom: -164px;
 }
 .game-index-imgcontainer{
 
@@ -724,8 +739,8 @@ li > a:only-child:after { content: ''; }
 .game-index-image{
     height:auto; width:auto;
 
-     min-height: 360px;
-    max-height: 360px;
+     min-height: 243;
+    max-height: 243;
 }
 .game-index-front{
     background-color: white;
@@ -745,6 +760,7 @@ li > a:only-child:after { content: ''; }
     margin-top:10px;
     min-height: 529px;
     max-height: 529px;
+    margin-bottom: -164px;
 }
 .game-index-imgcontainer{
     height:40%;
