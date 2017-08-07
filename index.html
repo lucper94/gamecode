@@ -25,6 +25,7 @@
 <script src="js/gc.app.js" ></script>
 <script src="js/gc.router.js" ></script> 
 <script src="js/index/index.controller.js" ></script> 
+<script src="js/index/modal.controller.js" ></script> 
 <script src="js/listing/listing.controller.js" ></script> 
 <script src="js/listing/listing.service.js" ></script>
 <script src="js/detail/detail.controller.js" ></script> 
@@ -210,7 +211,7 @@
 			</div>
 		</div>
 		
-		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-6 col-lg-6 col-lg-offset-6 game-header-info">
+		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-6 col-lg-6 col-lg-offset-6 game-header-info" ng-controller="modalCtrl as vm">
 			<label class="  " data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(1)">Sobre Gamer's Code</label>
 			<label class=" " data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(2)">Sucursales</label>
 			<label class=" " data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(3)">Contacto</label>
@@ -234,7 +235,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h3 class="modal-title" id="modalHead"><b>{{vm.modalHead}}</b></h3>
+				<h3 class="modal-title" id="modalHead"></h3>
 			</div>
 			<div class="modal-body" id="modalBody"></div>
 			<div class="modal-footer">
