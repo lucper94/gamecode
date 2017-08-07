@@ -69,26 +69,35 @@
         <div class="modal-body" >
              <table class="table game-table table-hover" style="border:gray">
                 <thead >
-
-                    <th  colspan="4"  style="background-color:darkred; font-size:13px; ">
+                    <th    style="background-color:darkred; font-size:13px; ">
+                        Sucursal
+                    </th>
+                    <th    style="background-color:darkred; font-size:13px; ">
                         En stock
                     </th>
                 </thead>
                 <tbody>
                     <tr >
                         <th ng-hide= "vm.gameDetail.ags == 'Sin Stock'" >Aguascalientes</th>
-                        <th ng-hide= "vm.gameDetail.ags_south ==  'Sin Stock'" >Aguascalientes Sur</th>
-                        <th ng-hide= "vm.gameDetail.zcs ==  'Sin Stock'">Zacatecas</th>
-                        <th ng-hide= "vm.gameDetail.len ==  'Sin Stock'">Leon</th>
-                        <th ng-hide= "vm.gameDetail.fun ==  'Sin Stock'">Leon fundadores</th>
+                        <td ng-hide= "vm.gameDetail.ags ==  'Sin Stock'">En Stock</td>
                     </tr>
                     <tr>
-                        <td ng-hide= "vm.gameDetail.ags ==  'Sin Stock'">En Stock</td>
+                        <th ng-hide= "vm.gameDetail.ags_south ==  'Sin Stock'" >Aguascalientes Sur</th> 
                         <td ng-hide= "vm.gameDetail.ags_south ==  'Sin Stock'">En Stock</td>
+                    </tr>
+                    <tr>
+                        <th ng-hide= "vm.gameDetail.zcs ==  'Sin Stock'">Zacatecas</th>
+                        
                         <td ng-hide= "vm.gameDetail.zcs ==  'Sin Stock'">En Stock</td>
+                       
+                    </tr>
+                    <tr>
+                        <th ng-hide= "vm.gameDetail.len ==  'Sin Stock'">Leon</th>
                         <td ng-hide= "vm.gameDetail.len ==  'Sin Stock'">En Stock</td>
+                    </tr>
+                    <tr>
+                        <th ng-hide= "vm.gameDetail.fun ==  'Sin Stock'">Leon fundadores</th>
                         <td ng-hide ="vm.gameDetail.fun ==  'Sin Stock'">En Stock</td>
-
                     </tr>
                 </tbody>
             </table>
