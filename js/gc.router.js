@@ -22,7 +22,7 @@
             .state('detail', {
                 url: '/detail',
                 templateUrl: 'templates/game-detail.html',
-                params : { id: null, },
+                params : { id: null, kind: null },
                 controller: 'gameDetail as vm'
             })
             

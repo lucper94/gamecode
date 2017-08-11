@@ -37,8 +37,8 @@
         }
         
         ctrl.loading=true;
-        
-        listingService.getGames($cookies.getObject('listParams').kind, $cookies.getObject('listParams').platform, $cookies.getObject('listParams').classic)
+        ctrl.kind = $cookies.getObject('listParams').kind;
+        listingService.getGames(ctrl.kind, $cookies.getObject('listParams').platform, $cookies.getObject('listParams').classic)
             .then(function(response){
                 ctrl.gamesObj = response.data.app_data;
                 ctrl.limit = 25;

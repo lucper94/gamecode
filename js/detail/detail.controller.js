@@ -5,6 +5,7 @@
      function gameDetail(detailService,$stateParams,$cookies){
          
         var ctrl = this;
+        console.log($stateParams);
 
         if($cookies.getObject('detailParams') != undefined){
             
@@ -12,7 +13,8 @@
             if($stateParams.id != null){
                 
                 var detailParams = {
-                    gameID:  $stateParams.id
+                    gameID:  $stateParams.id,
+                    kind:  $stateParams.kind
                 }
                 
                 $cookies.putObject('detailParams', detailParams, {path: "/"});
@@ -25,6 +27,7 @@
 
            var detailParams = {
                 gameID:  241,
+                kind: 'With_Box'
                 
             }
             
@@ -33,9 +36,11 @@
         }
 
         ctrl.gameId = $cookies.getObject('detailParams').gameID;
+        ctrl.kind = $cookies.getObject('detailParams').kind;
         
-        detailService.getDetail(ctrl.gameId)
+        detailService.getDetail(ctrl.gameId,ctrl.kind)
             .then(function(response){
+                console.log(response);
                 ctrl.gameDetail = response.data;
                 ctrl.loading=false;
             })

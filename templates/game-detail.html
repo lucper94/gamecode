@@ -20,13 +20,13 @@
                     
                 
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">
-                    <label class="game-detail-title ">{{vm.gameDetail.detail.Name}}</label>
+                    <label class="game-detail-title ">{{vm.gameDetail.Name}}</label>
                     <br><br> 
                 </div>
                 
 
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 search-console-{{vm.gameDetail.detail.Platform}}">
-                    <label>{{vm.gameDetail.detail.Platform}}</label>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 search-console-{{vm.gameDetail.Platform}}">
+                    <label>{{vm.gameDetail.Platform}}</label>
                 </div>
                 <div class="game-table-content" >
                 <table class="table game-table table-hover">
@@ -39,9 +39,9 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>$125</td>
-                                        <td>$150</td>
-                                        <td>$50</td>
+                                        <td>$ {{vm.gameDetail.Purchase}}</td>
+                                        <td>$ {{vm.gameDetail.Sale}}</td>
+                                        <td>$ {{vm.gameDetail.Exchange}}</td>
                                     </tr>
                                 </tbody>
                     </table>
