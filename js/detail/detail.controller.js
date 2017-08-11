@@ -24,13 +24,22 @@
         }
         
         else{
-
-           var detailParams = {
-                gameID:  241,
-                kind: 'With_Box'
-                
-            }
             
+            if($stateParams.id != null){
+                
+                var detailParams = {
+                    gameID:  $stateParams.id,
+                    kind:  $stateParams.kind
+                }
+            }
+
+            else{
+                var detailParams = {
+                    gameID:  241,
+                    kind: 'With_Box'
+                }
+            }
+
             $cookies.putObject('detailParams', detailParams, {path: "/"});
 
         }
