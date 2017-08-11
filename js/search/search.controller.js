@@ -8,7 +8,7 @@
         
         ctrl.gotoDetail = function(){ 
             var selectedGame = ctrl.names.indexOf(ctrl.asyncSelected);
-                $state.go('detail', {id: ctrl.ids[selectedGame]});
+                $state.go('detail', {id: ctrl.ids[selectedGame], kind:'With_Box'});
 		};
         
         ctrl.searchGames = function(val){
