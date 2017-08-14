@@ -36,7 +36,7 @@
                 .then(function(response){
                 ctrl.loading = false;
                 ctrl.todos = response.data;
-                // console.log(ctrl.todos);
+                console.log(ctrl.todos);
                  ctrl.resize_header();
                  ctrl.images = [
                      
