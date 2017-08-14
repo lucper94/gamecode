@@ -983,3 +983,17 @@ svg rect{
   bottom: 0;
   right: 0;
 }
+
+
+.game-related-container{
+    margin-top:5px;
+}
+.game-related{
+    background-color: white;
+    border: black 2px solid;
+
+    box-shadow: 0 3px 15px 0 rgba(0,0,0,0.9);  
+}
+
+
+

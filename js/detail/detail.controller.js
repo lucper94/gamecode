@@ -2,7 +2,7 @@
 
      'use strict'
 
-     function gameDetail(detailService,$stateParams,$cookies){
+     function gameDetail(detailService,$stateParams,$cookies,$timeout){
          
         var ctrl = this;
         console.log($stateParams);
@@ -73,7 +73,25 @@
             $('.game-banner').css('margin-top',header);
             $('.game-footter').css('bottom',0);
         }
-        
+
+    ctrl.timeInMs = 0;
+    ctrl.start = 0;
+    ctrl.finish = ctrl.start+4;
+    var countUp = function() {
+        ctrl.start ++;
+        ctrl.finish = ctrl.start+4;
+        if(ctrl.finish > ctrl.relatedIds.length){
+            ctrl.start = 0;
+            ctrl.finish = ctrl.start+4; 
+        }
+        $timeout(countUp, 3000);
+        ctrl.related = ctrl.relatedIds.slice(ctrl.start, ctrl.finish);
+        //console.log(ctrl.related);
+    }
+
+    $timeout(countUp, 3000);
+    
+  
 
      }
 
