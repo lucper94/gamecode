@@ -46,6 +46,11 @@
 
         ctrl.gameId = $cookies.getObject('detailParams').gameID;
         ctrl.kind = $cookies.getObject('detailParams').kind;
+
+        if($stateParams.relatedIds != null){
+            ctrl.relatedIds = $stateParams.relatedIds;
+            ctrl.relatedGames = $stateParams.relatedGames;
+        }
         
         detailService.getDetail(ctrl.gameId,ctrl.kind)
             .then(function(response){

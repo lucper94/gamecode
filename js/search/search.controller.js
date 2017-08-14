@@ -7,8 +7,11 @@
         var ctrl = this;
         
         ctrl.gotoDetail = function(){ 
+            
             var selectedGame = ctrl.names.indexOf(ctrl.asyncSelected);
-                $state.go('detail', {id: ctrl.ids[selectedGame], kind:'With_Box'});
+            var selectedID = ctrl.ids.splice(selectedGame, 1);    
+            ctrl.names.splice(selectedGame, 1);
+            $state.go('detail', {id: selectedID[0], kind:'With_Box', relatedIds: ctrl.ids, relatedGames: ctrl.names});
 		};
         
         ctrl.searchGames = function(val){
