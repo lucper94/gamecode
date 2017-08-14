@@ -43,13 +43,14 @@
         <label class="">Los mas vendidos</label>
     </div>
     <div ng-repeat="todo in vm.todos" repeat-done="foo()" class="col-xs-12 col-sm-6 col-md-6 col-lg-3 game-index-container" >
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-index-front"  >
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-index-front">
+            <a ui-sref="detail({id:{{todo.ID_Product}},kind: 'With_Box' })">
         <div  class=" game-index-imgcontainer"   >
           <img ng-src="img/products/{{todo.ID_Product}}.jpg" onerror="this.src='http://cdn.2020prosoftware.com/installations/common/img/image-not-found.png'"  class="img-responsive game-index-image center-block"    alt="Image"> 
         </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center" >
                 <label class=" game-table-title">{{vm.getName(todo.Name)}}</label>
-            </div>
+            </div></a>
             <div class="" >
             <table class="table game-table   table-hover">
                     <thead>
@@ -61,9 +62,9 @@
                     </thead>
                     <tbody>
                       <tr>
-                       <td>{{todo.compra}}</td>
-                        <td>{{todo.venta}}</td>
-                        <td>{{todo.intercambio}}</td>
+                       <td>{{todo.Purchase_Price}}</td>
+                        <td>{{todo.Sale_Price}}</td>
+                        <td>{{todo.Exchange_Price}}</td>
                       </tr>
                     </tbody>
               </table>

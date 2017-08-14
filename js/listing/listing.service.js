@@ -15,7 +15,7 @@
 
             this.getGamesHome = function(){
 
-                var url = 'game_handler.php';
+                var url = 'http://159.203.210.238/metalgear/api/webpage/homepage/';
                  return $http({
                     method: 'GET',
                     url : url,
