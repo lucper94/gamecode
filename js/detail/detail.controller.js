@@ -86,6 +86,7 @@
         }
         $timeout(countUp, 3000);
         ctrl.related = ctrl.relatedIds.slice(ctrl.start, ctrl.finish);
+        ctrl.relatedNames = ctrl.relatedGames.slice(ctrl.start, ctrl.finish);
         //console.log(ctrl.related);
     }
 
