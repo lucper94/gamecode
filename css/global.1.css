@@ -14,7 +14,7 @@ background-size: cover;
 }
 .game-header{
     background: rgba(0, 0, 0, 1);
-    padding-bottom: 10px;
+
     border-bottom: 4px solid red;
 
 
@@ -25,6 +25,7 @@ background-size: cover;
  margin-right: 5px;
  margin-left: 5px;
  color: darkred;
+ font-size: 14px;
 }
 .game-footer{
     background: rgba(0, 0, 0, 0.9);
@@ -44,9 +45,10 @@ background-size: cover;
 
 }
 .game-logo{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 5px;
+    margin-top: 14px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+    height: auto;
     z-index: 1;
  
 }
@@ -111,7 +113,7 @@ font-size: 8px;
     .game-header-info label{
     margin-right: 5px;
     margin-left: 5px;
-    font-size: 16px;
+     font-size: 14px;
     color: white;
     }
     .game-banner{
@@ -123,6 +125,7 @@ font-size: 8px;
     margin-top: 9%;
     
 }
+
 .filters
 {
     color: white;
@@ -205,7 +208,7 @@ border: white 1px solid;
     .game-header-info label{
         margin-top: 3px;
 
-        font-size: 18px;
+         font-size: 14px;
         color: white;
     }
     .game-table{
@@ -227,7 +230,7 @@ border: white 1px solid;
 
 .game-table th{
    background-color: black;
-   font-size: 14px;
+   font-size: 11px;
    color: white;
 }
 .game-table-title{
@@ -447,7 +450,7 @@ font-size: 14px;
    
 }
 .game-search input{
-    height: 40px;
+    height: 30px;
     width: 103%;
     box-sizing: border-box;
     border: 2px solid #ccc;
@@ -789,8 +792,8 @@ li > a:only-child:after { content: ''; }
     }
 
     .game-logo{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 14px;
+
 
     }
     .game-banner{
@@ -836,21 +839,21 @@ nav{position:relative;width:980px;margin:0 auto;}
 #cssmenu,#cssmenu ul,#cssmenu ul li,#cssmenu ul li a,#cssmenu #head-mobile{border:0;list-style:none;line-height:1;display:block;position:relative;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 #cssmenu:after,#cssmenu > ul:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
 #cssmenu #head-mobile{display:none}
-#cssmenu{font-family:sans-serif;background-color:rgba(0,0,0,0.9);margin-left: 30px;}
+#cssmenu{font-family:sans-serif;background-color:rgba(0,0,0,0.9);margin-left: 30px; }
 #cssmenu > ul > li{float:left;background-color: rgba(0,0,0,0.9);}
 #cssmenu > ul > li > a{padding:17px;font-size:16px;letter-spacing:1px;text-decoration:none;color:#ddd;font-weight:700;}
-#cssmenu > ul > li:hover > a,#cssmenu ul li.active a{color:#fff}
+#cssmenu > ul > li:hover > a,#cssmenu ul li.active a{color:#fff;font-size: 12px;}
 #cssmenu > ul > li:hover,#cssmenu ul li.active:hover,#cssmenu ul li.active,#cssmenu ul li.has-sub.active:hover{background:darkred!important;-webkit-transition:background .3s ease;-ms-transition:background .3s ease;transition:background .3s ease;}
-#cssmenu > ul > li.has-sub > a{padding-right:30px}
-#cssmenu > ul > li.has-sub > a:after{position:absolute;top:22px;right:11px;width:8px;height:2px;display:block;background:#ddd;content:''}
-#cssmenu > ul > li.has-sub > a:before{position:absolute;top:19px;right:14px;display:block;width:2px;height:8px;background:#ddd;content:'';-webkit-transition:all .25s ease;-ms-transition:all .25s ease;transition:all .25s ease}
+#cssmenu > ul > li.has-sub > a{padding-right:30px;padding-top: 10px; padding-bottom: 10px; font-size: 12px;}
+#cssmenu > ul > li.has-sub > a:after{position:absolute;top:12.1px;right:11px;width:8px;height:2px;display:block;background:#ddd;content:''}
+#cssmenu > ul > li.has-sub > a:before{position:absolute;top:9px;right:14px;display:block;width:2px;height:8px;background:#ddd;content:'';-webkit-transition:all .25s ease;-ms-transition:all .25s ease;transition:all .25s ease}
 #cssmenu > ul > li.has-sub:hover > a:before{top:23px;height:0}
-#cssmenu ul ul{position:absolute;left:-9999px;margin-top: -15px;}
+#cssmenu ul ul{position:absolute;left:-9999px;margin-top: -29px;}
 #cssmenu ul ul li{height:0;-webkit-transition:all .25s ease;-ms-transition:all .25s ease;background:rgba(0,0,0,0.9);transition:all .25s ease}
 #cssmenu li:hover > ul{left:auto}
 #cssmenu li:hover > ul > li{height:35px}
 #cssmenu ul ul ul{margin-top: 0px;}
-#cssmenu ul ul li a{border-bottom:1px solid rgba(150,150,150,0.15);padding:11px 15px;width:170px;font-size:16px;text-decoration:none;color:#ddd;font-weight:400;}
+#cssmenu ul ul li a{font-size: 12px !important; border-bottom:1px solid rgba(150,150,150,0.15);padding:11px 15px;width:170px;font-size:16px;text-decoration:none;color:#ddd;font-weight:400;}
 #cssmenu ul ul li:last-child > a,#cssmenu ul ul li.last-item > a{border-bottom:0}
 #cssmenu ul ul li:hover > a,#cssmenu ul ul li a:hover{color:#fff}
 #cssmenu ul ul li.has-sub > a:after{position:absolute;top:16px;right:11px;width:8px;height:2px;display:block;background:#ddd;content:''}
@@ -871,10 +874,10 @@ nav{width:100%;}
 #cssmenu ul ul li,#cssmenu li:hover > ul > li{height:auto}
 #cssmenu ul li a,#cssmenu ul ul li a{width:100%;border-bottom:0}
 #cssmenu > ul > li{float:none}
-#cssmenu ul ul li a{padding-left:25px}
+#cssmenu ul ul li a{padding-left:25px;font-size: 14px;}
 #cssmenu ul ul li{background:rgba(0,0,0,0.9)!important;}
 #cssmenu ul ul li:hover{background:rgba(0,0,0,0.9)!important}
-#cssmenu ul ul ul li a{padding-left:35px}
+#cssmenu ul ul ul li a{padding-left:35px;font-size: 14px;}
 #cssmenu ul ul li a{color:#ddd;background:none}
 #cssmenu ul ul li:hover > a,#cssmenu ul ul li.active > a{color:#fff}
 #cssmenu ul ul,#cssmenu ul ul ul{position:relative;left:0;width:100%;margin:0;text-align:left}

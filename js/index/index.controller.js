@@ -22,7 +22,7 @@
    
         
         ctrl.resize_header = function(){
-            var header= $('.game-header').height()+10;
+            var header= $('.game-header').height()-20;
             // console.log(header);
             $('.game-banner').css('margin-top',header);
             $('.filters').css('margin-top',header);
