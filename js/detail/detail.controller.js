@@ -6,7 +6,7 @@
          
         var ctrl = this;
         console.log($stateParams);
-
+        ctrl.relatedSearch = $stateParams.relatedGames;
         if($cookies.getObject('detailParams') != undefined){
             
             //Cuando se elige una plataforma diferente.
