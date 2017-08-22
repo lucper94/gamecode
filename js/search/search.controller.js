@@ -31,6 +31,7 @@
                 .then(function(response){
                     ctrl.ids = response.data.ID;
                     ctrl.names = response.data.Names;
+                    ctrl.predicate = 'Name';
                     return limitToFilter(response.data.Names, 7);
                 });
         };
