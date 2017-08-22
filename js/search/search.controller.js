@@ -6,34 +6,24 @@
          
         var ctrl = this;
         
-        ctrl.gotoDetail = function(event){
+        ctrl.gotoDetail = function(event, listener){
+            
             if(event != undefined){
                 
-                // User hits enter
-                if(event.which == 13){
-                    var selectedGame = ctrl.names.indexOf(ctrl.asyncSelected);
-                    if(selectedGame === -1){
-                        console.log('Te enviare a la pagina de busqueda');
-                    }
-                    else{
-                        var selectedID = ctrl.ids.splice(selectedGame, 1);    
-                        ctrl.names.splice(selectedGame, 1);
-                        $state.go('detail', {id: selectedID[0], kind:'With_Box', relatedIds: ctrl.ids, relatedGames: ctrl.names});
-                    }
-                    // var selectedID = ctrl.ids.splice(selectedGame, 1);    
-                    // ctrl.names.splice(selectedGame, 1);
-                }
-                //user uses taps on result
-                if(event.which == 1){
+                // User hits enter or taps on typehead
+                if((event.which == 13 && listener != undefined) || (event.which == 1)){
+                    
                     var selectedGame = ctrl.names.indexOf(ctrl.asyncSelected);
                     var selectedID = ctrl.ids.splice(selectedGame, 1);    
                     ctrl.names.splice(selectedGame, 1);
                     $state.go('detail', {id: selectedID[0], kind:'With_Box', relatedIds: ctrl.ids, relatedGames: ctrl.names});
                 }
-           }
-           
-           
-            
+                // usert hits enter without using the typehead
+                if(event.which == 13 && listener == undefined){
+                    $state.go('search', {searchString: ctrl.asyncSelected });                    
+                }
+
+            }   
 		};
         
         ctrl.searchGames = function(val){
@@ -44,10 +34,6 @@
                     return limitToFilter(response.data.Names, 7);
                 });
         };
-
-        ctrl.hola = function(){
-            console.log(ctrl.asyncSelected);
-        }
    
      }
     

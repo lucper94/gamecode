@@ -25,6 +25,13 @@
                 params : { id: null, kind: null, relatedIds: null, relatedGames: null },
                 controller: 'gameDetail as vm'
             })
+
+            .state('search', {
+                url: '/search',
+                templateUrl: 'templates/search-list.html',
+                params : { searchString: 'unchar' },
+                controller: 'searchListCtrl as vm'
+            })
             
             $urlRouterProvider.otherwise('/index');
      }
