@@ -2,7 +2,7 @@
 
      'use strict'
 
-     function panelStates($stateProvider,$urlRouterProvider){
+     function panelStates($stateProvider,$urlRouterProvider,$locationProvider){
          
          $stateProvider
          
@@ -34,6 +34,11 @@
             })
             
             $urlRouterProvider.otherwise('/index');
+            
+            //check browser support
+            if(window.history && window.history.pushState)
+                $locationProvider.html5Mode(true); 
+        
      }
 
      angular
