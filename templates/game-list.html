@@ -1,19 +1,18 @@
-<div class="row col-md-2  filters"  id="game-filters">   
-        <p ng-click="vm.predicate = 'price_s';" data-orderby="price" class="filter-button">Precio Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-        <p ng-click="vm.predicate = '-price_s';" data-orderby="price" class="filterDesc-button">Precio Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-        <p data-orderby="platform" class="filter-button subfilter-button">Consola <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-        <p ng-click="vm.predicate = 'Name'; reverse=!reverse" data-orderby="name" class="filter-button">Titulo <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-                         
+<div class="row col-md-2  filters"  id="game-filters">
+  <p class="filter-button">Ordenar por: </p>
+  <p ng-click="vm.orderFunction('name', vm.reverseOrder)"  class="filter-button">Titulo <i class="fa fa-caret-{{vm.direction}}" aria-hidden="true"></i></p>
+  <p ng-click="vm.orderFunction('price', false)" class="filter-button">Precio: Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+  <p ng-click="vm.orderFunction('price', true)"  class="filterDesc-button">Precio: Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
 </div>
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-banner">
-     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 " ng-repeat="game in vm.gamesObj | limitTo: vm.limit | orderBy:vm.predicate:reverse">
+     <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 " ng-repeat="game in vm.gamesObj | limitTo: vm.limit">
     
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " >
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 search-front" >
         
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-          <img src="img/products/{{game.ID_Info}}.jpg" class="img-responsive center-block search-image" alt="Image">
+          <img ng-src="img/products/{{game.ID_Info}}.jpg" onerror="this.src='http://cdn.2020prosoftware.com/installations/common/img/image-not-found.png'"  class="img-responsive center-block search-image" alt="Image">
         </div>
         
         <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
