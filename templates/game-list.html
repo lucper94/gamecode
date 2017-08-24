@@ -1,8 +1,8 @@
 <div class="row col-md-2  filters"  id="game-filters">
-  <p class="filter-button">Ordenar por: </p>
-  <p ng-click="vm.orderFunction('name', vm.reverseOrder)"  class="filter-button">Titulo <i class="fa fa-caret-{{vm.direction}}" aria-hidden="true"></i></p>
-  <p ng-click="vm.orderFunction('price', false)" class="filter-button">Precio: Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-  <p ng-click="vm.orderFunction('price', true)"  class="filterDesc-button">Precio: Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+  <p>Ordenar por: </p>
+  <p class="cursor" ng-click="vm.orderFunction('name', vm.reverseOrder)" >Titulo <i class="fa fa-caret-{{vm.direction}}" aria-hidden="true"></i></p>
+  <p class="cursor" ng-click="vm.orderFunction('price', false)">Precio: Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+  <p class="cursor" ng-click="vm.orderFunction('price', true)">Precio: Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
 </div>
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-banner">
