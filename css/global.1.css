@@ -251,11 +251,11 @@ font-size: 14px;
   
     padding: 3px;
     border-radius: 5px;
-    text-align: center;
-    font-size: 21px;
+
+    font-size: 16px;
     color: black;
     font-weight: bold;
-    text-align: center;
+
 }
 .search-action {
     background-color: black; 
@@ -288,7 +288,7 @@ font-size: 14px;
 }
 .search-front{
     background-color: white;
-    border: black 4px solid;
+    border: #E3D9D9 3px solid;
 
     margin-top: 12px;
     padding-bottom: 10px;
@@ -299,7 +299,7 @@ font-size: 14px;
 
 
 
-}
+}/*
 .search-console-xbox{
     background-color: #107c10;
     text-align: center;
@@ -428,7 +428,7 @@ font-size: 14px;
 .search-console-GBC label{
     font-size: 14px;
     color: white;
-}
+}*/
 .search-image{
     border: black 3px solid;
     max-height: 195px;
@@ -698,7 +698,7 @@ li > a:only-child:after { content: ''; }
 }
 .game-detail-content{
     background-color: white;
-    border: black 5px solid;
+    border: #E3D9D9 3px solid;
     margin-top: 12px;
     box-shadow: 0 5px 20px 0 rgba(0,0,0,0.9);
     height: auto;
@@ -750,7 +750,7 @@ li > a:only-child:after { content: ''; }
 }
 .game-index-front{
     background-color: white;
-    border: black 5px solid;
+    border: #E3D9D9 3px solid;
 
     box-shadow: 0 5px 20px 0 rgba(0,0,0,0.9);
    
