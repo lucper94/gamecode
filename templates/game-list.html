@@ -30,10 +30,10 @@
                   
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  ">
-                    <label class=" ">{{game.Stock}}</label>
+                    <label class="">{{game.Stock}}</label>
                 </div>
 
-                  <button  class=" game-search-btn pull-right" >Compra/intercambio</button>
+                  <button  class=" game-search-btn pull-right" data-toggle="modal" data-target="#myStock">Compra/intercambio</button>
 
     
 
@@ -50,4 +50,40 @@
 <div class="loadscreen" ng-show="vm.loading">
 	<img id="loading" src="img/resources/gamerscode-logo.png" class=""  >
   <img id="loadingsvg" src="img/resources/spin2.svg" />
+</div>
+
+<div class="modal fade" id="myStock" role="dialog">
+  <div class="modal-dialog">
+  
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body" >
+           <table class="table game-table table-hover" style="border:gray">
+              <thead >
+                  <th    style="background-color:darkred; font-size:13px; ">
+                      Compra
+                  </th>
+                  <th    style="background-color:darkred; font-size:13px; ">
+                     Intercambio
+                  </th>
+              </thead>
+              <tbody>
+                  <tr>
+                    
+                      <td>$ {{game.price_p}}</td>
+                      <td>$ {{game.price_e}}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+    
+  </div>
 </div>
