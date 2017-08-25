@@ -10,57 +10,37 @@
      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 " ng-repeat="game in vm.gamesObj | limitTo: vm.limit">
     
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " >
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 search-front" >
-        
-        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-          <img ng-src="img/products/{{game.ID_Info}}.jpg" onerror="this.src='http://cdn.2020prosoftware.com/installations/common/img/image-not-found.png'" class="img-responsive center-block search-image" alt="Image">
-        </div>
-        
-        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-            
-					  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 search-console-{{game.Platform}}">
-                <label>{{game.Platform}}</label>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-                <a ui-sref="detail({id:{{game.ID_Info}},kind: game.Kind })"><h4 class="search-text">{{game.Name}}</h4></a>
-            </div>
-            <br>
-              <div class="search-action col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                
 
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4  ">
-                  <label class=" search-action-label "><!--Compra--></label>
-
-                </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4  ">
-                  <label class=" search-action-label">Venta</label>
-                  
-                </div>
-               <!-- <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4  ">
-                  <label class=" search-action-label"  >Intercambio</label>
         
-                </div>  -->
-                </div>
-                <div class="search-precios search-stock-label  col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-                    
-                   <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                      <label class="search-precios-label  "><!--{{game.price_p}}--></labe>
-                    </div>
-                    <div class=" col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                      <label class="search-precios-label ">$ {{game.Sale}}</label>
-                    </div>
-                    <!--<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                      <label class="search-precios-label "  >{{game.price_e}}</label>
-                    </div> --> 
-                </div> 
-
-              <div class="search-action col-xs-12 col-sm-12 col-md-4 col-lg-4  col-md-offset-4 col-lg-offset-4">
-                  <label class="search-action-label ">Estatus</label>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 search-front" >
+          
+          <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <img ng-src="img/products/{{game.ID_Info}}.jpg" onerror="this.src='http://cdn.2020prosoftware.com/installations/common/img/image-not-found.png'"  class="img-responsive center-block search-image" alt="Image">
+          </div>
+          
+          <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+              
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 search-console-{{game.Platform}}">
+                  <label class="search-text">{{game.Platform}}</label>
               </div>
-              <div class="search-precios search-stock-label col-xs-12 col-sm-12 col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
-                  <label class=" ">{{game.Stock}}</label>
-              </div> 
-        </div>
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                  <a ui-sref="detail({id:{{game.ID_Info}},kind: vm.kind })"><h3 class="search-title">{{game.Name}}</h3></a>
+              </div>
+              <br>
+  
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  ">
+                    <label class="search-text">Precio de venta </label><label class="search-price">$ {{game.price_s}}</label>
+                    
+                  </div>
+                  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  ">
+                      <label ng-class="game.Stock == 'En Inventario' ? 'search-green' : 'search-red'">{{game.Stock}}</label>
+                  </div>
+  
+                    <!--<button  class=" game-search-btn pull-right" data-toggle="modal" data-target="#myStock" >Compra/intercambio</button>-->
+  
+      
+  
+          </div>
       </div>       
     </div>
 
