@@ -289,7 +289,7 @@ font-size: 14px;
 .search-front{
     background-color: white;
     border: #E3D9D9 3px solid;
-
+    font-family: Fjalla;
     margin-top: 12px;
     padding-bottom: 10px;
     padding-top: 10px;
@@ -299,7 +299,32 @@ font-size: 14px;
 
 
 
-}/*
+}
+.search-title{
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+.search-text{
+    font-size: 15px;
+    font-weight: lighter;
+}
+.search-price{
+    font-size: 16px;
+    font-weight: lighter;
+    color: red;
+}
+.search-green{
+    font-size: 15px;
+    font-weight: lighter;
+    color: green;
+}
+.search-red{
+    font-size: 15px;
+    font-weight: lighter;
+    color: red;
+}
+/*
 .search-console-xbox{
     background-color: #107c10;
     text-align: center;
@@ -1006,6 +1031,13 @@ svg rect{
 .cursor{
     cursor:pointer;
 }
+
+
+@font-face {
+    font-family: Fjalla;
+    src: url(../fonts/FjallaOne-Regular.otf);
+}
+
 
 
 
