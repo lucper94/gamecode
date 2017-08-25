@@ -1,5 +1,5 @@
 
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-detail-front game-banner">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-detail-front game-banner ">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-detail-content" >
         <div  class="col-xs-12 col-sm-12 col-md-4 col-lg-4" >
          <img src="img/products/{{vm.gameId}}.jpg"  class="img-responsive game-detail-image"  alt="Image">
@@ -16,38 +16,24 @@
                     septiembre de 2013 para las consolas PlayStation 3 y Xbox 360.
                 </p>-->
                 
-                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 game-detail-text">
                     
                 
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;">
-                    <label class="game-detail-title ">{{vm.gameDetail.detail.Name}}</label>
-                    <br><br> 
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+                    <label  class="search-detail-title">{{vm.gameDetail.detail.Name}}</label>
+                    <br>
                 </div>
                 
 
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="text-align:center;">
-                    <label>{{vm.gameDetail.detail.Platform}}</label>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " >
+                    <label class="search-detail-text">{{vm.gameDetail.detail.Platform}}</label>
                 </div>
-                <div class="game-table-content" >
-                <table class="table game-table table-hover">
-                                <thead>
-                                    <tr>
-                                        <!--<th>COMPRA</th>-->
-                                        <th>VENTA</th>
-                                        <!--<th>CAMBIA</th>-->
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                       <!-- <td>$ {{vm.gameDetail.detail.Purchase}}</td>-->
-                                        <td>$ {{vm.gameDetail.detail.Sale}}</td>
-                                        <!--<td>$ {{vm.gameDetail.detail.Exchange}}</td>-->
-                                    </tr>
-                                </tbody>
-                    </table>
+                <div class="game-table-content col-xs-12 col-sm-12 col-md-12 col-lg-12" >   
+                    <label class="search-detail-text">Precio de venta </label><br><label class="search-detail-price" > $ {{vm.gameDetail.detail.Sale}}</label>
+                    
                     <br>
-                    <button class=" game-search-btn center-block" style="width:200px;"  data-toggle="modal" data-target="#myStock" >Ver stock</button>
-                    </div>
+                    <button class=" game-search-btn center-block  pull-right" style="width:200px;"  data-toggle="modal" data-target="#myStock" >Ver stock</button>
+                </div>
                 </div>
             </div>
 

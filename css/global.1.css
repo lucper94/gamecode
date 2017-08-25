@@ -301,16 +301,16 @@ font-size: 14px;
 
 }
 .search-title{
-    font-size: 18px;
+    font-size: 19px;
     font-weight: bold;
     color: black;
 }
 .search-text{
-    font-size: 15px;
+    font-size: 14px;
     font-weight: lighter;
 }
 .search-price{
-    font-size: 16px;
+    font-size: 19px;
     font-weight: lighter;
     color: red;
 }
@@ -321,6 +321,21 @@ font-size: 14px;
 }
 .search-red{
     font-size: 15px;
+    font-weight: lighter;
+    color: red;
+}
+
+.search-detail-title{
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+.search-detail-text{
+    font-size: 17px;
+    font-weight: lighter;
+}
+.search-detail-price{
+    font-size: 22px;
     font-weight: lighter;
     color: red;
 }
@@ -710,6 +725,12 @@ li > a:only-child:after { content: ''; }
     width: 80%;
     margin-top: 124px;
     margin-bottom: 90px;
+    font-family: Fjalla;
+}
+
+.game-detail-text{
+    margin-top: 60px;
+
 }
 .game-detail-image{
     margin-top: 30px;
