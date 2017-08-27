@@ -914,6 +914,10 @@ nav{position:relative;width:980px;margin:0 auto;}
 #cssmenu > ul > li.has-sub > ul > li.active > a,#cssmenu > ul ul > li.has-sub > ul > li.active> a{border-top:1px solid rgba(0,0,0,0.9)}
 
 @media screen and (max-width:1000px){
+    .game-logo{
+        margin-left: 30%;
+
+        }
 .margin-search{
     margin-top: 0px;
 }
