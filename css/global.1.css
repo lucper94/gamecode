@@ -125,6 +125,9 @@ font-size: 8px;
     margin-top: 9%;
     
 }
+.margin-search{
+    margin-top: -47px;
+}
 
 .filters
 {
@@ -491,7 +494,7 @@ font-size: 14px;
 }
 .game-search input{
     height: 30px;
-    width: 103%;
+
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -803,6 +806,7 @@ li > a:only-child:after { content: ''; }
 }
 
 @media only screen and (max-width: 500px) {
+
 .search-image{
     border: black 3px solid;
     max-height: 195px;
@@ -910,6 +914,15 @@ nav{position:relative;width:980px;margin:0 auto;}
 #cssmenu > ul > li.has-sub > ul > li.active > a,#cssmenu > ul ul > li.has-sub > ul > li.active> a{border-top:1px solid rgba(0,0,0,0.9)}
 
 @media screen and (max-width:1000px){
+.margin-search{
+    margin-top: 0px;
+}
+.game-header-info label{
+
+    font-size: 10px;
+    color: white;
+}
+        
 nav ul ul{
     top:0;
     z-index: 1;
