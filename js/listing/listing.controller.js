@@ -117,6 +117,10 @@
         ctrl.resize_header = function(){
             var header= $('.game-header').height()+10;
             // console.log(header);
+            if(screen.width < 1000){
+                $('.game-menu ul').css('display','none');
+            }
+            
             $('.game-banner').css('margin-top',header);
             $('.filters').css('margin-top',header);
             // console.log('entro');

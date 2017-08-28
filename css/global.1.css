@@ -829,7 +829,7 @@ li > a:only-child:after { content: ''; }
 }
 .game-index-front{
     background-color: white;
-    border: black 5px solid;
+    border: #E3D9D9 3px solid;
 
     box-shadow: 0 5px 20px 0 rgba(0,0,0,0.9);
    
@@ -914,9 +914,18 @@ nav{position:relative;width:980px;margin:0 auto;}
 #cssmenu > ul > li.has-sub > ul > li.active > a,#cssmenu > ul ul > li.has-sub > ul > li.active> a{border-top:1px solid rgba(0,0,0,0.9)}
 
 @media screen and (max-width:1000px){
+.filters{
+    font-size: 7px;
+    margin-top: -3px;
+}
+.filters p{
+    font-size: 12px;
+    margin-top: -3px;
+    line-height: 14px;
+}
 .game-logo{
     position: absolute;
-    left: 50%;
+    left: 44%;
     margin-left: -50px;
 
 }
