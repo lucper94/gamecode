@@ -914,14 +914,33 @@ nav{position:relative;width:980px;margin:0 auto;}
 #cssmenu > ul > li.has-sub > ul > li.active > a,#cssmenu > ul ul > li.has-sub > ul > li.active> a{border-top:1px solid rgba(0,0,0,0.9)}
 
 @media screen and (max-width:1000px){
+
+.filters-mobil
+{
+    font-size: 10px;
+    color: white;
+    margin-top: 1%;
+    display: block;
+    z-index: 1;
+
+}
+.filters-mobil p
+{
+    background-color:black;
+    border: white 1px solid;
+}
 .filters{
     font-size: 7px;
     margin-top: -3px;
+    display: none;
 }
 .filters p{
-    font-size: 12px;
+    font-size: 10px;
     margin-top: -3px;
     line-height: 14px;
+    padding-left: 2;
+    padding-right: 2;
+    
 }
 .game-logo{
     position: absolute;

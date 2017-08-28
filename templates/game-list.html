@@ -1,11 +1,19 @@
-<div class="row col-xs-4 col-sm-4 col-md-4 col-lg-2  filters"  id="game-filters">
-  <p class="cursor col-xs-10 col-sm-10 col-md-10 col-lg-10">Ordenar por: </p>
-  <p class="cursor col-xs-10 col-sm-10 col-md-10 col-lg-10" ng-click="vm.orderFunction('name', vm.reverseOrder)" >Titulo <i class="fa fa-caret-{{vm.direction}}" aria-hidden="true"></i></p>
-  <p class="cursor col-xs-10 col-sm-10 col-md-10 col-lg-10" ng-click="vm.orderFunction('price', false)">Precio: Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-  <p class="cursor col-xs-10 col-sm-10 col-md-10 col-lg-10" ng-click="vm.orderFunction('price', true)">Precio: Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+<div class="row col-xs-3 col-sm-3 col-md-12 col-lg-2  filters"  id="game-filters">
+  <p class="cursor col-xs-12 col-sm-12 col-md-12 col-lg-12">Ordenar por: </p>
+  <p class="cursor col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('name', vm.reverseOrder)" >Titulo <i class="fa fa-caret-{{vm.direction}}" aria-hidden="true"></i></p>
+  <p class="cursor col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('price', false)">Precio: Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+  <p class="cursor col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('price', true)">Precio: Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
 </div>
 
+
+
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-banner">
+    <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-2  filters-mobil"   id="game-filters">
+        <p class="cursor col-xs-12 col-sm-12 col-md-12 col-lg-12">Ordenar por: </p>
+        <p class="cursor col-xs-4 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('name', vm.reverseOrder)" >Titulo <i class="fa fa-caret-{{vm.direction}}" aria-hidden="true"></i></p>
+        <p class="cursor col-xs-4 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('price', false)">Precio: Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+        <p class="cursor col-xs-4 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('price', true)">Precio: Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+      </div>
      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 " ng-repeat="game in vm.gamesObj | limitTo: vm.limit">
     
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " >
