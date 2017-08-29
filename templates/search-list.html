@@ -32,13 +32,13 @@
                   <label class="search-text">{{game.Platform}}</label>
               </div>
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
-                  <a ui-sref="detail({id:{{game.ID_Info}},kind: vm.kind })"><h3 class="search-title">{{game.Name}}</h3></a>
+                  <a ui-sref="detail({id:{{game.ID_Info}},kind: game.Kind })"><h3 class="search-title">{{game.Name}}</h3></a>
               </div>
               <br>
   
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  ">
 
-                    <label class="search-text">Precio de venta </label><br><label class="search-price">$ {{game.price_s}}</label>
+                    <label class="search-text">Precio de venta </label><br><label class="search-price">$ {{game.Sale}}</label>
 
                     
                   </div>
