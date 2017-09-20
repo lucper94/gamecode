@@ -20,9 +20,9 @@
             })
 
             .state('detail', {
-                url: '/detail',
+                url: '/detail/{id}/{kind}/',
                 templateUrl: 'templates/game-detail.html',
-                params : { id: null, kind: null, relatedIds: null, relatedGames: null },
+                params : {relatedIds: null, relatedGames: null },
                 controller: 'gameDetail as vm'
             })
 

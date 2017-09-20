@@ -27,7 +27,7 @@
 		};
         
         ctrl.searchGames = function(val){
-            return $http.get('http://159.203.210.238/metalgear/api/webpage/search/' + val)
+            return $http.get('https://gamerscode.mx/metalgear/api/webpage/search/' + val)
                 .then(function(response){
                     ctrl.ids = response.data.ID;
                     ctrl.names = response.data.Names;
