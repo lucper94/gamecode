@@ -29,15 +29,15 @@
             .state('search', {
                 url: '/search',
                 templateUrl: 'templates/search-list.html',
-                params : { searchString: 'unchar' },
+                params : { searchString: null },
                 controller: 'searchListCtrl as vm'
             })
             
             $urlRouterProvider.otherwise('/index');
             
             //check browser support
-           if(window.history && window.history.pushState)
-                $locationProvider.html5Mode(true); 
+        //    if(window.history && window.history.pushState)
+        //         $locationProvider.html5Mode(true); 
         
      }
 

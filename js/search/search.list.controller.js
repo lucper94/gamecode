@@ -2,9 +2,20 @@
 
      'use strict'
 
-     function searchListCtrl($stateParams,$http){
+     function searchListCtrl($stateParams,$http,$cookies){
+
          var ctrl = this;
-        console.log($stateParams);
+         
+
+         // Asignamos el valor de busqueda a una cookie para cuando el usuario de click en regresar
+         if($cookies.get('searchString') != null){
+
+             //Cuando se busca un nuevo juego se asigna el valor nuevo a la cookie
+             if($stateParams.searchString != null)
+                $cookies.put('searchString', $stateParams.searchString, {path: "/"});
+         }
+         else
+            $cookies.put('searchString', $stateParams.searchString, {path: "/"});
 
         ctrl.reverseOrder = true;
         ctrl.direction  = 'down';        
@@ -118,7 +129,7 @@
             $('.filters').css('margin-top',header);
             // console.log('entro');
         }
-        ctrl.searchGames($stateParams.searchString);
+        ctrl.searchGames($cookies.get('searchString'));
         ctrl.resize_header();
      }
 
