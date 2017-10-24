@@ -7,7 +7,7 @@
          this.getDetail = function(gameId,kind){
              return $http({
                  method: 'GET',
-                 url: 'https://gamerscode.mx/metalgear/api/webpage/singlestock/' + gameId + '/' + kind,
+                 url: 'https://gamerscode.mx/dashboard/api/webpage/singlestock/' + gameId + '/' + kind,
                  headers: {'Content-Type':'application/json'}
              }) 
          }

@@ -5,7 +5,7 @@
         function listingService($http){
             this.getGames = function(Kind,Platform,Type){
                
-                var url ="https://gamerscode.mx/metalgear/api/webpage/listing/" + Kind + "/" + Platform + "/" + Type;
+                var url ="https://gamerscode.mx/dashboard/api/webpage/listing/" + Kind + "/" + Platform + "/" + Type;
                 return $http({
                     method: 'GET',
                     url : url,
@@ -15,7 +15,7 @@
 
             this.getGamesHome = function(){
 
-                var url = 'https://gamerscode.mx/metalgear/api/webpage/homepage/';
+                var url = 'https://gamerscode.mx/dashboard/api/webpage/homepage/';
                  return $http({
                     method: 'GET',
                     url : url,
