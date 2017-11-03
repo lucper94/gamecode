@@ -27,6 +27,10 @@ background-size: cover;
  color: darkred;
  font-size: 14px;
 }
+
+.game-menu-container{
+    margin-top: 42px;
+}
 .game-footer{
     background: rgba(0, 0, 0, 0.9);
     padding-top: 10px;
@@ -807,6 +811,9 @@ li > a:only-child:after { content: ''; }
 }
 
 @media only screen and (max-width: 500px) {
+    .game-menu-container{
+        margin-top: 0px;
+    }
     nav ul ul ul li {
 
         top:0px;
