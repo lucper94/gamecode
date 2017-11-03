@@ -22,6 +22,15 @@
                     headers: {'Content-Type':'application/json'}
                 })
             }
+
+            this.getSlider = function(){
+                var url = 'http://159.203.210.238/dashboard/api/webpage/getsliderimgs';
+                return $http({
+                    method: 'POST',
+                    url : url,
+                    headers: {'Content-Type':'application/json'}
+                }) 
+            }
         }
         angular
             .module('gcapp')

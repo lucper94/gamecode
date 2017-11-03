@@ -20,7 +20,15 @@
             })
             }
    
-        
+            listingService.getSlider().then(function successCallback(response){
+                ctrl.firstone = response.data.class[0];
+                ctrl.secondone = response.data.sliderImgs[0];
+                console.log(ctrl.firstone);
+                ctrl.sliderimg = response.data;
+                console.log(ctrl.sliderimg);
+                ctrl.imagesS = response.data.sliderImgs;
+                console.log(ctrl.imagesS);
+            })
         ctrl.resize_header = function(){
             var header= $('.game-header').height()-20;
             // console.log(header);

@@ -1,34 +1,19 @@
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-banner" >
     <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
         <ol class="carousel-indicators">
-            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
-            <li data-target="#carousel" data-slide-to="3"></li>
-            <li data-target="#carousel" data-slide-to="4"></li>
-            <li data-target="#carousel" data-slide-to="5"></li>
+            <li  data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li ng-repeat = "i in vm.imagesS | limitTo:(1-vm.imagesS.length)" data-target="#carousel" data-slide-to="$index"></li>
         </ol>
         <!-- Carousel items -->
         <div class="carousel-inner">
+            
             <div class="active item game-slider"> 
-                <img src="img/slider/slider1.jpg" class="img-responsive game-bimage" alt="Logo">
+                <img src="img/slider/{{vm.secondone}}" class="img-responsive game-bimage" alt="Logo">
             </div>
-            <div class="item game-slider">
-                <img src="img/slider/slider2.jpg" class="img-responsive game-bimage" alt="Logo">
+            <div class="item game-slider" ng-repeat="img in vm.imagesS | limitTo: (1 - vm.imagesS.length)"> 
+                    <img src="img/slider/{{img}}" class="img-responsive game-bimage" alt="Logo">
             </div>
-            <div class="item game-slider">
-                <img src="img/slider/slider3.jpg" class="img-responsive game-bimage" alt="Logo">
-            </div>
-            <div class="item game-slider">
-                <img src="img/slider/slider4.jpg" class="img-responsive game-bimage" alt="Logo">
-            </div>
-            <div class="item game-slider">
-                <img src="img/slider/slider5.jpg" class="img-responsive game-bimage" alt="Logo">
-            </div>
-            <div class="item game-slider">
-                <img src="img/slider/slider6.jpg" class="img-responsive game-bimage" alt="Logo">
-            </div>
-
+            
         </div>
         <!-- Carousel nav -->
         <a class="carousel-control left" href="#carousel" data-slide="prev"><img src="img/resources/left-control.png" width="50px" height="50px" class="game-control"></a>

@@ -129,7 +129,7 @@
         $(window).resize(function(){
             ctrl.resize_header();
         });
-
+        
         listingService.getGamesHome()
             .then(function(response){
                 
