@@ -39,15 +39,35 @@
 <header>
 	
 	<div class="col-md-12 col-xs-12 col-sm-12  game-header navbar-fixed-top" >
-		<div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 game-logo">
+		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 game-logo">
 
 				<a ui-sref='index'><img src="img/resources/gamerscode-logo.png"  class="img-responsive " alt="Logo"></a>
 			
 		</div>
-	
-	<div class="col-xs-8 col-sm-8 col-md-10 col-lg-10 game-menu">
+
+		<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3 margin-search" ng-controller="searchCtrl as vm">
+				<!-- Buscador  -->
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-6 col-lg-6 col-lg-offset-6 game-header-info" ng-controller="modalCtrl as vm">
+					<label class="  " data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(1)">Sobre Gamer's Code</label>
+					<label class=" " data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(2)">Sucursales</label>
+					<label class=" " data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(3)">Contacto</label>
+				</div>
+				<div class='class="col-xs-12 col-sm-12 col-md-12 col-lg-12  game-search'  ng-keyup="vm.gotoDetail($event)">
+					<input class="col-xs-8 col-sm-8 col-md-9 col-lg-9" type="text" ng-model="vm.asyncSelected"  placeholder="Buscar..." typeahead-focus-first="false" typeahead-editable="true" uib-typeahead="games for games in vm.searchGames($viewValue) | limitTo:8" typeahead-loading="loadingLocations" typeahead-min-length="4" typeahead-on-select="vm.gotoDetail($event,$listener = 1)" typeahead-no-results="noResults" class="form-control">
+					<button type="button" class="btn btn-danger col-xs-2 col-sm-2 col-md-1 col-lg-1"  style="font-size: 8px;"><i class="fa fa-search fa-2x" aria-hidden="true"></i></button>
+		
+					<i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+					<div ng-show="noResults">
+						<i class="glyphicon glyphicon-remove"></i> No se encontraron resultados
+					</div>
+				</div>
+		
+			</div>	
+
+			
+	<div class="col-xs-8 col-sm-8 col-md-offset-4 col-md-8 col-lg-offset-4 col-lg-8 game-menu">
 		<a class="toggleMenu" href="#">Menu</a>
-		<nav id='cssmenu'class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+		<nav id='cssmenu'class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div id="head-mobile"></div>
 			<div class="button"></div>
 			<ul>
@@ -231,25 +251,9 @@
 	</ng-form>
 
 	</div>
-	<div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3 margin-search" ng-controller="searchCtrl as vm">
-		<!-- Buscador  -->
-		<div class='class="col-xs-12 col-sm-12 col-md-12 col-lg-12  game-search'  ng-keyup="vm.gotoDetail($event)">
-			<input class="col-xs-8 col-sm-8 col-md-9 col-lg-9" type="text" ng-model="vm.asyncSelected"  placeholder="Buscar..." typeahead-focus-first="false" typeahead-editable="true" uib-typeahead="games for games in vm.searchGames($viewValue) | limitTo:8" typeahead-loading="loadingLocations" typeahead-min-length="4" typeahead-on-select="vm.gotoDetail($event,$listener = 1)" typeahead-no-results="noResults" class="form-control">
-			<button type="button" class="btn btn-danger col-xs-2 col-sm-2 col-md-1 col-lg-1"  style="font-size: 8px;"><i class="fa fa-search fa-2x" aria-hidden="true"></i></button>
 
-			<i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
-			<div ng-show="noResults">
-				<i class="glyphicon glyphicon-remove"></i> No se encontraron resultados
-			</div>
-		</div>
 
-	
-		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-6 col-lg-6 col-lg-offset-6 game-header-info" ng-controller="modalCtrl as vm">
-			<label class="  " data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(1)">Sobre Gamer's Code</label>
-			<label class=" " data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(2)">Sucursales</label>
-			<label class=" " data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(3)">Contacto</label>
-		</div>
-	</div>
+
 </div>
 </header>
 
