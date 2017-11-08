@@ -6,13 +6,14 @@
 </div>
 
 
-
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-banner">
     <div class=" col-xs-12 col-sm-12 col-md-12 col-lg-2  filters-mobil"  style="display:none;" id="game-filters">
         <p class="cursor col-xs-12 col-sm-12 col-md-12 col-lg-12">Ordenar por: </p>
         <p class="cursor col-xs-4 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('name', vm.reverseOrder)" >Titulo <i class="fa fa-caret-{{vm.direction}}" aria-hidden="true"></i></p>
         <p class="cursor col-xs-4 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('price', false)">Precio: Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
         <p class="cursor col-xs-4 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('price', true)">Precio: Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
+        
+        
       </div>
      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-md-offset-2 col-lg-offset-2 " ng-repeat="game in vm.gamesObj | limitTo: vm.limit">
     
@@ -41,7 +42,7 @@
                     <label ng-class="game.Stock == 'En Inventario' ? 'search-green' : 'search-red'">{{game.Stock}}</label>
                 </div>
 
-                  <!--<button  class=" game-search-btn pull-right" data-toggle="modal" data-target="#myStock" >Compra/intercambio</button>-->
+                  <button  class=" game-search-btn pull-right" data-toggle="modal" ng-if="game.Platform=='PS4'" ng-click="vm.modal(game.price_e,game.price_p);" >Compra/intercambio</button>
 
     
 
@@ -60,7 +61,7 @@
   <img id="loadingsvg" src="img/resources/spin2.svg" />
 </div>
 
-<div class="modal fade" id="myStock" role="dialog">
+<div class="modal fade" id="myStock" role="dialog"  data-backdrop="true">
   <div class="modal-dialog">
   
     <!-- Modal content-->
@@ -82,8 +83,8 @@
               <tbody>
                   <tr>
                     
-                      <td>$ {{game.price_p}}</td>
-                      <td>$ {{game.price_e}}</td>
+                      <td>$ {{vm.price_p}}</td>
+                      <td>$ {{vm.price_e}}</td>
                   </tr>
               </tbody>
           </table>

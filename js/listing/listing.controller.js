@@ -48,6 +48,12 @@
             // return ctrl.reverseOrder
         }
 
+        ctrl.modal = function(pricee,pricep){
+            ctrl.price_e = pricee;
+            ctrl.price_p = pricep;
+            $("#myStock").modal();
+                    } 
+
         ctrl.orderFunction = function(property, reverse){
             ctrl.orderSwitch(reverse); // Changing Reverse Flag
             switch(property){
@@ -107,6 +113,7 @@
         listingService.getGames(ctrl.kind, $cookies.getObject('listParams').platform, $cookies.getObject('listParams').classic)
             .then(function(response){
                 ctrl.gamesObj = response.data.app_data;
+                console.log(ctrl.gamesObj);
                 ctrl.limit = 25;
                 ctrl.predicate = 'Name';
                 ctrl.loading=false;
@@ -148,7 +155,7 @@
 
                 // console.log(ctrl.images);
                 ctrl.loading = false;
-                console.log(ctrl.loading);
+                
                 
             })
             
