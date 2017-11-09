@@ -2,7 +2,7 @@
 <head>
 <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<base href="/">
+<!--<base href="/">-->
 <!-- CSS  -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/global.1.css">
@@ -179,9 +179,9 @@
 					<a ui-sref="#">RETRO</a>
 					<ul>
 					
-						<li class='drop'><a ui-sref="#">GAME CUBE</a>
+						<li class='drop'><a ui-sref="#">Game Cube</a>
 							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'With_Box', platform: 'GameCube', classic: 'False'})" >Juegos</a></li>
+								<li class='drop'><a ui-sref="listing({kind:'With_Box', platform: 'GameCube', classic: 'True'})" >Juegos</a></li>
 								<li class='drop'><a ui-sref="listing({kind:'Good', platform: 'GameCube', classic: 'False'})" >Consolas y Accesorios</a></li>
 							</ul>
 						</li>
@@ -190,21 +190,21 @@
 						
 						<li class='drop'><a ui-sref="#">N64</a>
 							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Without_Box', platform: 'N64', classic: 'False'})">Juegos</a></li>
+								<li class='drop'><a ui-sref="listing({kind:'Without_Box', platform: 'N64', classic: 'True'})">Juegos</a></li>
 								<li class='drop'><a ui-sref="listing({kind:'Good', platform: 'N64', classic: 'False'})" >Consolas y Accesorios</a></li>
 							</ul>
 						</li>
 						
 						<li class='drop'><a ui-sref="#">SUPER NES</a>
 							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Without_Box', platform: 'snes', classic: 'False'})" >Juegos</a></li>
+								<li class='drop'><a ui-sref="listing({kind:'Without_Box', platform: 'snes', classic: 'True'})" >Juegos</a></li>
 								<li class='drop'><a ui-sref="listing({kind:'Good', platform: 'snes', classic: 'False'})">Consolas y Accesorios</a></li>
 							</ul>
 						</li>
 						
 						<li class='drop'><a ui-sref="#">NES</a>
 							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Without_Box', platform: 'nes', classic: 'False'})" >Juegos</a></li>
+								<li class='drop'><a ui-sref="listing({kind:'Without_Box', platform: 'nes', classic: 'True'})" >Juegos</a></li>
 								<li class='drop'><a ui-sref="listing({kind:'Good', platform: 'nes', classic: 'False'})" >Consolas y Accesorios</a></li>
 							</ul>
 						</li>
@@ -215,7 +215,7 @@
 					</ul>
 				</li>
 				
-				<li class='drop'>
+				<!--<li class='drop'>
 					<a ui-sref="#">CLASICOS</a>
 					<ul>
 						
@@ -242,31 +242,22 @@
 							</ul>
 						</li>
 					</ul>
-				</li>
+				</li>-->
 				<li class='drop'>
 					<a ui-sref="#">Sega</a>
 					<ul>
 						
-						<li class='drop'><a ui-sref="#">GAMECUBE</a>
+						<li class='drop'><a ui-sref="#">Sega Genesis</a>
 							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Good', platform: 'GAMECUBE', classic: 'True'})">Juegos</a></li>
+								<li class='drop'><a ui-sref="listing({kind:'Without_Box', platform: 'Sega Genesis', classic: 'False'})" >Juegos</a></li>
+								<li class='drop'><a ui-sref="listing({kind:'Good', platform: 'Sega Genesis', classic: 'False'})" >Consolas y Accesorios</a></li>
 							</ul>
 						</li>
 						
-						<li class='drop'><a ui-sref="#">SUPER NES</a>
+						<li class='drop'><a ui-sref="#">Dreamcast</a>
 							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Good', platform: 'snes', classic: 'True'})" >Juegos</a></li>
-							</ul>
-						</li>
-						
-						<li class='drop'><a ui-sref="#">NES</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Good', platform: 'nes', classic: 'True'})">Juegos</a></li>
-							</ul>
-						</li>
-
-						<li class='drop'><a ui-sref="#">N64</a>
-							<ul><li class='drop'><a ui-sref="listing({kind:'Good', platform: 'n64', classic: 'True'})">Juegos</a></li>
+									<li class='drop'><a ui-sref="listing({kind:'With_Box', platform: 'Dreamcast', classic: 'False'})" >Juegos</a></li>
+								<li class='drop'><a ui-sref="listing({kind:'Good', platform: 'Dreamcast', classic: 'False'})" >Consolas y Accesorios</a></li>
 							</ul>
 						</li>
 					</ul>
