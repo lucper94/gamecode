@@ -1122,6 +1122,10 @@ svg rect{
 }
 
 
+@font-face {
+    font-family: Fjalla;
+    src: url(../fonts/FjallaOne-Regular.otf);
+}
 
 
 .supchecks {
