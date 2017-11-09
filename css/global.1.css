@@ -1122,11 +1122,27 @@ svg rect{
 }
 
 
-@font-face {
-    font-family: Fjalla;
-    src: url(../fonts/FjallaOne-Regular.otf);
+
+
+.supchecks {
+    display:none;
 }
 
+.supchecks + label {
+    color:#f2f2f2;
+    font-size: 16;
+}
 
+.supchecks + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-2px 10px 0 0;
+    vertical-align:middle;
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
+    cursor:pointer;
+}
 
-
+.supchecks:checked + label span {
+    background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+}
