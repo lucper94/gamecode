@@ -60,6 +60,11 @@
                 //  console.log(ctrl.loading);
                 
             })
+
+            listingService.getTopTen().then(function successCallback(response){
+                console.log(response);
+                ctrl.topten = response.data;
+            })
             
             ctrl.getName = function(name){
                 if(name.length > 25) {

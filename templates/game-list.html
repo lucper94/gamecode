@@ -3,22 +3,28 @@
   <p class="cursor col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('name', vm.reverseOrder)" >Titulo <i class="fa fa-caret-{{vm.direction}}" aria-hidden="true"></i></p>
   <p class="cursor col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('price', false)">Precio: Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
   <p class="cursor col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('price', true)">Precio: Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
-  <input type="checkbox" ng-model="vm.first" value='0-201'><font color ="black">$0-$201</font><br>
-  <input type="checkbox" ng-model="vm.second" value='0-201'><font color ="black">$151-250</font><br>
-  <input type="checkbox" ng-model="vm.third" value='0-201'><font color ="black">$251-$350</font><br>
-  <input type="checkbox" ng-model="vm.fourth" value='0-201'><font color ="black">$351-$500</font><br>
-  <input type="checkbox" ng-model="vm.fifth" value='0-201'><font color ="black">$501-$700</font><br>
-  <input type="checkbox" ng-model="vm.sixth" value='0-201'><font color ="black">$701-$849</font><br>
-  <input type="checkbox" ng-model="vm.seventh" value='0-201'><font color ="black">$851 - </font>
+
  
-  <p>
-  <input type="checkbox" class="supchecks" id="c1" name="cc" />
-  <label for="c1"><span></span>$0-$201</label>
-  <p>
-  <input type="checkbox" class="supchecks" id="c2" name="cc" />
-  <label for="c2"><span></span>$151-250</label>
-  
+ 
+
 </div>
+
+<div class="row col-xs-3 col-sm-3 col-md-12 col-lg-2 checkcontainer">
+    <input type="radio" class="supchecks" id="c1" ng-model="vm.preciofilter" value="0-150" />
+    <label for="c1"><span></span>$0-$150</label><br>
+    <input type="radio" class="supchecks" id="c2" ng-model="vm.preciofilter" value="151-250" />
+    <label for="c2"><span></span>$151-$250</label>
+    <input type="radio" class="supchecks" id="c3" ng-model="vm.preciofilter" value="251-350" />
+    <label for="c3"><span></span>$251-$350</label>
+    <input type="radio" class="supchecks" id="c4" ng-model="vm.preciofilter" value="351-500"/>
+    <label for="c4"><span></span>$351-$500</label>
+    <input type="radio" class="supchecks" id="c5" ng-model="vm.preciofilter" value="501-700"/>
+    <label for="c5"><span></span>$501-$700</label>
+    <input type="radio" class="supchecks" id="c6" ng-model="vm.preciofilter" value="701-849" />
+    <label for="c6"><span></span>$701-$849</label><br>
+    <input type="radio" class="supchecks" id="c7" ng-model="vm.preciofilter" value="850">
+    <label for="c7"><span></span>$850-</label>
+  </div>
 
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-banner">
@@ -49,15 +55,16 @@
             </div>
             <br>
 
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  ">
-                  <label class="search-text">Precio de venta </label><br><label class="search-price">$ {{game.price_s}}</label>
-                  
-                </div>
+            
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <label class="search-text">Precio de venta </label><br><label class="search-price">$ {{game.Sale}}</label>
+            </div>
+               
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  ">
                     <label ng-class="game.Stock == 'En Inventario' ? 'search-green' : 'search-red'">{{game.Stock}}</label>
                 </div>
 
-                  <button  class=" game-search-btn pull-right" data-toggle="modal" ng-if="game.Platform=='PS4'" ng-click="vm.modal(game.price_e,game.price_p);" >Compra/intercambio</button>
+                  <button  class=" game-search-btn pull-right" data-toggle="modal" ng-hide="game.PurchaseWB == null" ng-click="vm.modal(game.price_e,game.price_p);" >Compra/intercambio</button>
 
     
 

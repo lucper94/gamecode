@@ -820,7 +820,7 @@ li > a:only-child:after { content: ''; }
         /* has to be the same number as the "width" of "nav ul ul li" */ 
         left:0px; 
     }
-.search-image{
+   -image{
     border: black 3px solid;
     max-height: 195px;
     margin-bottom: 5px;
@@ -927,6 +927,14 @@ nav{position:relative;width:980px;margin:0 auto;}
 #cssmenu > ul > li.has-sub > ul > li.active > a,#cssmenu > ul ul > li.has-sub > ul > li.active> a{border-top:1px solid rgba(0,0,0,0.9)}
 
 @media screen and (max-width:1000px){
+
+    .checkcontainer{
+        color: white;
+        position:fixed;
+        margin-top: 23%;
+        display: block;
+        z-index: 1;
+    }
 
 .filters-mobil
 {
@@ -1130,23 +1138,35 @@ svg rect{
 
 .supchecks {
     display:none;
+    margin-left:3px;
+     
 }
 
 .supchecks + label {
-    color:#f2f2f2;
+    text-align: center;
+    color:black;
     font-size: 16;
+    
 }
 
 .supchecks + label span {
     display:inline-block;
     width:19px;
     height:19px;
-    margin:-2px 10px 0 0;
+    margin:-2px 10px 0 10px;
     vertical-align:middle;
     background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) left top no-repeat;
     cursor:pointer;
+    
 }
 
 .supchecks:checked + label span {
     background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -19px top no-repeat;
+}
+
+.checkcontainer{
+    color: white;
+    position:fixed;
+    margin-top: 23%;
+    z-index: 1;
 }
