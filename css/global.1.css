@@ -1093,6 +1093,36 @@ svg rect{
     border-radius: 3px;
 }
 
+.game-index-btn{
+
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    border: 3px solid darkred;
+    padding: 3px; 
+    padding-bottom: 3px; 
+    padding-top: 3px;
+    padding-left: 12px; 
+    padding-right: 12px; 
+    border-radius: 3px;
+     
+}
+.game-index-btn-selected{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: darkred;
+    color: white;
+    border: 3px solid black;
+    padding-bottom: 3px; 
+    padding-top: 3px;
+    padding-left: 12px; 
+    padding-right: 12px; 
+    border-radius: 3px;
+    box-shadow: 0 10px 25px 0 rgba(0,0,0,0.9); 
+}
+
 #modalBody{
     font-size: 18px;
 }

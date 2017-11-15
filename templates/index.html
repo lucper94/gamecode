@@ -23,8 +23,8 @@
 </div>    
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
         <div  class="text-center">
-    <button  class=" game-search-btn " ng-click="vm.div(0);">Los más buscados</button>
-    <button class=" game-search-btn  " ng-click="vm.div(1);">Los más vendidos</button>
+    <button   ng-class=" vm.idiv == 0 ? 'game-index-btn' : 'game-index-btn-selected'" ng-click="vm.div(0);">Los más buscados</button>
+    <button  ng-class="vm.idiv == 1 ? 'game-index-btn' : 'game-index-btn-selected'" ng-click="vm.div(1);">Los más vendidos</button>
     </div>
 </div>
                                         <!-- LOS MAS BUSCADOS -->
