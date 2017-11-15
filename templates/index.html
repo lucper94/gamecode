@@ -23,14 +23,14 @@
 </div>    
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
         <div  class="text-center">
-    <button  class=" game-search-btn ">Acción</button>
-    <button class=" game-search-btn  ">Acción</button>
+    <button  class=" game-search-btn " ng-click="vm.div(0);">Los más buscados</button>
+    <button class=" game-search-btn  " ng-click="vm.div(1);">Los más vendidos</button>
     </div>
 </div>
                                         <!-- LOS MAS BUSCADOS -->
 
-<!--<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10  col-md-offset-1 col-lg-offset-1" style="
-    margin-bottom: 107px;">
+<div class="col-xs-12 col-sm-12 col-md-10 col-lg-10  col-md-offset-1 col-lg-offset-1" style="
+    margin-bottom: 107px;" ng-if="vm.idiv==0">
     
     <div ng-repeat="todo in vm.todos" repeat-done="foo()" class="col-xs-12 col-sm-6 col-md-6 col-lg-3 game-index-container" >
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-index-front">
@@ -69,7 +69,7 @@
                                             <!-- LOS MAS VENDIDOS -->
 
   <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10  col-md-offset-1 col-lg-offset-1" style="
-  margin-bottom: 107px;">
+  margin-bottom: 107px;" ng-if="vm.idiv==1">
   
   <div ng-repeat="top in vm.topten" repeat-done="foo()" class="col-xs-12 col-sm-6 col-md-6 col-lg-3 game-index-container" >
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-index-front">

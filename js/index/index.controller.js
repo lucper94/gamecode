@@ -65,6 +65,10 @@
                 console.log(response);
                 ctrl.topten = response.data;
             })
+            ctrl.idiv=0;
+            ctrl.div = function(id){
+                ctrl.idiv=id;
+            }
             
             ctrl.getName = function(name){
                 if(name.length > 25) {
