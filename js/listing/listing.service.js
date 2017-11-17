@@ -3,9 +3,9 @@
      'use strict'
 
         function listingService($http){
-            this.getGames = function(Kind,Platform,Type){
+            this.getGames = function(Kind,Platform,Type,lowerPrice,higherPrice){
                
-                var url ="https://gamerscode.mx/beta/api/webpage/listing/" + Kind + "/" + Platform + "/" + Type;
+                var url ="https://gamerscode.mx/beta/api/webpage/listing/" + Kind + "/" + Platform + "/" + Type + "/" + lowerPrice + "/" + higherPrice;
                 return $http({
                     method: 'GET',
                     url : url,

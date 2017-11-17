@@ -10,20 +10,29 @@
 </div>
 
 <div class="row col-xs-3 col-sm-3 col-md-12 col-lg-2 checkcontainer">
-    <input type="radio" class="supchecks" id="c1" ng-model="vm.preciofilter" value="0-150" />
-    <label for="c1"><span></span>$0-$150</label><br>
-    <input type="radio" class="supchecks" id="c2" ng-model="vm.preciofilter" value="151-250" />
-    <label for="c2"><span></span>$151-$250</label>
-    <input type="radio" class="supchecks" id="c3" ng-model="vm.preciofilter" value="251-350" />
-    <label for="c3"><span></span>$251-$350</label>
-    <input type="radio" class="supchecks" id="c4" ng-model="vm.preciofilter" value="351-500"/>
-    <label for="c4"><span></span>$351-$500</label>
-    <input type="radio" class="supchecks" id="c5" ng-model="vm.preciofilter" value="501-700"/>
-    <label for="c5"><span></span>$501-$700</label>
-    <input type="radio" class="supchecks" id="c6" ng-model="vm.preciofilter" value="701-849" />
-    <label for="c6"><span></span>$701-$849</label><br>
-    <input type="radio" class="supchecks" id="c7" ng-model="vm.preciofilter" value="850">
-    <label for="c7"><span></span>$850-</label>
+      <input type="radio" class="supchecks" id="c10" ng-model="vm.radioPrice" ng-change="vm.priceFilter(0,2000000)" value="todos">
+      <label for="c10"><span></span>Todos</label><br>
+      <input type="radio" class="supchecks" id="c1" ng-model="vm.radioPrice" ng-change="vm.priceFilter(0,150)" value="red">
+      <label for="c1"><span></span>$0-$150</label><br>
+      <input type="radio" class="supchecks" id="c2" ng-model="vm.radioPrice" ng-change="vm.priceFilter(151,250)" value="nada">
+      <label for="c2"><span></span>$151-$250</label><br>
+      <input type="radio" class="supchecks" id="c3" ng-model="vm.radioPrice" ng-change="vm.priceFilter(251,350)" value="nada2">
+      <label for="c3"><span></span>$251-$350</label><br>
+      <input type="radio" class="supchecks" id="c4" ng-model="vm.radioPrice" ng-change="vm.priceFilter(350,500)" value="nada3">
+      <label for="c4"><span></span>$351-$500</label><br>
+      <input type="radio" class="supchecks" id="c5" ng-model="vm.radioPrice" ng-change="vm.priceFilter(501,700)" value="nada4">
+      <label for="c5"><span></span>$501-$700</label><br>
+      <input type="radio" class="supchecks" id="c6" ng-model="vm.radioPrice" ng-change="vm.priceFilter(701,849)" value="nada5">
+      <label for="c6"><span></span>$701-$849</label><br>
+      <input type="radio" class="supchecks" id="c7" ng-model="vm.radioPrice" ng-change="vm.priceFilter(850,200000)" value="nada6">
+      <label for="c7"><span></span>$850-</label><br><br>
+      <article>
+          <rzslider  class="custom-slider"
+                data-rz-slider-model="vm.rangeSlider.minValue"
+                data-rz-slider-high="vm.rangeSlider.maxValue"
+                data-rz-slider-options="vm.rangeSlider.options"
+              ></rzslider>
+          </article>
   </div>
 
 

@@ -7,6 +7,22 @@
          var ctrl = this;
          
 
+        ctrl.rangeSlider = {
+            minValue: 0,
+            maxValue: 12000,
+            options: {
+              floor: 0,
+              ceil: 12000,
+              step: 100,
+              onEnd: function(id, newValue, highValue, pointerType) {
+                ctrl.filterSlider();
+                
+              }
+            }
+          }
+          
+        
+
          // Asignamos el valor de busqueda a una cookie para cuando el usuario de click en regresar
          if($cookies.get('searchString') != null){
 
@@ -18,8 +34,9 @@
             $cookies.put('searchString', $stateParams.searchString, {path: "/"});
 
         ctrl.reverseOrder = true;
-        ctrl.direction  = 'down';        
-        
+        ctrl.direction  = 'down';
+        ctrl.searchedGame =   $cookies.get('searchString');     
+        console.log($cookies.get('searchString'));
         ctrl.orderSwitch = function(reverseFlag){
             if(reverseFlag === true)
                 ctrl.reverseOrder = false;
@@ -114,14 +131,46 @@
         
         }
         
-        ctrl.searchGames = function(val){
-            return $http.get('https://gamerscode.mx/dashboard/api/webpage/searchlist/' + val)
+        ctrl.searchGames = function(val,lowerPrice,higherPrice){
+            return $http.get('https://gamerscode.mx/beta/api/webpage/searchlist/' + val + "/" +  "0" + "/" + "10000000000")
                 .then(function(response){
                     console.log(response);
                     ctrl.gamesObj = response.data.app_data;
+                    ctrl.platforms = response.data.platforms;
                     ctrl.resize_header();
                 });
         };
+        ctrl.rangePrice='';
+        ctrl.radioPrice ='';
+        ctrl.priceFilter = function (lowerPrice,higherPrice){
+            return $http.get('https://gamerscode.mx/beta/api/webpage/searchlist/' + ctrl.searchedGame   +  "/" + lowerPrice  + "/" + higherPrice)
+            .then(function(response){
+                ctrl.gamesObj = response.data.app_data;
+                console.log(ctrl.gamesObj);
+                ctrl.limit = 25;
+                ctrl.predicate = 'Name';
+                ctrl.loading=false;
+            
+            })
+        }
+        ctrl.platform = "";
+        ctrl.platformFilter = function (lowerPrice,higherPrice){
+            return $http.get('https://gamerscode.mx/beta/api/webpage/searchlist/' + ctrl.searchedGame   +  "/" + lowerPrice  + "/" + higherPrice )
+            .then(function(response){
+                ctrl.gamesObj = response.data.app_data;
+                console.log(ctrl.gamesObj);
+                ctrl.limit = 25;
+                ctrl.predicate = 'Name';
+                ctrl.loading=false;
+            
+            })
+        }
+
+
+            ctrl.filterSlider = function (){
+              ctrl.priceFilter(ctrl.rangeSlider.minValue,ctrl.rangeSlider.maxValue);
+        }
+        
         ctrl.resize_header = function(){
             var header= $('.game-header').height()+10;
             // console.log(header);

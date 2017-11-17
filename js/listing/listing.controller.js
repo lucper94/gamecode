@@ -6,6 +6,20 @@
          
         var ctrl = this;
 
+        ctrl.rangeSlider = {
+            minValue: 0,
+            maxValue: 12000,
+            options: {
+              floor: 0,
+              ceil: 12000,
+              step: 100,
+              onEnd: function(id, newValue, highValue, pointerType) {
+                ctrl.filterSlider();
+                
+              }
+            }
+          }
+
         if($cookies.getObject('listParams') != undefined){
             
             //Cuando se elige una plataforma diferente.
@@ -110,7 +124,7 @@
         
         ctrl.loading=true;
         ctrl.kind = $cookies.getObject('listParams').kind;
-        listingService.getGames(ctrl.kind, $cookies.getObject('listParams').platform, $cookies.getObject('listParams').classic)
+        listingService.getGames(ctrl.kind, $cookies.getObject('listParams').platform, $cookies.getObject('listParams').classic,0,100000)
             .then(function(response){
                 ctrl.gamesObj = response.data.app_data;
                 console.log(ctrl.gamesObj);
@@ -142,11 +156,7 @@
                 
                 ctrl.loading = false;
                 ctrl.todos = response.data;
-                // console.log(ctrl.todos);
                 ctrl.resize_header();
-              
-
-                // console.log(ctrl.images);
                 ctrl.loading = false;
                 
                 
@@ -166,6 +176,24 @@
             ctrl.resize_header();
             
         });
+       ctrl.radioPrice ='';
+        ctrl.priceFilter = function (lowerPrice,higherPrice){
+            listingService.getGames(ctrl.kind, $cookies.getObject('listParams').platform, $cookies.getObject('listParams').classic,lowerPrice,higherPrice)
+            .then(function(response){
+                ctrl.gamesObj = response.data.app_data;
+                console.log(ctrl.gamesObj);
+                ctrl.limit = 25;
+                ctrl.predicate = 'Name';
+                ctrl.loading=false;
+            
+            })
+   
+        }
+
+        ctrl.filterSlider = function (){
+            ctrl.priceFilter(ctrl.rangeSlider.minValue,ctrl.rangeSlider.maxValue);
+      }
+      
 
         
      }

@@ -2,6 +2,6 @@
 
      'use strict'
 
-     angular.module('gcapp',['ui.router','ngAnimate', 'ngSanitize', 'ui.bootstrap','ngCookies'])
+     angular.module('gcapp',['ui.router','ngAnimate', 'ngSanitize', 'ui.bootstrap','ngCookies','rzModule'])
 
  }());
