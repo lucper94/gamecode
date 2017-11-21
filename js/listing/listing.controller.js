@@ -39,12 +39,25 @@
         
         else{
 
-           var listParams = {
-                kind:  'With_Box',
-                platform:  'PS4',
-                classic:  'False',
+            if($stateParams.kind != null){
                 
+                var listParams = {
+                    kind:  $stateParams.kind,
+                    platform:  $stateParams.platform,
+                    classic:  $stateParams.classic
+                }
             }
+            else{
+
+                var listParams = {
+                    kind:  'Game',
+                    platform:  'PS4',
+                    classic:  'False',
+                    
+                }
+            }
+
+           
             
             $cookies.putObject('listParams', listParams, {path: "/"});
 
@@ -127,7 +140,7 @@
         listingService.getGames(ctrl.kind, $cookies.getObject('listParams').platform, $cookies.getObject('listParams').classic,0,100000)
             .then(function(response){
                 ctrl.gamesObj = response.data.app_data;
-                console.log(ctrl.gamesObj);
+                console.log($cookies.getObject('listParams'));
                 ctrl.limit = 25;
                 ctrl.predicate = 'Name';
                 ctrl.loading=false;
