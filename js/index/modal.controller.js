@@ -11,7 +11,7 @@
              switch (key) {
                  case 1:
                     ctrl.modalHead = "¿Qué es Games's Code?";
-                    ctrl.modalBody = "<p>Gamers Code fue establecido en el 2012 en Zacatecas, México.</p>"+"<p>Iniciamos este proyecto para crear un lugar en donde pudieras intercambiar cualquiera de tus videojuegos o consolas/accesorios usadas por otro producto sin restricciones ni comisiones.</p>"+"<p>Es nuestra meta el ofrecerte el mejor precio posible al comprar o tomar en crédito tus juegos; y al mismo tiempo, queremos que tengas seguridad y confianza en nuestros productos, es por eso ofrecemos 1 año de garantía en tus compras.</p>"+"<p>Buscamos ser el lugar donde encuentres todo lo necesario para jugar los videojuegos que más te gusten, como son consolas, controles y accesorios.</p>"+"<p>En Gamers Code estamos trabajando para llevarte la más completa colección de videojuegos a precios accesibles, En nuestras tiendas podrás encontrar desde los juegos más recientes para las consolas de última generación, hasta juegos retro de las consolas que jugábamos en nuestra infancia.</p>";
+                    ctrl.modalBody = "<p>Iniciamos este proyecto para crear un lugar en donde pudieras intercambiar cualquiera de tus videojuegos o consolas/accesorios usadas por otro producto sin restricciones ni comisiones.</p>"+"<p>En Gamers Code estamos trabajando constantemente para llevarte la más completa colección de videojuegos a precios accesibles, En nuestras tiendas podrás encontrar desde los juegos y consolas retro clásicas, hasta los juegos más recientes de última generación.</p>";
                     ctrl.sucursales = false; 
                     ctrl.modalBody2 ="";
                     $('.no-sucursales').show();

@@ -5,7 +5,7 @@
         function listingService($http){
             this.getGames = function(Kind,Platform,Type,lowerPrice,higherPrice){
                
-                var url ="https://gamerscode.mx/beta/api/webpage/listing/" + Kind + "/" + Platform + "/" + Type + "/" + lowerPrice + "/" + higherPrice;
+                var url ="https://gamerscode.mx/dashboard/api/webpage/listing/" + Kind + "/" + Platform + "/" + Type + "/" + lowerPrice + "/" + higherPrice;
                 return $http({
                     method: 'GET',
                     url : url,
@@ -33,7 +33,7 @@
             }
 
             this.getTopTen = function (){
-                var url = 'https://gamerscode.mx/beta/api/webpage/topten';
+                var url = 'https://gamerscode.mx/dashboard/api/webpage/topten';
                 return $http({
                     method: 'GET',
                     url : url,
