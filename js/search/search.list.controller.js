@@ -131,8 +131,8 @@
         
         }
         
-        ctrl.searchGames = function(val,lowerPrice,higherPrice){
-            return $http.get('https://gamerscode.mx/beta/api/webpage/searchlist/' + val + "/" +  "0" + "/" + "10000000000")
+        ctrl.searchGames = function(val,lowerPrice,higherPrice,platform){
+            return $http.get('https://gamerscode.mx/beta/api/webpage/searchlist/' + val + "/" +  "0" + "/" + "10000000000" + "/" + "NULL")
                 .then(function(response){
                     console.log(response);
                     ctrl.gamesObj = response.data.app_data;
@@ -140,10 +140,11 @@
                     ctrl.resize_header();
                 });
         };
+        ctrl.platform = "";
         ctrl.rangePrice='';
         ctrl.radioPrice ='';
-        ctrl.priceFilter = function (lowerPrice,higherPrice){
-            return $http.get('https://gamerscode.mx/beta/api/webpage/searchlist/' + ctrl.searchedGame   +  "/" + lowerPrice  + "/" + higherPrice)
+        ctrl.priceFilter = function (lowerPrice,higherPrice,platform){
+            return $http.get('https://gamerscode.mx/beta/api/webpage/searchlist/' + ctrl.searchedGame   +  "/" + lowerPrice  + "/" + higherPrice + "/" + 'NULL')
             .then(function(response){
                 ctrl.gamesObj = response.data.app_data;
                 console.log(ctrl.gamesObj);
@@ -153,15 +154,16 @@
             
             })
         }
-        ctrl.platform = "";
-        ctrl.platformFilter = function (lowerPrice,higherPrice){
-            return $http.get('https://gamerscode.mx/beta/api/webpage/searchlist/' + ctrl.searchedGame   +  "/" + lowerPrice  + "/" + higherPrice )
+        
+        ctrl.platformFilter = function (lowerPrice,higherPrice,platform){
+            return $http.get('https://gamerscode.mx/beta/api/webpage/searchlist/' + ctrl.searchedGame   +  "/" + 0  + "/" + 10000000000 + "/" + ctrl.platform)
             .then(function(response){
                 ctrl.gamesObj = response.data.app_data;
                 console.log(ctrl.gamesObj);
                 ctrl.limit = 25;
                 ctrl.predicate = 'Name';
                 ctrl.loading=false;
+                console.log(ctrl.platform);
             
             })
         }

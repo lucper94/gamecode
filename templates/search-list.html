@@ -5,9 +5,9 @@
         <p class="cursor col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('price', false)">Precio: Menor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
         <p class="cursor col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="vm.orderFunction('price', true)">Precio: Mayor <i class="fa fa-caret-down" aria-hidden="true"></i></p>
 
-    <select name="plataformas" ng-change="vm.platformFilter();" ng-model="vm.platform" class="form-control" style="margin-bottom:3px" ng-change="vm.platformFilter();">
+    <select name="plataformas" ng-change="vm.platformFilter();" ng-model="vm.platform" class="form-control" style="margin-bottom:3px">
         <option VALUE="">-- FILTRAR POR --</option>
-        <option ng-repeat="platform in vm.platforms" value="platform">{{platform}}</option>
+        <option ng-repeat="platform in vm.platforms" value="{{platform}}">{{platform}}</option>
     </select>
    
     <input type="radio" class="supchecks" id="c10" ng-model="vm.radioPrice" ng-change="vm.priceFilter(0,2000000)" value="todos">

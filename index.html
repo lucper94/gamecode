@@ -2,7 +2,7 @@
 <head>
 <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<!--<base href="/">-->
+<base href="/">
 <!-- CSS  -->
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/global.1.css">
@@ -133,6 +133,12 @@
 				
 				<li class='drop'><a ui-sref="#">NINTENDO</a>
 					<ul>
+						<li class='drop'><a ui-sref="#">SWITCH</a>
+							<ul>
+								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'Switch', classic: 'False'})" >Juegos</a></li>
+								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'Switch', classic: 'False'})">Consolas y Accesorios</a></li>
+							</ul>
+						</li>
 						<li class='drop'><a ui-sref="#">WII U</a>
 							<ul>
 								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'WIIU', classic: 'False'})" >Juegos</a></li>
