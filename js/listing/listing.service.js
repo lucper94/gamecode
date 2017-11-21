@@ -24,7 +24,7 @@
             }
 
             this.getSlider = function(){
-                var url = 'http://159.203.210.238/dashboard/api/webpage/getsliderimgs';
+                var url = 'https://gamerscode.mx/dashboard/api/webpage/getsliderimgs';
                 return $http({
                     method: 'POST',
                     url : url,
