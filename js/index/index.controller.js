@@ -81,6 +81,13 @@
             ctrl.resize_header();
             
          });
+
+         listingService.getMenu().then(function successCallback(response){
+             
+             console.log(response.data);
+             ctrl.menu = response.data;
+             
+         })
         
      }
 
