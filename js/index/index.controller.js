@@ -129,7 +129,20 @@ $(function() {
                     $('#id'+indexMain+'-'+indexSub).append('<ul id="ul'+indexMain+'-'+indexSub+'"> </ul>');
                     
                     menu[key][key2].forEach(function(entry) {  
-                        $ ('#ul'+indexMain+'-'+indexSub).append('<li><a href="#">'+entry.kind+'</a></li>');
+                        var descripcion = '';
+                        switch (entry.kind) {
+                            case 'Game':
+                                descripcion = 'Juegos';
+                                break;
+
+                            case 'Accesory':
+                                descripcion = 'Consolas/Accesorios';
+                                break;
+
+                            default:
+                                break;
+                        }
+                        $ ('#ul'+indexMain+'-'+indexSub).append('<li><a ui-sref="listing({kind:'+entry.kind+', platform: '+key2+', classic: '+entry.classic+'})">'+descripcion+'</a></li>');
                     
                    })
                    indexSub++;

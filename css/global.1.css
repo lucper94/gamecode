@@ -1191,7 +1191,7 @@ input[type=range] {
   
   @media (min-width: 768px) {
     #main-menu {
-      float: right;
+
       clear: none;
     }
   }
