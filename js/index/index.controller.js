@@ -116,21 +116,25 @@ $(function() {
              ctrl.menu = response.data;
              var menu = response.data;
              var $menu = $('#main-menu');
+             var indexMain = 0;
              for (var key in menu) {
-                var str = key.replace(/\s/g, '');
                  console.log(key);
-                 $menu.append("<li id='"+str+"'><a href='#' >"+key+"</a> <li>");
+                 $menu.append("<li id='"+indexMain+"'><a href='#' >"+key+"</a> <li>");  
+                 $('#'+indexMain).append('<ul id="ul'+indexMain+'"> </ul>');
                  
-                 $('#'+str).append('<ul id="ul'+key+'"> </ul>');
+                 var indexSub = 0;
                  for (var key2 in menu[key]) {
-                 var str2 = key2.replace(/\s/g, '')
-                 $('#ul'+ key).append('<li id="'+str2+'"><a href="#">'+key2+'</a></li>');
-                 $('#'+key2).append('<ul id="ul'+str2+'"> </ul>');
+                    $('#ul'+ indexMain).append('<li id="id'+indexMain+'-'+indexSub+'"><a href="#">'+key2+'</a></li>');
+                   console.log('#'+indexMain+'.'+indexSub);
+                    $('#id'+indexMain+'-'+indexSub).append('<ul id="ul'+indexMain+'-'+indexSub+'"> </ul>');
+                    
                     menu[key][key2].forEach(function(entry) {  
-                        $ ('#ul'+str2).append('<li><a href="#">'+entry.kind+'</a></li>');
+                        $ ('#ul'+indexMain+'-'+indexSub).append('<li><a href="#">'+entry.kind+'</a></li>');
                     
                    })
+                   indexSub++;
                 }
+                indexMain++;
             }
              $menu.smartmenus('refresh');
  

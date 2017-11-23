@@ -11,7 +11,7 @@
 // :: 1.1. Colors
 // ----------------------------------------------------------
 
-$sm-blue__blue:											#3092c0 !default;
+$sm-blue__blue:											rgba(0,0,0,0.9) !default;
 $sm-blue__blue-dark:									darken($sm-blue__blue, 5%) !default;
 $sm-blue__blue-darker:									#006892 !default;
 $sm-blue__blue-light:									lighten($sm-blue__blue, 30%) !default;
