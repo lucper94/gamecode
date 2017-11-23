@@ -74,20 +74,14 @@
 		<nav id='cssmenu'class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div id="head-mobile"></div>
 			<div class="button"></div>
-			<ul>
-				<li ng-controller="modalCtrl as vm"  ><label data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(4)"  class="menu-main-label">Venta</label></li>
-				<li ng-repeat ="" class='drop'  class="test"><a href="#">HOLA</a>
+			<ul ng-controller="indexCtrl as vm">
+				<li ><label data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(4)"  class="menu-main-label">Venta</label></li>
+					
+				<li ng-repeat ="(key, value) in vm.menu" class='drop'  ><a href="#">{{key}}</a>
 					<ul>
-						<li class='drop'  class="test"><a href="#">XBOX ONE</a>
+						<li ng-repeat ="(key2, value2) in vm.menu[key]" class='drop' ><a href="#">{{key2}}</a>
 							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})">Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'Xbox One', classic: 'False'})">Consola y Accesorios</a></li>
-							</ul>
-						</li>
-						<li class='drop'  class="test"><a href="#">XBOX 360</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'Xbox 360', classic: 'False'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'Xbox 360', classic: 'False'})">Consolas y Accesorios</a></li>
+								<li class='drop' ng-repeat ="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})">{{value3}}</a></li>								
 							</ul>
 						</li>
 					</ul>
@@ -409,3 +403,44 @@
 </div>
 		
 </html>
+
+
+
+
+
+
+
+<ul ng-controller="indexCtrl as vm" class="ng-scope open" style="display: block;">
+	<li><label data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(4)" class="menu-main-label">Venta</label></li>
+		
+	<!-- ngRepeat: (key, value) in vm.menu --><li ng-repeat="(key, value) in vm.menu" class="drop ng-scope" style=""><a href="#" class="ng-binding">Xbox</a>
+		<ul>
+			<!-- ngRepeat: (key2, value2) in vm.menu[key] --><li ng-repeat="(key2, value2) in vm.menu[key]" class="drop ng-scope"><a href="#" class="ng-binding">Xbox 360</a>
+				<ul>
+					<!-- ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Juegos</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Consolas</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] -->								
+				</ul>
+			</li><!-- end ngRepeat: (key2, value2) in vm.menu[key] --><li ng-repeat="(key2, value2) in vm.menu[key]" class="drop ng-scope"><a href="#" class="ng-binding">Xbox One</a>
+				<ul>
+					<!-- ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Juegos</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Consolas</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] -->								
+				</ul>
+			</li><!-- end ngRepeat: (key2, value2) in vm.menu[key] -->
+		</ul>
+	</li><!-- end ngRepeat: (key, value) in vm.menu --><li ng-repeat="(key, value) in vm.menu" class="drop ng-scope"><a href="#" class="ng-binding">Play Statios</a>
+		<ul>
+			<!-- ngRepeat: (key2, value2) in vm.menu[key] --><li ng-repeat="(key2, value2) in vm.menu[key]" class="drop ng-scope"><a href="#" class="ng-binding">PS3</a>
+				<ul>
+					<!-- ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Juegos</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Consolas</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] -->								
+				</ul>
+			</li><!-- end ngRepeat: (key2, value2) in vm.menu[key] --><li ng-repeat="(key2, value2) in vm.menu[key]" class="drop ng-scope"><a href="#" class="ng-binding">PS2</a>
+				<ul>
+					<!-- ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Juegos</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Consolas</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] -->								
+				</ul>
+			</li><!-- end ngRepeat: (key2, value2) in vm.menu[key] --><li ng-repeat="(key2, value2) in vm.menu[key]" class="drop ng-scope"><a href="#" class="ng-binding">PS4</a>
+				<ul>
+					<!-- ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Juegos</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] -->								
+				</ul>
+			</li><!-- end ngRepeat: (key2, value2) in vm.menu[key] -->
+		</ul>
+	</li><!-- end ngRepeat: (key, value) in vm.menu -->
+	
+</ul>

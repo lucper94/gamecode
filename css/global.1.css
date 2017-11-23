@@ -910,7 +910,7 @@ nav{position:relative;width:980px;margin:0 auto;}
 #cssmenu > ul > li.has-sub > a:after{position:absolute;top:12.1px;right:11px;width:8px;height:2px;display:block;background:#ddd;content:''}
 #cssmenu > ul > li.has-sub > a:before{position:absolute;top:9px;right:14px;display:block;width:2px;height:8px;background:#ddd;content:'';-webkit-transition:all .25s ease;-ms-transition:all .25s ease;transition:all .25s ease}
 #cssmenu > ul > li.has-sub:hover > a:before{top:23px;height:0}
-#cssmenu ul ul{position:absolute;left:-9999px;margin-top: -29px;}
+#cssmenu ul ul{position:absolute;left:-9999px;margin-top: -15px;}
 #cssmenu ul ul li{height:0;-webkit-transition:all .25s ease;-ms-transition:all .25s ease;background:rgba(0,0,0,0.9);transition:all .25s ease}
 #cssmenu li:hover > ul{left:auto}
 #cssmenu li:hover > ul > li{height:35px}
