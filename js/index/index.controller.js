@@ -83,9 +83,63 @@
          });
 
          listingService.getMenu().then(function successCallback(response){
-             
+            // SmartMenus init
+$(function() {
+    $('#main-menu').smartmenus({
+      subMenusSubOffsetX: 1,
+      subMenusSubOffsetY: -8
+    });
+  });
+  
+  // SmartMenus mobile menu toggle button
+  $(function() {
+    var $mainMenuState = $('#main-menu-state');
+    if ($mainMenuState.length) {
+      // animate mobile menu
+      $mainMenuState.change(function(e) {
+        var $menu = $('#main-menu');
+        if (this.checked) {
+          $menu.hide().slideDown(250, function() { $menu.css('display', ''); });
+        } else {
+          $menu.show().slideUp(250, function() { $menu.css('display', ''); });
+        }
+      });
+      // hide mobile menu beforeunload
+      $(window).bind('beforeunload unload', function() {
+        if ($mainMenuState[0].checked) {
+          $mainMenuState[0].click();
+        }
+      });
+    }
+  });
              console.log(response.data);
              ctrl.menu = response.data;
+             var menu = response.data;
+             var $menu = $('#main-menu');
+             for (var key in menu) {
+                var str = key.replace(/\s/g, '');
+                 console.log(key);
+                 $menu.append("<li id='"+str+"'><a href='#' >"+key+"</a> <li>");
+                 
+                 $('#'+str).append('<ul id="ul'+key+'"> </ul>');
+                 for (var key2 in menu[key]) {
+                 var str2 = key2.replace(/\s/g, '')
+                 $('#ul'+ key).append('<li id="'+str2+'"><a href="#">'+key2+'</a></li>');
+                 $('#'+key2).append('<ul id="ul'+str2+'"> </ul>');
+                    menu[key][key2].forEach(function(entry) {  
+                        $ ('#ul'+str2).append('<li><a href="#">'+entry.kind+'</a></li>');
+                    
+                   })
+                }
+            }
+             $menu.smartmenus('refresh');
+ 
+             
+             // add a sub menu with 3 items to the new main menu item
+  
+             
+             // refresh the menu after the DOM op*erations
+             ; 
              
          })
         
@@ -96,3 +150,6 @@
         .controller('indexCtrl', indexCtrl)
 
  }());
+
+
+ 

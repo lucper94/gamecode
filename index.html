@@ -11,7 +11,11 @@
 <link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/demo.css">
 <link rel="stylesheet" href="css/rzslider.css">
+<!-- SmartMenus core CSS (required) -->
+<link href="css/sm-core-css.css" rel="stylesheet" type="text/css" />
 
+<!-- "sm-blue" menu theme (optional, you can use your own CSS, too) -->
+<link href="css/sm-blue/sm-blue.css" rel="stylesheet" type="text/css" />
 
 <!-- JS Libs  -->
 <script src="libs/jquery/jquery-3.2.1.min.js" ></script>
@@ -23,6 +27,11 @@
 <script src="libs/angular/angular-touch.min.js" ></script>
 <script src="libs/angular/ui-bootstrap-tpls-2.5.0.min.js"></script>
 <script src="libs/angular/angular-cookies.js"></script>
+
+ 
+
+<!-- SmartMenus jQuery plugin -->
+<script type="text/javascript" src="js/jquery.smartmenus.min.js"></script>
 
 
 <!-- Webpage JS  -->
@@ -40,9 +49,11 @@
 
 </head>
 
-<header>
-	
+<header  >
+
 	<div class="col-md-12 col-xs-12 col-sm-12  game-header navbar-fixed-top" >
+			 
+
 		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 game-logo">
 
 				<a ui-sref='index'><img src="img/resources/gamerscode-logo.png"  class="img-responsive " alt="Logo"></a>
@@ -69,195 +80,22 @@
 			</div>	
 
 			
-	<div class="col-xs-8 col-sm-8 col-md-offset-1 col-md-11 col-lg-offset-1 col-lg-11 game-menu">
+	<div class="col-xs-8 col-sm-8 col-md-offset-1 col-md-11 col-lg-offset-1 col-lg-11 game-menu" >
 		<a class="toggleMenu" href="#">Menu</a>
-		<nav id='cssmenu'class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<div id="head-mobile"></div>
-			<div class="button"></div>
-			<ul ng-controller="indexCtrl as vm">
-				<li ><label data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(4)"  class="menu-main-label">Venta</label></li>
-					
-				<li ng-repeat ="(key, value) in vm.menu" class='drop'  ><a href="#">{{key}}</a>
-					<ul>
-						<li ng-repeat ="(key2, value2) in vm.menu[key]" class='drop' ><a href="#">{{key2}}</a>
-							<ul>
-								<li class='drop' ng-repeat ="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})">{{value3}}</a></li>								
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<!--<li class='drop'  class="test"><a href="#">XBOX</a>
-					<ul>
-						<li class='drop'  class="test"><a href="#">XBOX ONE</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})">Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'Xbox One', classic: 'False'})">Consola y Accesorios</a></li>
-							</ul>
-						</li>
-						<li class='drop'  class="test"><a href="#">XBOX 360</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'Xbox 360', classic: 'False'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'Xbox 360', classic: 'False'})">Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						<li class='drop'  class="test"><a href="#">XBOX</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'XBOX', classic: 'False'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'XBOX', classic: 'False'})">Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
+		<nav class="main-nav" role="navigation" >
+				 
 				
-				<li class='drop'><a ui-sref="#">PlayStation</a>
-					<ul>
-						<li class='drop'><a ui-sref="#">PS4</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'PS4', classic: 'False'})">Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'PS4', classic: 'False'})" >Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						<li class='drop'><a ui-sref="#">PS3</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'PS3', classic: 'False'})">Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'PS3', classic: 'False'})">Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						<li class='drop'><a ui-sref="#">PS2</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'PS2', classic: 'False'})">Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'PS2', classic: 'False'})" >Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						<li class='drop'><a ui-sref="#">PS1</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'PS1', classic: 'False'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'PS1', classic: 'False'})">Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-
-
+				  <!-- Mobile menu toggle button (hamburger/x icon) -->
+				  <input id="main-menu-state" type="checkbox" />
+				  <label class="main-menu-btn" for="main-menu-state">
+					<span class="main-menu-btn-icon"></span> Toggle main menu visibility
+				  </label>
 				
-				<li class='drop'><a ui-sref="#">NINTENDO</a>
-					<ul>
-						<li class='drop'><a ui-sref="#">SWITCH</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'Switch', classic: 'False'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'Switch', classic: 'False'})">Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						<li class='drop'><a ui-sref="#">WII U</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'WIIU', classic: 'False'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'WIIU', classic: 'False'})">Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						<li class='drop'><a ui-sref="#">WII</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'WII', classic: 'False'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="slisting({kind:'Accessory', platform: 'WII', classic: 'False'})">Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						<li class='drop'><a ui-sref="#">NDS3</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'n3ds', classic: 'False'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'n3ds', classic: 'False'})">Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						<li class='drop'><a ui-sref="#">NDS</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'nds', classic: 'False'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'nds', classic: 'False'})">Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						<li class='drop'><a ui-sref="#">GBA</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'gba', classic: 'False'})">Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'gba', classic: 'False'})">Consolas y Accesorios</a></li>
-		 				  </ul>
-						</li>
-						<li class='drop'><a ui-sref="#">GBC</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'gbc', classic: 'False'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'gbc', classic: 'False'})">Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						<li class='drop'><a ui-sref="#">GB</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'gb', classic: 'False'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'gb', classic: 'False'})">Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-
-					</ul>
-				</li>
+				  <h2 class="nav-brand"><a href="#">Brand</a></h2>
 				
-				<li class='drop'>
-					<a ui-sref="#">RETRO</a>
-					<ul>
-					
-						<li class='drop'><a ui-sref="#">Game Cube</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'GameCube', classic: 'True'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'GameCube', classic: 'False'})" >Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						
-					
-						
-						<li class='drop'><a ui-sref="#">N64</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'N64', classic: 'True'})">Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'N64', classic: 'False'})" >Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						
-						<li class='drop'><a ui-sref="#">SUPER NES</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'snes', classic: 'True'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'snes', classic: 'False'})">Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						
-						<li class='drop'><a ui-sref="#">NES</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'nes', classic: 'True'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accessory', platform: 'nes', classic: 'False'})" >Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						
-						
-						
-						
-					</ul>
-				</li>
-				
-				
-				<li class='drop'>
-					<a ui-sref="#">Sega</a>
-					<ul>
-						
-						<li class='drop'><a ui-sref="#">Sega Genesis</a>
-							<ul>
-								<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'Sega Genesis', classic: 'False'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accesory', platform: 'Sega Genesis', classic: 'False'})" >Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-						
-						<li class='drop'><a ui-sref="#">Dreamcast</a>
-							<ul>
-									<li class='drop'><a ui-sref="listing({kind:'Game', platform: 'Dreamcast', classic: 'False'})" >Juegos</a></li>
-								<li class='drop'><a ui-sref="listing({kind:'Accesory', platform: 'Dreamcast', classic: 'False'})" >Consolas y Accesorios</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>-->
-			</ul>
-		</nav>
-
-		<!-- Fin de Menú  -->
+				  
+				  <ul id="main-menu" class="sm sm-blue"  >
+                 </ul>
 
 	</ng-form>
 
@@ -410,37 +248,4 @@
 
 
 
-<ul ng-controller="indexCtrl as vm" class="ng-scope open" style="display: block;">
-	<li><label data-toggle="modal" data-target="#myModal" ng-click="vm.showModal(4)" class="menu-main-label">Venta</label></li>
-		
-	<!-- ngRepeat: (key, value) in vm.menu --><li ng-repeat="(key, value) in vm.menu" class="drop ng-scope" style=""><a href="#" class="ng-binding">Xbox</a>
-		<ul>
-			<!-- ngRepeat: (key2, value2) in vm.menu[key] --><li ng-repeat="(key2, value2) in vm.menu[key]" class="drop ng-scope"><a href="#" class="ng-binding">Xbox 360</a>
-				<ul>
-					<!-- ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Juegos</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Consolas</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] -->								
-				</ul>
-			</li><!-- end ngRepeat: (key2, value2) in vm.menu[key] --><li ng-repeat="(key2, value2) in vm.menu[key]" class="drop ng-scope"><a href="#" class="ng-binding">Xbox One</a>
-				<ul>
-					<!-- ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Juegos</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Consolas</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] -->								
-				</ul>
-			</li><!-- end ngRepeat: (key2, value2) in vm.menu[key] -->
-		</ul>
-	</li><!-- end ngRepeat: (key, value) in vm.menu --><li ng-repeat="(key, value) in vm.menu" class="drop ng-scope"><a href="#" class="ng-binding">Play Statios</a>
-		<ul>
-			<!-- ngRepeat: (key2, value2) in vm.menu[key] --><li ng-repeat="(key2, value2) in vm.menu[key]" class="drop ng-scope"><a href="#" class="ng-binding">PS3</a>
-				<ul>
-					<!-- ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Juegos</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Consolas</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] -->								
-				</ul>
-			</li><!-- end ngRepeat: (key2, value2) in vm.menu[key] --><li ng-repeat="(key2, value2) in vm.menu[key]" class="drop ng-scope"><a href="#" class="ng-binding">PS2</a>
-				<ul>
-					<!-- ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Juegos</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Consolas</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] -->								
-				</ul>
-			</li><!-- end ngRepeat: (key2, value2) in vm.menu[key] --><li ng-repeat="(key2, value2) in vm.menu[key]" class="drop ng-scope"><a href="#" class="ng-binding">PS4</a>
-				<ul>
-					<!-- ngRepeat: (key3, value3) in vm.menu[key][key2] --><li class="drop ng-scope" ng-repeat="(key3, value3) in vm.menu[key][key2]"><a ui-sref="listing({kind:'Game', platform: 'Xbox One', classic: 'False'})" class="ng-binding" href="#!/listing">Juegos</a></li><!-- end ngRepeat: (key3, value3) in vm.menu[key][key2] -->								
-				</ul>
-			</li><!-- end ngRepeat: (key2, value2) in vm.menu[key] -->
-		</ul>
-	</li><!-- end ngRepeat: (key, value) in vm.menu -->
-	
-</ul>
+ 
