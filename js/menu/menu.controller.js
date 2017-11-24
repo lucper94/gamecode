@@ -54,7 +54,7 @@
             $('#'+indexMain).append('<ul id="ul'+indexMain+'"> </ul>'); 
             var indexSub = 0;
             for (var key2 in menu[key]) {
-                $('#ul'+ indexMain).append('<li id="id'+indexMain+'-'+indexSub+'"><a href="#">'+key2+'</a></li>');
+                $('#ul'+ indexMain).append('<li id="id'+indexMain+'-'+indexSub+'"><a >'+key2+'</a></li>');
                 console.log('#'+indexMain+'.'+indexSub);
                 $('#id'+indexMain+'-'+indexSub).append('<ul id="ul'+indexMain+'-'+indexSub+'"> </ul>');
                 
