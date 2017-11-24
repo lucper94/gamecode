@@ -116,6 +116,10 @@ $(function() {
              ctrl.menu = response.data;
              var menu = response.data;
              var $menu = $('#main-menu');
+             var classic = "'false'";
+             var platform = "'Game'";
+             var kind = "'Xbox 360'";
+             
              var indexMain = 0;
              for (var key in menu) {
                  console.log(key);
@@ -142,7 +146,10 @@ $(function() {
                             default:
                                 break;
                         }
-                        $ ('#ul'+indexMain+'-'+indexSub).append('<li><a ui-sref="listing({kind:'+entry.kind+', platform: '+key2+', classic: '+entry.classic+'})">'+descripcion+'</a></li>');
+                        var classic = "'"+entry.classic+"'";
+                        var platform = "'"+entry.uisref+"'";
+                        var kind = "'"+entry.kind+"'";
+                        $ ('#ul'+indexMain+'-'+indexSub).append('<li><a ui-sref="getPlatform({kind:'+kind+', platform: '+platform+', classic: '+classic+'})">'+descripcion+'</a></li>');
                     
                    })
                    indexSub++;
