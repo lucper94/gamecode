@@ -2,7 +2,7 @@
 
      'use strict'
 
-     function indexCtrl($http,listingService,limitToFilter){
+     function indexCtrl($http,listingService,limitToFilter,$scope,$compile){
           var ctrl = this;
             ctrl.loading=true; 
             ctrl.modalHead = "";
@@ -116,6 +116,7 @@ $(function() {
              ctrl.menu = response.data;
              var menu = response.data;
              var $menu = $('#main-menu');
+             $menu.html('');
              var classic = "'false'";
              var platform = "'Game'";
              var kind = "'Xbox 360'";
@@ -123,7 +124,7 @@ $(function() {
              var indexMain = 0;
              for (var key in menu) {
                  console.log(key);
-                 $menu.append("<li id='"+indexMain+"'><a href='#' >"+key+"</a> <li>");  
+                 $menu.append("<li id='"+indexMain+"'><a   >"+key+"</a> <li>");  
                  $('#'+indexMain).append('<ul id="ul'+indexMain+'"> </ul>');
                  
                  var indexSub = 0;
@@ -149,7 +150,9 @@ $(function() {
                         var classic = "'"+entry.classic+"'";
                         var platform = "'"+entry.uisref+"'";
                         var kind = "'"+entry.kind+"'";
-                        $ ('#ul'+indexMain+'-'+indexSub).append('<li><a ui-sref="getPlatform({kind:'+kind+', platform: '+platform+', classic: '+classic+'})">'+descripcion+'</a></li>');
+                        var myEl = angular.element( document.querySelector('#ul'+indexMain+'-'+indexSub ) );
+                        myEl.prepend('<li><a ui-sref="listing({kind:'+kind+', platform: '+platform+', classic: '+classic+'})">'+descripcion+'</a></li>'); 
+                        //$ ('#ul'+indexMain+'-'+indexSub).append('<li><a ui-sref="getPlatform({kind:'+kind+', platform: '+platform+', classic: '+classic+'})">'+descripcion+'</a></li>');
                     
                    })
                    indexSub++;
@@ -157,6 +160,7 @@ $(function() {
                 indexMain++;
             }
              $menu.smartmenus('refresh');
+             $compile($menu)($scope);
  
              
              // add a sub menu with 3 items to the new main menu item
