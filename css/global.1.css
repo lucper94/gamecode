@@ -1187,6 +1187,7 @@ input[type=range] {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+    z-index: 1;
   }
   
   @media (min-width: 768px) {
@@ -1317,23 +1318,3 @@ input[type=range] {
   }
   
   
-  /* IGNORE: Unrelated generic demo styles */
-  
-  body {
-    margin: 8px;
-    background: #fff;
-    color: #aaa;
-    font: 16px/1.5em 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-  
-  .demo-text {
-    margin: 3em 22px;
-  }
-  
-  .demo-text p {
-    margin-bottom: 1em;
-  }
-  
-  .demo-text a {
-    color: #999;
-  }
