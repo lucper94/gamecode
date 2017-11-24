@@ -117,9 +117,7 @@ $(function() {
              var menu = response.data;
              var $menu = $('#main-menu');
              $menu.html('');
-             var classic = "'false'";
-             var platform = "'Game'";
-             var kind = "'Xbox 360'";
+           
              
              var indexMain = 0;
              for (var key in menu) {
@@ -147,7 +145,7 @@ $(function() {
                             default:
                                 break;
                         }
-                        var classic = "'"+entry.classic+"'";
+                        var classic = "'False'";
                         var platform = "'"+entry.uisref+"'";
                         var kind = "'"+entry.kind+"'";
                         var myEl = angular.element( document.querySelector('#ul'+indexMain+'-'+indexSub ) );
