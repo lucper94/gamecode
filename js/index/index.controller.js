@@ -138,7 +138,7 @@ $(function() {
                                 descripcion = 'Juegos';
                                 break;
 
-                            case 'Accesory':
+                            case 'Accessory':
                                 descripcion = 'Consolas/Accesorios';
                                 break;
 
