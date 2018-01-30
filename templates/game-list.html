@@ -69,7 +69,7 @@
                     <label ng-class="game.Stock == 'En Inventario' ? 'search-green' : 'search-red'">{{game.Stock}}</label>
                 </div>
 
-                  <button  class=" game-search-btn pull-right" data-toggle="modal" ng-hide="game.PurchaseWB == null" ng-click="vm.modal(game.price_e,game.price_p);" >Compra/intercambio</button>
+                  <button  class=" game-search-btn pull-right" data-toggle="modal" ng-show="game.Platform=='Xbox One'" ng-click="vm.modal(game.Exchange,game.Purchase);" >Compra/intercambio</button>
 
     
 

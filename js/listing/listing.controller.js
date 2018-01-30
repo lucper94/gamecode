@@ -140,7 +140,6 @@
         listingService.getGames(ctrl.kind, $cookies.getObject('listParams').platform, $cookies.getObject('listParams').classic,0,100000)
             .then(function(response){
                 ctrl.gamesObj = response.data.app_data;
-                console.log($cookies.getObject('listParams'));
                 ctrl.limit = 25;
                 ctrl.predicate = 'Name';
                 ctrl.loading=false;
@@ -194,7 +193,6 @@
             listingService.getGames(ctrl.kind, $cookies.getObject('listParams').platform, $cookies.getObject('listParams').classic,lowerPrice,higherPrice)
             .then(function(response){
                 ctrl.gamesObj = response.data.app_data;
-                console.log(ctrl.gamesObj);
                 ctrl.limit = 25;
                 ctrl.predicate = 'Name';
                 ctrl.loading=false;

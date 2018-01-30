@@ -5,7 +5,7 @@
      function gameDetail(detailService,$stateParams,$cookies,$timeout){
          
         var ctrl = this;
-        console.log($stateParams);
+     
         ctrl.relatedSearch = $stateParams.relatedGames;
         if($cookies.getObject('detailParams') != undefined){
             
@@ -54,7 +54,7 @@
         
         detailService.getDetail(ctrl.gameId,ctrl.kind)
             .then(function(response){
-                console.log(response);
+               
                 ctrl.gameDetail = response.data;
                 ctrl.loading=false;
             })
