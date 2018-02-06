@@ -2,7 +2,7 @@
     
          'use strict'
     
-         function indexCtrl($http,listingService,limitToFilter){
+         function indexCtrl($http,listingService,limitToFilter,$cookies){
               var ctrl = this;
                 ctrl.loading=true; 
                 ctrl.modalHead = "";
@@ -77,6 +77,8 @@
                     return name;
                     } 
                 }
+
+               
              angular.element(document).ready(function () {
                 ctrl.resize_header();
                 

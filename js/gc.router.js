@@ -32,6 +32,11 @@
                 params : { searchString: null },
                 controller: 'searchListCtrl as vm'
             })
+            .state('shopcar', {
+                url: '/shopcar',
+                templateUrl: 'templates/shop-car.html',
+                controller: 'shopCarCtrl as vm'
+            })
             
             $urlRouterProvider.otherwise('/index');
             

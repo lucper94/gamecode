@@ -1,4 +1,4 @@
-<html ng-app="gcapp">
+<html ng-app="gcapp" ng-controller="shopCarCtrl as sc">
 <head>
 <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -46,6 +46,7 @@
 <script src="js/search/search.controller.js" ></script> 
 <script src="js/search/search.list.controller.js" ></script> 
 <script src="js/menu/menu.controller.js" ></script> 
+<script src="js/shopcar/shopcar.controller.js" ></script> 
 <script src="js/rzslider.js"></script>
 
 </head>
@@ -53,8 +54,11 @@
 <header  >
 
 	<div class="col-md-12 col-xs-12 col-sm-12  game-header navbar-fixed-top" >
-			 
+				<label class="game-shopcar-label"><span>{{sc.count}}</span></label>	 
+				<a  ui-sref='shopcar'><img src="img/resources/shop-car.png"  class="img-responsive game-shopcar-icon"></a>
 
+			
+		
 		<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 game-logo">
 
 				<a ui-sref='index'><img src="img/resources/gamerscode-logo.png"  class="img-responsive " alt="Logo"></a>

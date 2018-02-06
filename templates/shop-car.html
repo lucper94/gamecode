@@ -1,0 +1,44 @@
+
+<div class="container" style="margin-top: 125px;">
+        <table id="cart" class="table table-hover table-condensed">
+                        <thead>
+                            <tr>
+                                <th style="width:50%">Producto</th>
+                                <th style="width:10%">Precio</th>
+                                <th style="width:8%">Cantidad</th>
+                                <th style="width:22%" class="text-center">Subtotal</th>
+                                <th style="width:10%"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="articulo in vm.articulos">
+                                <td data-th="Product">
+                                    <div class="row">
+                                        <div class="col-sm-2 hidden-xs"> <img ng-src="img/products/{{articulo.ID_Info}}.jpg" onerror="this.src='img/resources/image-not-found.png'"  class="img-responsive  center-block"    alt="Image"> </div>
+                                        <div class="col-sm-10">
+                                            <h4 class="nomargin">{{articulo.Name}}</h4>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-th="Price">${{articulo.Sale}}</td>
+                                <td data-th="Quantity">
+                                        {{articulo.count}}
+                                </td>
+                                <td data-th="Subtotal" class="text-center">{{(articulo.Sale*articulo.count)}}</td>
+                                <td class="actions" data-th="">
+                                    <button class="btn btn-info btn-sm"><i class="fa fa-refresh"></i></button>
+                                    <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+          
+                            <tr>
+                                <td><a href="#" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continuar comprando</a></td>
+                                <td colspan="2" class="hidden-xs"></td>
+                                <td class="hidden-xs text-center"><strong>Total ${{vm.total}}</strong></td>
+                                <td><a href="#" class="btn btn-success btn-block">Realizar compra <i class="fa fa-angle-right"></i></a></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+    </div>

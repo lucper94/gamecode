@@ -22,6 +22,7 @@
 
 </div>    
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+
         <div  class="text-center">
     <button   ng-class=" vm.idiv == 0 ? 'game-index-btn' : 'game-index-btn-selected'" ng-click="vm.div(0);">Los más buscados</button>
     <button  ng-class="vm.idiv == 1 ? 'game-index-btn' : 'game-index-btn-selected'" ng-click="vm.div(1);">Los más vendidos</button>
@@ -34,6 +35,7 @@
     
     <div ng-repeat="todo in vm.todos" repeat-done="foo()" class="col-xs-12 col-sm-6 col-md-6 col-lg-3 game-index-container" >
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-index-front">
+           
             <a ui-sref="detail({id:{{todo.ID_Info}},kind: 'With_Box' })">
         <div  class=" game-index-imgcontainer"   >
           <img ng-src="img/products/{{todo.ID_Info}}.jpg" onerror="this.src='img/resources/image-not-found.png'"  class="img-responsive game-index-image center-block"    alt="Image"> 
@@ -53,12 +55,13 @@
                     <tbody>
                       <tr>
                       
-                        <td>$ {{todo.Sale}}</td>
+                        <td>$ {{todo.Sale}} <div ><img src="img/resources/shop-car.png"  class="img-responsive game-list-shopcar" ng-click="sc.addToCar(todo)"></div></td>
                         
                       </tr>
                     </tbody>
               </table>
               </div>
+  
 
           </div>
       </div>
@@ -73,6 +76,7 @@
   
   <div ng-repeat="top in vm.topten" repeat-done="foo()" class="col-xs-12 col-sm-6 col-md-6 col-lg-3 game-index-container" >
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 game-index-front">
+            
           <a ui-sref="detail({id:{{top.ID_Info}},kind: 'With_Box' })">
       <div  class=" game-index-imgcontainer"   >
         <img ng-src="img/products/{{top.ID_Info}}.jpg" onerror="this.src='img/resources/image-not-found.png'"  class="img-responsive game-index-image center-block"    alt="Image"> 
